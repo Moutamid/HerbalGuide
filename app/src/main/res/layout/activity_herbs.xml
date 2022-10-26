@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HerbsActivity">
+
+    <LinearLayout
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="12dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/herbal_logo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sf_ui_text_regular"
+            android:text="@string/app_name_A" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/sf_ui_text_regular"
+            android:text="@string/app_name_E" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/logo"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@color/green_light" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/herb_img"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/line"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/border"
+        android:src="@drawable/i1"/>
+
+    <TextView
+        android:id="@+id/herb_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/herb_img"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/sf_ui_text_regular"
+        android:gravity="center"
+        android:text="Herb"
+        android:textColor="@color/green"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/EvaluationBtn"
+        android:layout_below="@id/herb_name"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scientificname"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:gravity="end"
+                android:background="@drawable/border_full"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/thepartoftheplantused"
+                android:padding="15dp"
+                android:gravity="end"
+                android:textColor="@color/black"
+                android:background="@drawable/border_half"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/medicine_properties_and_used"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:gravity="end"
+                android:background="@drawable/border_half"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/side_effects"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:gravity="end"
+                android:background="@drawable/border_half"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contraindications"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:gravity="end"
+                android:background="@drawable/border_half"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/interaction_with_pharma"
+                android:padding="15dp"
+                android:gravity="end"
+                android:textColor="@color/black"
+                android:background="@drawable/border_half"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/EvaluationBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/green_light"
+        android:padding="10dp"
+        android:text="@string/evaluate_the_information"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+</RelativeLayout>

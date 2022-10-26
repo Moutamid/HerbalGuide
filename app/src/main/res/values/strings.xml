@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HerbalGuide</string>
+    <string name="app_name">Herbal Guide</string>
     <string name="app_name_A"><font color="#3F48CC">دليل</font> <font color="#22B14C">الأعشاب</font></string>
     <string name="app_name_E"><font color="#3F48CC">Herbal</font> <font color="#22B14C">Guide</font></string>
     <string name="welcomeText">أهلا بكم في تطبيق دليل الأعشاب الخاص بالممارسين الصحين</string>
@@ -15,5 +15,28 @@
     <string name="function">الوظيفة</string>
     <string name="back_to_main_menu">العودة للقائمة الرئيسية</string>
     <string name="the_evaluation_sent_by_you">تم استلام التقيم المرسل من قبلكم نشكر مشاركتكم ورايكم يهمنا</string>
+    <string name="question_1">ماهي مدى استفادتك من المعلومات المتوفرة ؟</string>
+    <string name="question_2">ماهي مدى استفادتك من المعلومات المتوفرة ؟</string>
+    <string name="question_3">هل استفدت من المعلومة المتاحة ؟</string>
+    <string name="question_4">هل استفدت من المعلومة المتاحة ؟</string>
+    <string name="question_5">هل تعتقد بأن المعلومات المتوفرة مفيدة ؟</string>
+    <string name="question_6">هل استفدت من المعلومة المتاحة ؟</string>
+    <string name="question7">ماهي مدى استفادتك من المعلومات المتوفرة ؟</string>
+    <string name="question_8">ماهي مدى استفادتك من المعلومات المتوفرة ؟</string>
+    <string name="question_9">ماهي مدى استفادتك من المعلومات المتوفرة ؟</string>
+    <string name="question_10">هل استفدت من المعلومة المتاحة ؟</string>
+    <string name="question_11">هل تعتقد بأن المعلومات المتوفرة مفيدة ؟</string>
+    <string name="question_12">هل تعتقد بأن المعلومات المتوفرة مفيدة ؟</string>
+    <string name="finish_evaluation"><![CDATA[انهاء التقييم ]]></string>
+    <string name="search_hint">" الرجاء تحديد البحث المطلوب"</string>
+    <string name="evaluate_the_information">تـقيم المعلومة</string>
+    <string name="scientificname">الاسم العلمي</string>
+    <string name="thepartoftheplantused">الجزء المستخدم</string>
+    <string name="medicine_properties_and_used">الاستخدامات  والخصائص الطبية</string>
+    <string name="side_effects">الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية</string>
+    <string name="contraindications">ينصحبعدم مشاركته مع بعض الاصناف الدوائية</string>
+    <string name="interaction_with_pharma">interaction With Pharma</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

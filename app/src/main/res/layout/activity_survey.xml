@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SurveyActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/herbal_logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sf_ui_text_regular"
+                    android:gravity="center"
+                    android:text="@string/app_name_A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_ui_text_regular"
+                    android:gravity="center"
+                    android:text="@string/app_name_E"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/logo"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@color/green_light" />
+
+            <LinearLayout
+                android:id="@+id/edittextLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:orientation="vertical"
+                android:paddingBottom="12dp">
+
+                <EditText
+                    android:id="@+id/question1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="12dp"
+                    android:hint="@string/question_1"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/arial_regular"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/question_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/arial_regular"
+                    android:hint="@string/question_2"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/question_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/arial_regular"
+                    android:hint="@string/question_3"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/question_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/arial_regular"
+                    android:hint="@string/question_4"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/question_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/arial_regular"
+                    android:hint="@string/question_5"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/question_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/arial_regular"
+                    android:hint="@string/question_6"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/question7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:hint="@string/question7"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/arial_regular"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/question_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/arial_regular"
+                    android:hint="@string/question_8"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/question_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/arial_regular"
+                    android:hint="@string/question_9"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/question_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/arial_regular"
+                    android:hint="@string/question_10"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/question_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/arial_regular"
+                    android:hint="@string/question_11"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/question_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/arial_regular"
+                    android:hint="@string/question_12"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/finishEvaluation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edittextLayout"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/green_light"
+                android:padding="10dp"
+                android:text="@string/finish_evaluation"
+                android:textAllCaps="false"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
