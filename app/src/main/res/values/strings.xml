@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HerbalGuide</string>
+    <string name="app_name_A"><font color="#3F48CC">دليل</font> <font color="#22B14C">الأعشاب</font></string>
+    <string name="app_name_E"><font color="#3F48CC">Herbal</font> <font color="#22B14C">Guide</font></string>
+    <string name="welcomeText">أهلا بكم في تطبيق دليل الأعشاب الخاص بالممارسين الصحين</string>
+    <string name="entry">دخول</string>
+    <string name="or">أو</string>
+    <string name="register_now">سجل الان</string>
+    <string name="email_mobile_hint">البريد الالكتروني / رقم الجوال</string>
+    <string name="password_hint">كلمة المرور</string>
+    <string name="forgot_your_password">نسيت كلمة المرور</string>
+    <string name="dont_have_account">ليس لديك حساب ؟</string>
+    <string name="the_name">الاسم</string>
+    <string name="the_family"><![CDATA[العائلة ]]></string>
+    <string name="function">الوظيفة</string>
+    <string name="back_to_main_menu">العودة للقائمة الرئيسية</string>
+    <string name="the_evaluation_sent_by_you">تم استلام التقيم المرسل من قبلكم نشكر مشاركتكم ورايكم يهمنا</string>
+
+</resources>
