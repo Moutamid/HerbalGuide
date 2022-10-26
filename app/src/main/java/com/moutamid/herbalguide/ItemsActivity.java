@@ -2,6 +2,7 @@ package com.moutamid.herbalguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -42,13 +43,13 @@ public class ItemsActivity extends AppCompatActivity {
         prev = findViewById(R.id.backbtn);
 
         pageOne();
+        Toast.makeText(this, ""+count, Toast.LENGTH_SHORT).show();
 
         next.setOnClickListener(v -> {
             if (count == 1){
                 pageTwo();
                 count = 2;
-            }
-            if (count == 2){
+            } else if (count == 2){
                 pageThree();
                 count = 3;
             }
@@ -357,10 +358,15 @@ public class ItemsActivity extends AppCompatActivity {
         image1.setImageResource(R.drawable.i1);
         image2.setImageResource(R.drawable.i2);
         image3.setImageResource(R.drawable.i3);
+        Toast.makeText(this, ""+count, Toast.LENGTH_SHORT).show();
 
         title1.setText("Matricaria Chamomilla");
         title2.setText("Nigella sativia");
         title3.setText("Alo vera, Aloe barabadensis, Aloe capennsis");
+
+        image1.setOnClickListener(v-> {
+            startActivity(new Intent(this, HerbsActivity.class));
+        });
 
         page1.setTextColor(getResources().getColor(R.color.blue));
         page2.setTextColor(getResources().getColor(R.color.black));
