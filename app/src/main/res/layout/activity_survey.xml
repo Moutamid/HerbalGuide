@@ -68,7 +68,7 @@
                 android:paddingBottom="12dp">
 
                 <EditText
-                    android:id="@+id/question1"
+                    android:id="@+id/question_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/line"
@@ -152,7 +152,7 @@
                     android:padding="15dp" />
 
                 <EditText
-                    android:id="@+id/question7"
+                    android:id="@+id/question_7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/line"
