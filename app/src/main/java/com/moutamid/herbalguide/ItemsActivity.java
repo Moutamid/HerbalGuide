@@ -1,37 +1,98 @@
 package com.moutamid.herbalguide;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import androidx.appcompat.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ItemsActivity extends AppCompatActivity {
 
-    CircleImageView image1, image2, image3;
-    TextView title1, title2, title3;
+    /*CircleImageView image1, image2, image3;
+    TextView title1, title2, title3;*/
     TextView page1, page2, page3, page4, page5;
     ImageView next, prev;
     boolean enabled = true;
     int count = 1;
+    RecyclerView recyclerView;
+    ItemDetailModel model;
+    ArrayList<ItemDetailModel> list;
+    ItemAdapter adapter;
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_items);
 
-        image1 = findViewById(R.id.image1);
+        /*image1 = findViewById(R.id.image1);
         image2 = findViewById(R.id.image2);
         image3 = findViewById(R.id.image3);
 
         title1 = findViewById(R.id.name1);
         title2 = findViewById(R.id.name2);
-        title3 = findViewById(R.id.name3);
+        title3 = findViewById(R.id.name3);*/
+
+        list = new ArrayList<>();
+
+        recyclerView = findViewById(R.id.itemsRC);
+        searchView = findViewById(R.id.search_view);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(false);
+
+        list.add(new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "1-\tالبابونج الحقيقي او الالماني"));
+        list.add(new ItemDetailModel(R.drawable.i2, "Nigella sativia", "الحبة السوداء"));
+        list.add(new ItemDetailModel(R.drawable.i3, "Alo vera, Aloe barabadensis, Aloe capennsis", "الصبار"));
+        list.add(new ItemDetailModel(R.drawable.i4, "Origanum syriacum", "البردقوش "));
+        list.add(new ItemDetailModel(R.drawable.i5, "Coeffia arabica", "البن (القهوة)"));
+        list.add(new ItemDetailModel(R.drawable.i6, "Salvia officinalis", "المريمية"));
+        list.add(new ItemDetailModel(R.drawable.i7, "Rosmarinus officinalis", "اكليل الجبل"));
+        list.add(new ItemDetailModel(R.drawable.i8, "Glycyrrhiza glabra", "عرق السوس"));
+        list.add(new ItemDetailModel(R.drawable.i9, "Zingiber officinalle", "الزنجبيل"));
+        list.add(new ItemDetailModel(R.drawable.i11, "Senna alexandrina", "السنا"));
+        list.add(new ItemDetailModel(R.drawable.i12, "Camellia sinesis", "الشاي الاخضر"));
+        list.add(new ItemDetailModel(R.drawable.i13, "Panax quinquefol", "الجنسنغ( الامريكي )"));
+        list.add(new ItemDetailModel(R.drawable.i14, "Mellisa officinalis", "المليسة"));
+        list.add(new ItemDetailModel(R.drawable.i15, "Hibiscus sabdariffa", "الكركديه"));
+        list.add(new ItemDetailModel(R.drawable.i16, "Calendula officinalis", "الاقحوان"));
+        list.add(new ItemDetailModel(R.drawable.i17, "Thymus vulgaris", "الزعتر"));
+        list.add(new ItemDetailModel(R.drawable.i18, "Myrtus communis", "الاس (الريحان)"));
+        list.add(new ItemDetailModel(R.drawable.i19, "Lavandula angustifolia", "الخزامى"));
+        list.add(new ItemDetailModel(R.drawable.i20, "Pimpinella anisum", "اليانسون"));
+        list.add(new ItemDetailModel(R.drawable.i21, "Taraxacum officinale", "الهندباء "));
+        list.add(new ItemDetailModel(R.drawable.i22, "Eucalyptus camaldulensis", "الاوكاليبتوس ( الكافور)"));
+        list.add(new ItemDetailModel(R.drawable.i23, "Trigonella foenum -graecum", "الحلبة"));
+        list.add(new ItemDetailModel(R.drawable.i24, "Curcuma longa", "الكركم"));
+        list.add(new ItemDetailModel(R.drawable.i25, "Equisetaceaearvense", "ذنب الخيل"));
+        list.add(new ItemDetailModel(R.drawable.i26, "Ammi visnaga", "الخلة"));
+        list.add(new ItemDetailModel(R.drawable.i27, "Paronychia argentea", "زهرة الالماسة"));
+
+        adapter = new ItemAdapter(ItemsActivity.this, list);
+        recyclerView.setAdapter(adapter);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
 
         page1 = findViewById(R.id.p1);
         page2 = findViewById(R.id.p2);
@@ -52,16 +113,13 @@ public class ItemsActivity extends AppCompatActivity {
             } else if (count == 2){
                 pageThree();
                 count = 3;
-            }
-            if (count == 3){
+            } else if (count == 3){
                 pageFour();
                 count = 4;
-            }
-            if (count == 4){
+            } else if (count == 4){
                 pageFive();
                 count = 5;
-            }
-            if (count == 5){
+            } else if (count == 5){
                 pageSix();
                 page1.setText("6");
                 page2.setText("7");
@@ -70,18 +128,15 @@ public class ItemsActivity extends AppCompatActivity {
                 page5.setText("10");
                 enabled = false;
                 count = 6;
-            }
-            if (count == 6){
+            } else if (count == 6){
                 pageSeven();
                 count = 7;
-            }
-            if (count == 7){
+            } else if (count == 7){
                 pageEight();
                 count = 8;
-            }
-            if (count == 8){
+            } else if (count == 8){
                 pageNine();
-                Toast.makeText(this, ""+count, Toast.LENGTH_SHORT).show();
+                count = 9;
             }
         });
 
@@ -89,20 +144,16 @@ public class ItemsActivity extends AppCompatActivity {
             if (count == 2){
                 pageOne();
                 count = 1;
-            }
-            if (count == 3){
+            } else if (count == 3){
                 pageTwo();
                 count = 2;
-            }
-            if (count == 4){
+            } else if (count == 4){
                 pageThree();
                 count = 3;
-            }
-            if (count == 5){
+            } else if (count == 5){
                 pageFour();
                 count = 4;
-            }
-            if (count == 6){
+            } else if (count == 6){
                 pageFive();
                 page1.setText("1");
                 page2.setText("2");
@@ -111,16 +162,13 @@ public class ItemsActivity extends AppCompatActivity {
                 page5.setText("5");
                 enabled = true;
                 count = 5;
-            }
-            if (count == 7){
+            } else if (count == 7){
                 pageSix();
                 count = 6;
-            }
-            if (count == 8){
+            } else if (count == 8){
                 pageSeven();
                 count = 7;
-            }
-            if (count == 9){
+            } else if (count == 9){
                 pageEight();
                 count = 8;
             }
@@ -171,13 +219,6 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageNine() {
-        image1.setImageResource(R.drawable.i26);
-        image2.setImageResource(R.drawable.i27);
-        image3.setImageResource(0);
-
-        title1.setText("Ammi visnaga");
-        title2.setText("Paronychia argentea");
-        title3.setText("");
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.black));
@@ -194,13 +235,6 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageEight() {
-        image1.setImageResource(R.drawable.i23);
-        image2.setImageResource(R.drawable.i24);
-        image3.setImageResource(R.drawable.i25);
-
-        title1.setText("Trigonella foenum -graecum");
-        title2.setText("Curcuma longa");
-        title3.setText("Equisetaceaearvense");
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.black));
@@ -217,13 +251,6 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageSeven() {
-        image1.setImageResource(R.drawable.i20);
-        image2.setImageResource(R.drawable.i21);
-        image3.setImageResource(R.drawable.i22);
-
-        title1.setText("Pimpinella anisum");
-        title2.setText("Taraxacum officinale");
-        title3.setText("Eucalyptus camaldulensis ");
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.blue));
@@ -240,13 +267,6 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageSix() {
-        image1.setImageResource(R.drawable.i17);
-        image2.setImageResource(R.drawable.i18);
-        image3.setImageResource(R.drawable.i19);
-
-        title1.setText("Thymus vulgaris");
-        title2.setText("Myrtus communis");
-        title3.setText("Lavandula angustifolia");
 
         page1.setTextColor(getResources().getColor(R.color.blue));
         page2.setTextColor(getResources().getColor(R.color.black));
@@ -263,13 +283,6 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageFive() {
-        image1.setImageResource(R.drawable.i14);
-        image2.setImageResource(R.drawable.i15);
-        image3.setImageResource(R.drawable.i16);
-
-        title1.setText("Mellisa officinalis");
-        title2.setText("Hibiscus sabdariffa");
-        title3.setText("Calendula officinalis");
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.black));
@@ -286,13 +299,7 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageFour() {
-        image1.setImageResource(R.drawable.i11);
-        image2.setImageResource(R.drawable.i12);
-        image3.setImageResource(R.drawable.i13);
 
-        title1.setText("Senna alexandrina");
-        title2.setText("Camellia sinesis");
-        title3.setText("Panax quinquefol");
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.black));
@@ -309,13 +316,6 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageThree() {
-        image1.setImageResource(R.drawable.i7);
-        image2.setImageResource(R.drawable.i8);
-        image3.setImageResource(R.drawable.i9);
-
-        title1.setText("Rosmarinus officinalis");
-        title2.setText("Glycyrrhiza glabra");
-        title3.setText("Zingiber officinalle");
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.black));
@@ -332,13 +332,6 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageTwo() {
-        image1.setImageResource(R.drawable.i4);
-        image2.setImageResource(R.drawable.i5);
-        image3.setImageResource(R.drawable.i6);
-
-        title1.setText("Origanum syriacum");
-        title2.setText("Coeffia arabica");
-        title3.setText("Salvia officinalis");
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.blue));
@@ -355,18 +348,6 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageOne() {
-        image1.setImageResource(R.drawable.i1);
-        image2.setImageResource(R.drawable.i2);
-        image3.setImageResource(R.drawable.i3);
-        Toast.makeText(this, ""+count, Toast.LENGTH_SHORT).show();
-
-        title1.setText("Matricaria Chamomilla");
-        title2.setText("Nigella sativia");
-        title3.setText("Alo vera, Aloe barabadensis, Aloe capennsis");
-
-        image1.setOnClickListener(v-> {
-            startActivity(new Intent(this, HerbsActivity.class));
-        });
 
         page1.setTextColor(getResources().getColor(R.color.blue));
         page2.setTextColor(getResources().getColor(R.color.black));

@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 public class ItemDetailModel {
     int img;
-    String name;
+    String name, arabic_name;
     ArrayList<String> headings;
     String[] firstlist, secondList, thirdlist, fourthlist, fifthlist, sixthlist, seventhlst;
 
-    public ItemDetailModel(int img, String name) {
+    public ItemDetailModel(int img, String name, String arabic_name) {
         this.img = img;
         this.name = name;
+        this.arabic_name = arabic_name;
     }
 
     public ItemDetailModel(int img, String name, ArrayList<String> headings, String[] firstlist, String[] secondList, String[] thirdlist, String[] fourthlist, String[] fifthlist, String[] sixthlist, String[] seventhlst) {
@@ -136,5 +137,13 @@ public class ItemDetailModel {
 
     public void setSeventhlst(String[] seventhlst) {
         this.seventhlst = seventhlst;
+    }
+
+    public String getArabic_name() {
+        return arabic_name;
+    }
+
+    public void setArabic_name(String arabic_name) {
+        this.arabic_name = arabic_name;
     }
 }
