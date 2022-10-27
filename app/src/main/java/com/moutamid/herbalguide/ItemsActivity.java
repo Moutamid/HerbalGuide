@@ -242,6 +242,8 @@ public class ItemsActivity extends AppCompatActivity {
         getDetail23();
         getDetail24();
         getDetail25();
+        getDetail26();
+        getDetail27();
 
 
         model1 = new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "البابونج الحقيقي او الالماني", headings1, firstmsg1, seondmsg1, thirdmsg1, fourthmsg1, fifthmsg1, sixthmsg1);
@@ -276,8 +278,39 @@ public class ItemsActivity extends AppCompatActivity {
         model24 = new ItemDetailModel(R.drawable.i24, "Curcuma longa", "الكركم", headings24, firstmsg24, seondmsg24, thirdmsg24, fourthmsg24, fifthmsg24);
         model25 = new ItemDetailModel(R.drawable.i25, "Equisetaceaearvense", "ذنب الخيل", headings25, firstmsg25, seondmsg25, thirdmsg25, fourthmsg25, fifthmsg25);
 
-        model26 = new ItemDetailModel(R.drawable.i26, "Ammi visnaga", "الخلة");
-        model27 = new ItemDetailModel(R.drawable.i27, "Paronychia argentea", "زهرة الالماسة");
+        model26 = new ItemDetailModel(R.drawable.i26, "Ammi visnaga", "الخلة",  headings26, firstmsg26, seondmsg26, thirdmsg26, fourthmsg26, fifthmsg26);
+        model27 = new ItemDetailModel(R.drawable.i27, "Paronychia argentea", "زهرة الالماسة",  headings27, firstmsg27, seondmsg27, thirdmsg27, fourthmsg27, fifthmsg27);
+    }
+
+    private void getDetail26() {
+        headings26 = new String[] { };
+        firstmsg26 = new String[] { };
+        seondmsg26 = new String[] {  };
+        thirdmsg26 = new String[] {};
+        fourthmsg26 = new String[] {};
+        fifthmsg26 = new String[] {};
+    }
+
+    private void getDetail27() {
+        headings27 = new String[] {
+            "الاسم العلمي",
+                "الجزء المستخدم من النبات",
+                "الخصائص والاستخدامات الطبية",
+                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
+                "الاستخدام اثناء الحمل"
+        };
+        firstmsg27 = new String[] { "Paronychia argentea" };
+        seondmsg27 = new String[] { "جميع اجزاء النبات" };
+        thirdmsg27 = new String[] {
+                " يتمتع هذا النبات بخصائص مدرة للبول  وخصائص واقية ومنشطة للكلى  اضافة الى فعاليتها في تفتيت الحصيات في الكلى وتنظيفها من ترسبات الرمل.",
+                "تتمتع بفعالية خافضة لمستوى الدهون في الجسم.",
+                "لها فعالية مضادة للاسهال وطاردة للديدان وطاردة للغازات اضافة الى فعاليتها في علاج القروح والبثور .",
+        };
+        fourthmsg27 = new String[] {
+                "ان استهلاك هذا النبات بكميات كبيرة ولفترات طويلة قد يسبب اضطرابات في الجهاز الهضمي وتسبب حدوث الاسهال والغثيان والاقياء.",
+                "لا توجد ادلة ومعلومات عن تداخلات هذا العقار مع المستحضرات الدوائية."
+        };
+        fifthmsg27 = new String[] { "يعتبر هذا العقار غير امن خلال الحمل لانه يحرض انقباضات الرحم مما يزيد من خطر الاجهاض او الولادة المبكرة." };
     }
 
     private void getDetail25() {
