@@ -10,6 +10,9 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.moutamid.herbalguide.adapter.ItemAdapter;
+import com.moutamid.herbalguide.model.ItemDetailModel;
+
 import java.util.ArrayList;
 
 public class ItemsActivity extends AppCompatActivity {

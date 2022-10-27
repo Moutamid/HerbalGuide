@@ -1,8 +1,7 @@
-package com.moutamid.herbalguide;
+package com.moutamid.herbalguide.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.moutamid.herbalguide.HerbsActivity;
+import com.moutamid.herbalguide.model.ItemDetailModel;
+import com.moutamid.herbalguide.R;
 
 import java.util.ArrayList;
 import java.util.Collection;

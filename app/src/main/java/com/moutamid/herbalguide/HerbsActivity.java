@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.moutamid.herbalguide.adapter.DetailAdapter;
+import com.moutamid.herbalguide.model.ItemDetailModel;
+
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;

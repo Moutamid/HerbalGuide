@@ -1,4 +1,4 @@
-package com.moutamid.herbalguide;
+package com.moutamid.herbalguide.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
