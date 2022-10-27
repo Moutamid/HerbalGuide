@@ -104,7 +104,6 @@ public class ItemsActivity extends AppCompatActivity {
         prev = findViewById(R.id.backbtn);
 
         pageOne();
-        Toast.makeText(this, ""+count, Toast.LENGTH_SHORT).show();
 
         next.setOnClickListener(v -> {
             if (count == 1){

@@ -36,7 +36,7 @@ public class HerbsActivity extends AppCompatActivity {
         herb_name.setText(name);
 
         EvaluationBtn.setOnClickListener(v -> {
-            startActivity(new Intent(this, ThankYouActivity.class));
+            startActivity(new Intent(this, SurveyActivity.class));
         });
 
         backbtn.setOnClickListener(v -> {
