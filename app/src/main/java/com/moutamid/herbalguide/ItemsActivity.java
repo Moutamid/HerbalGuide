@@ -51,7 +51,7 @@ public class ItemsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(false);
 
-        list.add(new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "1-\tالبابونج الحقيقي او الالماني"));
+        list.add(new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "البابونج الحقيقي او الالماني"));
         list.add(new ItemDetailModel(R.drawable.i2, "Nigella sativia", "الحبة السوداء"));
         list.add(new ItemDetailModel(R.drawable.i3, "Alo vera, Aloe barabadensis, Aloe capennsis", "الصبار"));
         list.add(new ItemDetailModel(R.drawable.i4, "Origanum syriacum", "البردقوش "));
