@@ -105,6 +105,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/heading1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/scientificname"
@@ -113,7 +114,16 @@
                 android:gravity="end"
                 android:background="@drawable/border_full"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/heading1RC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/details_list_item"
+                android:visibility="gone" />
+
             <TextView
+                android:id="@+id/heading2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/thepartoftheplantused"
@@ -122,7 +132,16 @@
                 android:textColor="@color/black"
                 android:background="@drawable/border_half"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/heading2RC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/details_list_item"
+                android:visibility="gone" />
+
             <TextView
+                android:id="@+id/heading3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/medicine_properties_and_used"
@@ -132,7 +151,15 @@
                 android:background="@drawable/border_half"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/heading3RC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/details_list_item"
+                android:visibility="gone" />
+
             <TextView
+                android:id="@+id/heading4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/side_effects"
@@ -142,7 +169,15 @@
                 android:background="@drawable/border_half"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/heading4RC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/details_list_item"
+                android:visibility="gone" />
+
             <TextView
+                android:id="@+id/heading5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/contraindications"
@@ -152,7 +187,15 @@
                 android:background="@drawable/border_half"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/heading5RC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/details_list_item"
+                android:visibility="gone" />
+
             <TextView
+                android:id="@+id/heading6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/interaction_with_pharma"
@@ -162,6 +205,30 @@
                 android:background="@drawable/border_half"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/heading6RC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/details_list_item"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/heading7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/interaction_with_pharma"
+                android:padding="15dp"
+                android:gravity="end"
+                android:textColor="@color/black"
+                android:background="@drawable/border_half"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/heading7RC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/details_list_item"
+                android:visibility="gone" />
 
         </LinearLayout>
 

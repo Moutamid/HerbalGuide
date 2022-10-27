@@ -8,13 +8,14 @@
         <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/drawable/border_half.xml" value="0.201" />
         <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/drawable/edittext.xml" value="0.201" />
         <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/layout/activity_entry.xml" value="0.25" />
-        <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/layout/activity_herbs.xml" value="0.22" />
+        <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/layout/activity_herbs.xml" value="0.5" />
         <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/layout/activity_items.xml" value="0.25" />
         <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/layout/activity_register.xml" value="0.18" />
         <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
         <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/layout/activity_survey.xml" value="0.25" />
         <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/layout/activity_thank_you.xml" value="0.209375" />
+        <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/layout/details_list_item.xml" value="0.5" />
         <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/layout/fragment_one.xml" value="0.209375" />
         <entry key="..\:/BridgeLinxProject/HerbalGuide/app/src/main/res/layout/item_layout.xml" value="0.33" />
       </map>

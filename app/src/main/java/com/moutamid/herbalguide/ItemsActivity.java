@@ -18,30 +18,24 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ItemsActivity extends AppCompatActivity {
 
-    /*CircleImageView image1, image2, image3;
-    TextView title1, title2, title3;*/
     TextView page1, page2, page3, page4, page5;
     ImageView next, prev;
     boolean enabled = true;
     int count = 1;
     RecyclerView recyclerView;
-    ItemDetailModel model;
+    ItemDetailModel model1, model2, model3, model4, model5, model6, model7, model8, model9, model11, model12,
+    model13, model14, model15, model16, model17, model18, model19, model20, model21, model22, model23, model24, model25, model26, model27;
     ArrayList<ItemDetailModel> list;
     ItemAdapter adapter;
     SearchView searchView;
+    String[] headings1,	headings2,	headings3,	headings4,	headings5,	headings6,	headings7,	headings8,	headings9,	headings10,	headings11,	headings12,	headings13,	headings14,	headings15,	headings16,	headings17,	headings18,	headings19,	headings20,	headings21,	headings22,	headings23,	headings24,	headings25,	headings26,	headings27;
+    String[] firstmesg, secondmsg, thirdmsg, fourthmsg, fifthmsg, sixthmsg, sevnthmsg;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_items);
-
-        /*image1 = findViewById(R.id.image1);
-        image2 = findViewById(R.id.image2);
-        image3 = findViewById(R.id.image3);
-
-        title1 = findViewById(R.id.name1);
-        title2 = findViewById(R.id.name2);
-        title3 = findViewById(R.id.name3);*/
 
         list = new ArrayList<>();
 
@@ -51,43 +45,9 @@ public class ItemsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(false);
 
-        list.add(new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "البابونج الحقيقي او الالماني"));
-        list.add(new ItemDetailModel(R.drawable.i2, "Nigella sativia", "الحبة السوداء"));
-        list.add(new ItemDetailModel(R.drawable.i3, "Alo vera, Aloe barabadensis, Aloe capennsis", "الصبار"));
+        modelsAdd();
 
-        list.add(new ItemDetailModel(R.drawable.i4, "Origanum syriacum", "البردقوش "));
-        list.add(new ItemDetailModel(R.drawable.i5, "Coeffia arabica", "البن (القهوة)"));
-        list.add(new ItemDetailModel(R.drawable.i6, "Salvia officinalis", "المريمية"));
-
-        list.add(new ItemDetailModel(R.drawable.i7, "Rosmarinus officinalis", "اكليل الجبل"));
-        list.add(new ItemDetailModel(R.drawable.i8, "Glycyrrhiza glabra", "عرق السوس"));
-        list.add(new ItemDetailModel(R.drawable.i9, "Zingiber officinalle", "الزنجبيل"));
-
-        list.add(new ItemDetailModel(R.drawable.i11, "Senna alexandrina", "السنا"));
-        list.add(new ItemDetailModel(R.drawable.i12, "Camellia sinesis", "الشاي الاخضر"));
-        list.add(new ItemDetailModel(R.drawable.i13, "Panax quinquefol", "الجنسنغ( الامريكي )"));
-
-        list.add(new ItemDetailModel(R.drawable.i14, "Mellisa officinalis", "المليسة"));
-        list.add(new ItemDetailModel(R.drawable.i15, "Hibiscus sabdariffa", "الكركديه"));
-        list.add(new ItemDetailModel(R.drawable.i16, "Calendula officinalis", "الاقحوان"));
-
-        list.add(new ItemDetailModel(R.drawable.i17, "Thymus vulgaris", "الزعتر"));
-        list.add(new ItemDetailModel(R.drawable.i18, "Myrtus communis", "الاس (الريحان)"));
-        list.add(new ItemDetailModel(R.drawable.i19, "Lavandula angustifolia", "الخزامى"));
-
-        list.add(new ItemDetailModel(R.drawable.i20, "Pimpinella anisum", "اليانسون"));
-        list.add(new ItemDetailModel(R.drawable.i21, "Taraxacum officinale", "الهندباء "));
-        list.add(new ItemDetailModel(R.drawable.i22, "Eucalyptus camaldulensis", "الاوكاليبتوس ( الكافور)"));
-
-        list.add(new ItemDetailModel(R.drawable.i23, "Trigonella foenum -graecum", "الحلبة"));
-        list.add(new ItemDetailModel(R.drawable.i24, "Curcuma longa", "الكركم"));
-        list.add(new ItemDetailModel(R.drawable.i25, "Equisetaceaearvense", "ذنب الخيل"));
-
-        list.add(new ItemDetailModel(R.drawable.i26, "Ammi visnaga", "الخلة"));
-        list.add(new ItemDetailModel(R.drawable.i27, "Paronychia argentea", "زهرة الالماسة"));
-
-        adapter = new ItemAdapter(ItemsActivity.this, list);
-        recyclerView.setAdapter(adapter);
+        listAdd();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -225,9 +185,108 @@ public class ItemsActivity extends AppCompatActivity {
         });
     }
 
+    private void listAdd() {
+        list.add(model1);
+        list.add(model2);
+        list.add(model3);
+        list.add(model4);
+        list.add(model5);
+        list.add(model6);
+        list.add(model7);
+        list.add(model8);
+        list.add(model9);
+        list.add(model11);
+        list.add(model12);
+        list.add(model13);
+        list.add(model14);
+        list.add(model15);
+        list.add(model16);
+        list.add(model17);
+        list.add(model18);
+        list.add(model19);
+        list.add(model20);
+        list.add(model21);
+        list.add(model22);
+        list.add(model23);
+        list.add(model24);
+        list.add(model25);
+        list.add(model26);
+        list.add(model27);
+
+        adapter = new ItemAdapter(ItemsActivity.this, list);
+        recyclerView.setAdapter(adapter);
+    }
+
+    private void modelsAdd() {
+        headings1 = new String[]{
+                "الاسم العلمي",
+                "الجزء المستخدم",
+                "الاستخدامات  والخصائص الطبية",
+                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
+                "ينصحبعدم مشاركته مع بعض الاصناف الدوائية",
+                "الاستخدام اثناء الحمل"
+        };
+        firstmesg = new String[]{"(MatricariaChamomilla)"};
+        secondmsg = new String[]{"الرؤوس المزهرة والزيت العطري المستخرج منها"};
+        thirdmsg = new String[]{
+                "الازهار والزيت العطري يتمتعان بخواص مضادة للالتهاب,مزيلة لتشنجات العضلات الملساء,يساعد على ترميم الجروح والتقرحات,مضاد للبكتريا ومثبط لنموها.",
+                "يمكن ان يستخدم داخليا لعلاج تشنجات الجهاز الهضمي ولعلاج تخرش الاغشية المخاطية للفم والبلعوم والطرق التنفسية العلوية ويتمتع بفعالية لعلاج التهاب القصبات الهوائية المزمن والسعال الديكي ويستخدم لعلاج الحمى بسبب فعاليته كخافض للحرارة.",
+                "كذلك يمكن ان يستخدم موضعيا بشكل غرغرة لعلاج التهاب اللثة او بشكل نشوق لعلاج التهابات الجهاز التنفسي او بشكل غسول لعلاج التهابات المسالك التناسلية والتهاب الجلد والاغشية المخاطية وكذلك يمكن ان يستخدم بشكل حمامات للتخفيف من الام البواسيرولعلاج الامراض النسائية الالتهابية.",
+                "كما يستخدم كمهدئ ومزيل للقلق ."
+        };
+        fourthmsg = new String[]{
+                "التهاب الملتحمة الارجي, تهيج الجلد, اعراض تحسسية حادة (ضيق نفس حكة, طفح جلدي, ازيز).",
+                "لذلك يجب استخدام البابونج بحذر لدى الاشخاص الذين يعانون من حساسية لمكونات الزيت العطري وكذلك لدى الاشخاص الذين يعانون من حساسية شديدة من بعض الاعشاب كعشبة الرجيد(Ragweed)."
+        };
+        fifthmsg = new String[]{
+                "البنزوديزبينات حيث يطيل البابونج من التاثير المهدئ لهذه المركبات.",
+                "مضادات التخثر: قد يزيد تناول البابونج مع هذه الادوية من خطر  الاصابة بالنزيف.",
+                "الادوية التي تحوي الحديد في تركيبها:  حيث يقلل البابونج من امتصاص الحديد."
+        };
+        sixthmsg = new String[]{"يجب تجنب استخدام  عقار البابونج اثناء الحمل لانه قد يحرض الاجهاض كما ان بعض مكوناته قد سببت الضرر عند اجنة الحيوانات."};
+
+        model1 = new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "البابونج الحقيقي او الالماني", headings1, firstmesg, secondmsg, thirdmsg, fourthmsg, fifthmsg, sixthmsg);
+        model2 = new ItemDetailModel(R.drawable.i2, "Nigella sativia", "الحبة السوداء");
+        model3 = new ItemDetailModel(R.drawable.i3, "Alo vera, Aloe barabadensis, Aloe capennsis", "الصبار");
+
+        model4 = new ItemDetailModel(R.drawable.i4, "Origanum syriacum", "البردقوش ");
+        model5 = new ItemDetailModel(R.drawable.i5, "Coeffia arabica", "البن (القهوة)");
+        model6 = new ItemDetailModel(R.drawable.i6, "Salvia officinalis", "المريمية");
+
+        model7 = new ItemDetailModel(R.drawable.i7, "Rosmarinus officinalis", "اكليل الجبل");
+        model8 = new ItemDetailModel(R.drawable.i8, "Glycyrrhiza glabra", "عرق السوس");
+        model9 = new ItemDetailModel(R.drawable.i9, "Zingiber officinalle", "الزنجبيل");
+
+        model11 = new ItemDetailModel(R.drawable.i11, "Senna alexandrina", "السنا");
+        model12 = new ItemDetailModel(R.drawable.i12, "Camellia sinesis", "الشاي الاخضر");
+        model13 = new ItemDetailModel(R.drawable.i13, "Panax quinquefol", "الجنسنغ( الامريكي )");
+
+        model14 = new ItemDetailModel(R.drawable.i14, "Mellisa officinalis", "المليسة");
+        model15 = new ItemDetailModel(R.drawable.i15, "Hibiscus sabdariffa", "الكركديه");
+        model16 = new ItemDetailModel(R.drawable.i16, "Calendula officinalis", "الاقحوان");
+
+        model17 = new ItemDetailModel(R.drawable.i17, "Thymus vulgaris", "الزعتر");
+        model18 = new ItemDetailModel(R.drawable.i18, "Myrtus communis", "الاس (الريحان)");
+        model19 = new ItemDetailModel(R.drawable.i19, "Lavandula angustifolia", "الخزامى");
+
+        model20 = new ItemDetailModel(R.drawable.i20, "Pimpinella anisum", "اليانسون");
+        model21 = new ItemDetailModel(R.drawable.i21, "Taraxacum officinale", "الهندباء ");
+        model22 = new ItemDetailModel(R.drawable.i22, "Eucalyptus camaldulensis", "الاوكاليبتوس ( الكافور)");
+
+        model23 = new ItemDetailModel(R.drawable.i23, "Trigonella foenum -graecum", "الحلبة");
+        model24 = new ItemDetailModel(R.drawable.i24, "Curcuma longa", "الكركم");
+        model25 = new ItemDetailModel(R.drawable.i25, "Equisetaceaearvense", "ذنب الخيل");
+
+        model26 = new ItemDetailModel(R.drawable.i26, "Ammi visnaga", "الخلة");
+        model27 = new ItemDetailModel(R.drawable.i27, "Paronychia argentea", "زهرة الالماسة");
+    }
+
     private void pageNine() {
-        list.add(0, new ItemDetailModel(R.drawable.i26, "Ammi visnaga", "الخلة"));
-        list.add(1, new ItemDetailModel(R.drawable.i27, "Paronychia argentea", "زهرة الالماسة"));
+        list.remove(model26);
+        list.remove(model27);
+
+        list.add(0, model26);
+        list.add(1, model27);
         list.add(2, new ItemDetailModel(0, "", ""));
 
         adapter = new ItemAdapter(ItemsActivity.this, list);
@@ -248,9 +307,13 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageEight() {
-        list.add(0, new ItemDetailModel(R.drawable.i23, "Trigonella foenum -graecum", "الحلبة"));
-        list.add(1, new ItemDetailModel(R.drawable.i24, "Curcuma longa", "الكركم"));
-        list.add(2, new ItemDetailModel(R.drawable.i25, "Equisetaceaearvense", "ذنب الخيل"));
+        list.remove(model23);
+        list.remove(model24);
+        list.remove(model25);
+
+        list.add(0, model23);
+        list.add(1, model24);
+        list.add(2, model25);
 
         adapter = new ItemAdapter(ItemsActivity.this, list);
         recyclerView.setAdapter(adapter);
@@ -270,9 +333,13 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageSeven() {
-        list.add(0, new ItemDetailModel(R.drawable.i20, "Pimpinella anisum", "اليانسون"));
-        list.add(1, new ItemDetailModel(R.drawable.i21, "Taraxacum officinale", "الهندباء "));
-        list.add(2, new ItemDetailModel(R.drawable.i22, "Eucalyptus camaldulensis", "الاوكاليبتوس ( الكافور)"));
+        list.remove(model20);
+        list.remove(model21);
+        list.remove(model22);
+
+        list.add(0, model20);
+        list.add(1, model21);
+        list.add(2, model22);
 
         adapter = new ItemAdapter(ItemsActivity.this, list);
         recyclerView.setAdapter(adapter);
@@ -292,9 +359,13 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageSix() {
-        list.add(0, new ItemDetailModel(R.drawable.i17, "Thymus vulgaris", "الزعتر"));
-        list.add(1, new ItemDetailModel(R.drawable.i18, "Myrtus communis", "الاس (الريحان)"));
-        list.add(2, new ItemDetailModel(R.drawable.i19, "Lavandula angustifolia", "الخزامى"));
+        list.remove(model17);
+        list.remove(model18);
+        list.remove(model19);
+
+        list.add(0, model17);
+        list.add(1, model18);
+        list.add(2, model19);
 
         adapter = new ItemAdapter(ItemsActivity.this, list);
         recyclerView.setAdapter(adapter);
@@ -314,9 +385,13 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageFive() {
-        list.add(0, new ItemDetailModel(R.drawable.i14, "Mellisa officinalis", "المليسة"));
-        list.add(1, new ItemDetailModel(R.drawable.i15, "Hibiscus sabdariffa", "الكركديه"));
-        list.add(2, new ItemDetailModel(R.drawable.i16, "Calendula officinalis", "الاقحوان"));
+        list.remove(model14);
+        list.remove(model15);
+        list.remove(model16);
+
+        list.add(0, model14);
+        list.add(1, model15);
+        list.add(2, model16);
 
         adapter = new ItemAdapter(ItemsActivity.this, list);
         recyclerView.setAdapter(adapter);
@@ -336,9 +411,13 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageFour() {
-        list.add(0, new ItemDetailModel(R.drawable.i11, "Senna alexandrina", "السنا"));
-        list.add(1, new ItemDetailModel(R.drawable.i12, "Camellia sinesis", "الشاي الاخضر"));
-        list.add(2, new ItemDetailModel(R.drawable.i13, "Panax quinquefol", "الجنسنغ( الامريكي )"));
+        list.remove(model11);
+        list.remove(model12);
+        list.remove(model13);
+
+        list.add(0, model11);
+        list.add(1, model12);
+        list.add(2, model13);
 
         adapter = new ItemAdapter(ItemsActivity.this, list);
         recyclerView.setAdapter(adapter);
@@ -358,9 +437,13 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageThree() {
-        list.add(0, new ItemDetailModel(R.drawable.i7, "Rosmarinus officinalis", "اكليل الجبل"));
-        list.add(1, new ItemDetailModel(R.drawable.i8, "Glycyrrhiza glabra", "عرق السوس"));
-        list.add(2, new ItemDetailModel(R.drawable.i9, "Zingiber officinalle", "الزنجبيل"));
+        list.remove(model7);
+        list.remove(model8);
+        list.remove(model9);
+
+        list.add(0, model7);
+        list.add(1, model8);
+        list.add(2, model9);
 
         adapter = new ItemAdapter(ItemsActivity.this, list);
         recyclerView.setAdapter(adapter);
@@ -380,9 +463,13 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageTwo() {
-        list.add(0, new ItemDetailModel(R.drawable.i4, "Origanum syriacum", "البردقوش "));
-        list.add(1, new ItemDetailModel(R.drawable.i5, "Coeffia arabica", "البن (القهوة)"));
-        list.add(2, new ItemDetailModel(R.drawable.i6, "Salvia officinalis", "المريمية"));
+        list.remove(model4);
+        list.remove(model5);
+        list.remove(model6);
+
+        list.add(0, model4);
+        list.add(1, model5);
+        list.add(2, model6);
 
         adapter = new ItemAdapter(ItemsActivity.this, list);
         recyclerView.setAdapter(adapter);
@@ -403,9 +490,13 @@ public class ItemsActivity extends AppCompatActivity {
 
     private void pageOne() {
 
-        list.add(0, new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "البابونج الحقيقي او الالماني"));
-        list.add(1, new ItemDetailModel(R.drawable.i2, "Nigella sativia", "الحبة السوداء"));
-        list.add(2, new ItemDetailModel(R.drawable.i3, "Alo vera, Aloe barabadensis, Aloe capennsis", "الصبار"));
+        list.remove(model1);
+        list.remove(model2);
+        list.remove(model3);
+
+        list.add(0, model1);
+        list.add(1, model2);
+        list.add(2, model3);
 
         adapter = new ItemAdapter(ItemsActivity.this, list);
         recyclerView.setAdapter(adapter);

@@ -1,11 +1,12 @@
 package com.moutamid.herbalguide;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ItemDetailModel {
+public class ItemDetailModel implements Serializable {
     int img;
     String name, arabic_name;
-    ArrayList<String> headings;
+    String[] headings;
     String[] firstlist, secondList, thirdlist, fourthlist, fifthlist, sixthlist, seventhlst;
 
     public ItemDetailModel(int img, String name, String arabic_name) {
@@ -14,7 +15,7 @@ public class ItemDetailModel {
         this.arabic_name = arabic_name;
     }
 
-    public ItemDetailModel(int img, String name, ArrayList<String> headings, String[] firstlist, String[] secondList, String[] thirdlist, String[] fourthlist, String[] fifthlist, String[] sixthlist, String[] seventhlst) {
+    public ItemDetailModel(int img, String name, String arabic_name, String[] headings, String[] firstlist, String[] secondList, String[] thirdlist, String[] fourthlist, String[] fifthlist, String[] sixthlist, String[] seventhlst) {
         this.img = img;
         this.name = name;
         this.headings = headings;
@@ -25,9 +26,10 @@ public class ItemDetailModel {
         this.fifthlist = fifthlist;
         this.sixthlist = sixthlist;
         this.seventhlst = seventhlst;
+        this.arabic_name = arabic_name;
     }
 
-    public ItemDetailModel(int img, String name, ArrayList<String> headings, String[] firstlist, String[] secondList, String[] thirdlist, String[] fourthlist, String[] fifthlist, String[] sixthlist) {
+    public ItemDetailModel(int img, String name, String arabic_name, String[] headings, String[] firstlist, String[] secondList, String[] thirdlist, String[] fourthlist, String[] fifthlist, String[] sixthlist) {
         this.img = img;
         this.name = name;
         this.headings = headings;
@@ -37,9 +39,10 @@ public class ItemDetailModel {
         this.fourthlist = fourthlist;
         this.fifthlist = fifthlist;
         this.sixthlist = sixthlist;
+        this.arabic_name = arabic_name;
     }
 
-    public ItemDetailModel(int img, String name, ArrayList<String> headings, String[] firstlist, String[] secondList, String[] thirdlist, String[] fourthlist, String[] fifthlist) {
+    public ItemDetailModel(int img, String name, String arabic_name, String[] headings, String[] firstlist, String[] secondList, String[] thirdlist, String[] fourthlist, String[] fifthlist) {
         this.img = img;
         this.name = name;
         this.headings = headings;
@@ -48,15 +51,18 @@ public class ItemDetailModel {
         this.thirdlist = thirdlist;
         this.fourthlist = fourthlist;
         this.fifthlist = fifthlist;
+        this.arabic_name = arabic_name;
     }
 
-    public ItemDetailModel(int img, String name, String[] firstlist, String[] secondList, String[] thirdlist, String[] fourthlist) {
+    public ItemDetailModel(int img, String name, String arabic_name, String[] headings, String[] firstlist, String[] secondList, String[] thirdlist, String[] fourthlist) {
         this.img = img;
         this.name = name;
+        this.headings = headings;
         this.firstlist = firstlist;
         this.secondList = secondList;
         this.thirdlist = thirdlist;
         this.fourthlist = fourthlist;
+        this.arabic_name = arabic_name;
     }
 
     public int getImg() {
@@ -75,11 +81,11 @@ public class ItemDetailModel {
         this.name = name;
     }
 
-    public ArrayList<String> getHeadings() {
+    public String[] getHeadings() {
         return headings;
     }
 
-    public void setHeadings(ArrayList<String> headings) {
+    public void setHeadings(String[] headings) {
         this.headings = headings;
     }
 
