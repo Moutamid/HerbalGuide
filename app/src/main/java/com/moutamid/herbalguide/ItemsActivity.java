@@ -54,27 +54,35 @@ public class ItemsActivity extends AppCompatActivity {
         list.add(new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "البابونج الحقيقي او الالماني"));
         list.add(new ItemDetailModel(R.drawable.i2, "Nigella sativia", "الحبة السوداء"));
         list.add(new ItemDetailModel(R.drawable.i3, "Alo vera, Aloe barabadensis, Aloe capennsis", "الصبار"));
+
         list.add(new ItemDetailModel(R.drawable.i4, "Origanum syriacum", "البردقوش "));
         list.add(new ItemDetailModel(R.drawable.i5, "Coeffia arabica", "البن (القهوة)"));
         list.add(new ItemDetailModel(R.drawable.i6, "Salvia officinalis", "المريمية"));
+
         list.add(new ItemDetailModel(R.drawable.i7, "Rosmarinus officinalis", "اكليل الجبل"));
         list.add(new ItemDetailModel(R.drawable.i8, "Glycyrrhiza glabra", "عرق السوس"));
         list.add(new ItemDetailModel(R.drawable.i9, "Zingiber officinalle", "الزنجبيل"));
+
         list.add(new ItemDetailModel(R.drawable.i11, "Senna alexandrina", "السنا"));
         list.add(new ItemDetailModel(R.drawable.i12, "Camellia sinesis", "الشاي الاخضر"));
         list.add(new ItemDetailModel(R.drawable.i13, "Panax quinquefol", "الجنسنغ( الامريكي )"));
+
         list.add(new ItemDetailModel(R.drawable.i14, "Mellisa officinalis", "المليسة"));
         list.add(new ItemDetailModel(R.drawable.i15, "Hibiscus sabdariffa", "الكركديه"));
         list.add(new ItemDetailModel(R.drawable.i16, "Calendula officinalis", "الاقحوان"));
+
         list.add(new ItemDetailModel(R.drawable.i17, "Thymus vulgaris", "الزعتر"));
         list.add(new ItemDetailModel(R.drawable.i18, "Myrtus communis", "الاس (الريحان)"));
         list.add(new ItemDetailModel(R.drawable.i19, "Lavandula angustifolia", "الخزامى"));
+
         list.add(new ItemDetailModel(R.drawable.i20, "Pimpinella anisum", "اليانسون"));
         list.add(new ItemDetailModel(R.drawable.i21, "Taraxacum officinale", "الهندباء "));
         list.add(new ItemDetailModel(R.drawable.i22, "Eucalyptus camaldulensis", "الاوكاليبتوس ( الكافور)"));
+
         list.add(new ItemDetailModel(R.drawable.i23, "Trigonella foenum -graecum", "الحلبة"));
         list.add(new ItemDetailModel(R.drawable.i24, "Curcuma longa", "الكركم"));
         list.add(new ItemDetailModel(R.drawable.i25, "Equisetaceaearvense", "ذنب الخيل"));
+
         list.add(new ItemDetailModel(R.drawable.i26, "Ammi visnaga", "الخلة"));
         list.add(new ItemDetailModel(R.drawable.i27, "Paronychia argentea", "زهرة الالماسة"));
 
@@ -218,6 +226,12 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageNine() {
+        list.add(0, new ItemDetailModel(R.drawable.i26, "Ammi visnaga", "الخلة"));
+        list.add(1, new ItemDetailModel(R.drawable.i27, "Paronychia argentea", "زهرة الالماسة"));
+        list.add(2, new ItemDetailModel(0, "", ""));
+
+        adapter = new ItemAdapter(ItemsActivity.this, list);
+        recyclerView.setAdapter(adapter);
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.black));
@@ -234,6 +248,12 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageEight() {
+        list.add(0, new ItemDetailModel(R.drawable.i23, "Trigonella foenum -graecum", "الحلبة"));
+        list.add(1, new ItemDetailModel(R.drawable.i24, "Curcuma longa", "الكركم"));
+        list.add(2, new ItemDetailModel(R.drawable.i25, "Equisetaceaearvense", "ذنب الخيل"));
+
+        adapter = new ItemAdapter(ItemsActivity.this, list);
+        recyclerView.setAdapter(adapter);
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.black));
@@ -250,6 +270,12 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageSeven() {
+        list.add(0, new ItemDetailModel(R.drawable.i20, "Pimpinella anisum", "اليانسون"));
+        list.add(1, new ItemDetailModel(R.drawable.i21, "Taraxacum officinale", "الهندباء "));
+        list.add(2, new ItemDetailModel(R.drawable.i22, "Eucalyptus camaldulensis", "الاوكاليبتوس ( الكافور)"));
+
+        adapter = new ItemAdapter(ItemsActivity.this, list);
+        recyclerView.setAdapter(adapter);
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.blue));
@@ -266,6 +292,12 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageSix() {
+        list.add(0, new ItemDetailModel(R.drawable.i17, "Thymus vulgaris", "الزعتر"));
+        list.add(1, new ItemDetailModel(R.drawable.i18, "Myrtus communis", "الاس (الريحان)"));
+        list.add(2, new ItemDetailModel(R.drawable.i19, "Lavandula angustifolia", "الخزامى"));
+
+        adapter = new ItemAdapter(ItemsActivity.this, list);
+        recyclerView.setAdapter(adapter);
 
         page1.setTextColor(getResources().getColor(R.color.blue));
         page2.setTextColor(getResources().getColor(R.color.black));
@@ -282,6 +314,12 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageFive() {
+        list.add(0, new ItemDetailModel(R.drawable.i14, "Mellisa officinalis", "المليسة"));
+        list.add(1, new ItemDetailModel(R.drawable.i15, "Hibiscus sabdariffa", "الكركديه"));
+        list.add(2, new ItemDetailModel(R.drawable.i16, "Calendula officinalis", "الاقحوان"));
+
+        adapter = new ItemAdapter(ItemsActivity.this, list);
+        recyclerView.setAdapter(adapter);
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.black));
@@ -298,7 +336,12 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageFour() {
+        list.add(0, new ItemDetailModel(R.drawable.i11, "Senna alexandrina", "السنا"));
+        list.add(1, new ItemDetailModel(R.drawable.i12, "Camellia sinesis", "الشاي الاخضر"));
+        list.add(2, new ItemDetailModel(R.drawable.i13, "Panax quinquefol", "الجنسنغ( الامريكي )"));
 
+        adapter = new ItemAdapter(ItemsActivity.this, list);
+        recyclerView.setAdapter(adapter);
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.black));
@@ -315,6 +358,12 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageThree() {
+        list.add(0, new ItemDetailModel(R.drawable.i7, "Rosmarinus officinalis", "اكليل الجبل"));
+        list.add(1, new ItemDetailModel(R.drawable.i8, "Glycyrrhiza glabra", "عرق السوس"));
+        list.add(2, new ItemDetailModel(R.drawable.i9, "Zingiber officinalle", "الزنجبيل"));
+
+        adapter = new ItemAdapter(ItemsActivity.this, list);
+        recyclerView.setAdapter(adapter);
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.black));
@@ -331,6 +380,12 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageTwo() {
+        list.add(0, new ItemDetailModel(R.drawable.i4, "Origanum syriacum", "البردقوش "));
+        list.add(1, new ItemDetailModel(R.drawable.i5, "Coeffia arabica", "البن (القهوة)"));
+        list.add(2, new ItemDetailModel(R.drawable.i6, "Salvia officinalis", "المريمية"));
+
+        adapter = new ItemAdapter(ItemsActivity.this, list);
+        recyclerView.setAdapter(adapter);
 
         page1.setTextColor(getResources().getColor(R.color.black));
         page2.setTextColor(getResources().getColor(R.color.blue));
@@ -347,6 +402,13 @@ public class ItemsActivity extends AppCompatActivity {
     }
 
     private void pageOne() {
+
+        list.add(0, new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "البابونج الحقيقي او الالماني"));
+        list.add(1, new ItemDetailModel(R.drawable.i2, "Nigella sativia", "الحبة السوداء"));
+        list.add(2, new ItemDetailModel(R.drawable.i3, "Alo vera, Aloe barabadensis, Aloe capennsis", "الصبار"));
+
+        adapter = new ItemAdapter(ItemsActivity.this, list);
+        recyclerView.setAdapter(adapter);
 
         page1.setTextColor(getResources().getColor(R.color.blue));
         page2.setTextColor(getResources().getColor(R.color.black));
