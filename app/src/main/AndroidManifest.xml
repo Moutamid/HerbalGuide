@@ -16,13 +16,14 @@
         android:theme="@style/Theme.HerbalGuide"
         tools:targetApi="31">
         <activity
+            android:name=".ForgetActivity"
+            android:exported="false" />
+        <activity
             android:name=".HerbsActivity"
             android:exported="false" />
         <activity
             android:name=".ItemsActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".SurveyActivity"
             android:exported="false" />
