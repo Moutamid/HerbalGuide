@@ -6,135 +6,112 @@
     android:layout_height="match_parent"
     tools:context=".EntryActivity">
 
-    <LinearLayout
-        android:id="@+id/logo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_margin="12dp"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true">
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/herbal_logo"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/sf_ui_text_regular"
-            android:text="@string/app_name_A" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/sf_ui_text_regular"
-            android:text="@string/app_name_E" />
-
-    </LinearLayout>
-
-    <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/logo"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:background="@color/green_light" />
-
-    <EditText
-        android:id="@+id/emailNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/line"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="12dp"
-        android:background="@drawable/edittext"
-        android:fontFamily="@font/arial_regular"
-        android:hint="@string/email_mobile_hint"
-        android:inputType="textPersonName"
-        android:padding="15dp" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/emailNumber"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:background="@drawable/edittext"
-        android:padding="15dp"
-        android:gravity="end"
-        android:fontFamily="@font/arial_regular"
-        android:inputType="textPassword"
-        android:hint="@string/password_hint" />
-
-    <TextView
-        android:id="@+id/forgotPassword"
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/password"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
-        android:textSize="16sp"
-        android:fontFamily="@font/sf_ui_text_regular"
-        android:text="@string/forgot_your_password"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        android:layout_height="?actionBarSize"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:id="@+id/back"
+        android:paddingLeft="20dp"/>
 
-    <Button
-        android:id="@+id/entryBtn"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/forgotPassword"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
-        android:backgroundTint="@color/green_light"
-        android:padding="20dp"
-        android:text="@string/entry"
-        android:textAllCaps="false"
-        android:textSize="20sp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_below="@id/entryBtn">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/back"
+        android:layout_margin="20dp">
 
         <TextView
-            android:id="@+id/registerNow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/register_now"
+            android:id="@+id/text1"
+            android:text="@string/login_text1"
+            android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginEnd="8dp"
-            android:textSize="16sp"
-            android:fontFamily="@font/sf_ui_text_regular"
-            android:textStyle="bold" />
+            android:textSize="30sp"/>
 
         <TextView
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text2"
+            android:layout_below="@+id/text1"
+            android:text="@string/login_text2"
+            android:textSize="22sp"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/text2"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_mobile_hint" />
+
+            <EditText
+                android:id="@+id/emailNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text2"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/arial_regular"
+                android:gravity="left"
+                android:hint="@string/email_mobile_hint"
+                android:inputType="textPersonName"
+                android:padding="15dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/password_hint" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailNumber"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/arial_regular"
+                android:gravity="left"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:padding="15dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/entryBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_background2"
+                android:text="@string/entry"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/dont_have_account"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:fontFamily="@font/sf_ui_text_regular" />
+            android:id="@+id/registerNow"
+            android:layout_marginTop="8dp"
+            android:textColor="#FFC025"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_background"/>
 
-    </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

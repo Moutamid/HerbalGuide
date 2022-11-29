@@ -7,7 +7,7 @@
     tools:context=".HerbsActivity">
 
 
-    <LinearLayout
+  <!--  <LinearLayout
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,59 +43,81 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-    </LinearLayout>
+    </LinearLayout>-->
 
     <ImageView
         android:id="@+id/backbtn"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        app:tint="@color/blue"
-        android:layout_margin="15dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        />
 
-    <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/logo"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:background="@color/green_light" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/herb_img"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_below="@id/line"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="12dp"
-        app:civ_border_width="1dp"
-        app:civ_border_color="@color/border"
-        android:src="@drawable/i1"/>
-
-    <TextView
-        android:id="@+id/herb_name"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/herb_img"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/sf_ui_text_regular"
-        android:gravity="center"
-        android:text="Herb"
-        android:textColor="@color/green"
-        android:textSize="28sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/herbs"
+        android:layout_below="@id/backbtn">
+        <ImageView
+            android:id="@+id/herb_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/i1"
+            app:civ_border_color="@color/border"
+            app:civ_border_width="1dp" />
+
+        <!-- <TextView
+            android:id="@+id/herb_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/herb_img"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/backbtn"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/sf_ui_text_regular"
+            android:gravity="center"
+            android:text="Herb"
+            android:textColor="@color/green"
+            android:textSize="28sp"
+            android:textStyle="bold" />-->
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/evaluationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_background2"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:text="@string/evaluate_the_information"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/EvaluationBtn"
-        android:layout_below="@id/herb_name"
+        android:layout_below="@id/herbs"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp">
 
@@ -110,35 +132,48 @@
                 android:layout_height="wrap_content"
                 android:text="@string/scientificname"
                 android:padding="15dp"
+                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="end"
-                android:background="@drawable/border_full"
-                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                android:textStyle="bold"
+                android:gravity="end" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/heading1RC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/details_list_item"
-                android:visibility="gone" />
+                android:visibility="visible"
+                android:orientation="vertical"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/heading7RC"
+                android:background="@color/border" />
 
             <TextView
                 android:id="@+id/heading2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/thepartoftheplantused"
+                android:gravity="left"
                 android:padding="15dp"
-                android:gravity="end"
+                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:background="@drawable/border_half"
-                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                android:textStyle="bold"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/heading2RC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/details_list_item"
-                android:visibility="gone" />
+                android:visibility="visible"
+                android:orientation="vertical"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/heading7RC"
+                android:background="@color/border" />
+
 
             <TextView
                 android:id="@+id/heading3"
@@ -146,17 +181,23 @@
                 android:layout_height="wrap_content"
                 android:text="@string/medicine_properties_and_used"
                 android:padding="15dp"
+                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="end"
-                android:background="@drawable/border_half"
-                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                android:textStyle="bold"
+                android:gravity="left"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/heading3RC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/details_list_item"
-                android:visibility="gone" />
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/heading7RC"
+                android:background="@color/border" />
 
             <TextView
                 android:id="@+id/heading4"
@@ -164,17 +205,24 @@
                 android:layout_height="wrap_content"
                 android:text="@string/side_effects"
                 android:padding="15dp"
+                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="end"
-                android:background="@drawable/border_half"
-                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                android:textStyle="bold"
+                android:gravity="left"/>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/heading4RC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/details_list_item"
-                android:visibility="gone" />
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/heading7RC"
+                android:background="@color/border" />
 
             <TextView
                 android:id="@+id/heading5"
@@ -182,72 +230,73 @@
                 android:layout_height="wrap_content"
                 android:text="@string/contraindications"
                 android:padding="15dp"
+                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="end"
-                android:background="@drawable/border_half"
-                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                android:textStyle="bold"
+                android:gravity="left"/>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/heading5RC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/details_list_item"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/heading7RC"
+                android:background="@color/border" />
             <TextView
                 android:id="@+id/heading6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/interaction_with_pharma"
                 android:padding="15dp"
-                android:gravity="end"
+                android:gravity="left"
+                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:background="@drawable/border_half"
-                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                android:textStyle="bold"/>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/heading6RC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/details_list_item"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/heading7RC"
+                android:background="@color/border" />
             <TextView
                 android:id="@+id/heading7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/interaction_with_pharma"
                 android:padding="15dp"
-                android:gravity="end"
+                android:gravity="left"
+                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:background="@drawable/border_half"
-                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                android:textStyle="bold"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/heading7RC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/details_list_item"
-                android:visibility="gone" />
+                android:visibility="visible" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/heading7RC"
+                android:background="@color/border" />
 
         </LinearLayout>
 
     </ScrollView>
-
-
-    <Button
-        android:id="@+id/EvaluationBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
-        android:backgroundTint="@color/green_light"
-        android:padding="10dp"
-        android:text="@string/evaluate_the_information"
-        android:textAllCaps="false"
-        android:textSize="20sp" />
 
 </RelativeLayout>

@@ -1,21 +1,25 @@
 package com.moutamid.herbalguide;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class EntryActivity extends AppCompatActivity {
 
-    Button entry;
+    AppCompatButton entry;
     EditText email, password;
     ProgressDialog progressDialog;
     TextView registerNow;
+    private ImageView backImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +33,14 @@ public class EntryActivity extends AppCompatActivity {
 
         progressDialog = new ProgressDialog(EntryActivity.this);
         progressDialog.setMessage("تسجيل الدخول");
-
+        backImg = findViewById(R.id.back);
+        backImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), SplashScreenActivity.class));
+                finish();
+            }
+        });
         registerNow.setOnClickListener(v -> {
             startActivity(new Intent(this, RegisterActivity.class));
         });

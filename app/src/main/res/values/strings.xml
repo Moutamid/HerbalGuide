@@ -5,12 +5,17 @@
     <string name="welcomeText">أهلا بكم في تطبيق دليل الأعشاب الخاص بالممارسين الصحين</string>
     <string name="entry">دخول</string>
     <string name="or">أو</string>
+    <string name="text1">مرحبًا!</string>
+    <string name="login_text1">مرحبًا بعودتك!</string>
+    <string name="login_text2">الرجاء إدخال التفاصيل الخاصة بك</string>
+    <string name="register_text1">انشاء حساب جديد</string>
     <string name="register_now">سجل الان</string>
     <string name="email_mobile_hint">البريد الالكتروني / رقم الجوال</string>
     <string name="password_hint">كلمة المرور</string>
     <string name="forgot_your_password">نسيت كلمة المرور</string>
     <string name="dont_have_account">ليس لديك حساب ؟</string>
     <string name="the_name">الاسم</string>
+    <string name="the_other_name">العائلة</string>
     <string name="the_family"><![CDATA[العائلة ]]></string>
     <string name="function">الوظيفة</string>
     <string name="back_to_main_menu">العودة للقائمة الرئيسية</string>
@@ -37,4 +42,109 @@
     <string name="contraindications">ينصحبعدم مشاركته مع بعض الاصناف الدوائية</string>
     <string name="interaction_with_pharma">interaction With Pharma</string>
 
+    <string name="ques_head">يهدف تطبيق دليل الأعشاب الى تزويد صيادلة المجتمع بمصدر للمعلومات حول استخدامات الاعشاب الشائعة وتداخلاتها الدوائية.</string>
+
+    <string name="ques1">1. يمكن استخدام عقار الصبار لعلاج : </string>
+    <string name="ques2">	2. يتمتع الشاي الاخضر بالخصائص الطبية التالية ماعدا: </string>
+    <string name="ques3">3. الجزء الطبي المستخدم من عقار الخلة هو:</string>
+    <string name="ques4">4. يمكن استخدام عقار الكركم في الحالات التالية ما عدا:</string>
+    <string name="ques5">5. يمكن استخدام عقار الاوكاليبتوس لعلاج:</string>
+    <string name="ques6">6. يعتبر عقار ذنب الخيل فعال في علاج:</string>
+    <string name="ques7">7. يتمتع عقار مشرات الفوقس البحري بالخصائص والاستخدامات  الطبية التالية ماعدا:</string>
+    <string name="ques8">8. يمكن استخدام عقار عرق السوس في الحالات التالية ماعدا:</string>
+    <string name="ques9">9. يمكن استخدام عقار البابونج في الحالات التالية ماعدا:</string>
+    <string name="ques10">10. يستخدم عقار المليسة لعلاج :</string>
+    <string name="ques11">11. يتمتع عقار الجنسنغ بالخصائص والاستخدامات الطبية التالية ماعدا:</string>
+    <string name="ques12">12. اي من الاعشاب التالية يملك فعالية لعلاج الامساك والاسهال:</string>
+    <string name="ques13">13. يمكن استخدم عقار البردقوش لعلاج الحالات التالية ماعدا:</string>
+    <string name="ques14">14. يمنع استخدام عقار السنا في الحالات التالية ماعدا:</string>
+    <string name="ques15">15.  يمكن استخدام عقار الزعتر لعلاج:</string>
+    <string name="ques16">16. يمكن استخدام جذور الزنجبيل لعلاج الغثيان الصباحي لدى الحوامل:</string>
+    <string name="ques17">17. يمكن استخدام الاوكاليبتوس لعلاج السعال والتهاب المسالك التنفسية لدى الرضع والاطفال :</string>
+    <string name="ques18">18. ينصح الاشخاص المصابين بارتفاع الضغط الدموي وفرط نشاط الغدة  الدرقية والقرحة المعدية بعدم الاكثار من استهلاك القهوة:</string>
+    <string name="ques19">19. يمكن للاشخاص المصابين بالملاريا والذين يستخدمون دواء الكلوروكين  من استخدام الكركديه:</string>
+    <string name="ques20">20. يمكن للاشخاص الذين يستخدمون المهدئات من فئة البينزوديازبينات من استخدام الخزامى: </string>
+    <string name="ques21">21. يمكن استخدام عقار المريمية لعلاج فرط التعرق:</string>
+    <string name="ques22">22. يمكن استخدام الحبة السوداء لعلاج السعال والربو وامراض المفاصل:</string>
+    <string name="ques23">23. يمكن استخدام زهرة الالماسة لعلاج الرمل وحصوات الكلى لدى الحوامل:</string>
+    <string name="ques24">24. يمكن استخدام الاس لعلاج الالتهابات المصاحبة لنزلات البرد لدى الاطفال:</string>
+    <string name="ques25">25. يتمتع عقار اكليل الجبل بخصائص مقوية ومحسنة للذاكرة </string>
+
+    <string name="ques1_point1">فقدان الشهية</string>
+    <string name="ques1_point2">القلق والارق</string>
+    <string name="ques1_point3">الامساك</string>
+    <string name="ques1_point4">اضطرابات عسر الهضم</string>
+
+    <string name="ques2_point1">منشط للجهاز العصبي المركزي</string>
+    <string name="ques2_point2">يقلل من مستوى الدهون في الدم</string>
+    <string name="ques2_point3">يقلل من مستوى السكر في الدم</string>
+    <string name="ques2_point4">مهدىء وحال للقلق</string>
+
+    <string name="ques3_point1">الاوراق</string>
+    <string name="ques3_point2">الجذور</string>
+    <string name="ques3_point3">الثمار</string>
+    <string name="ques3_point4">النبات كاملا</string>
+
+    <string name="ques4_point1">اضطرابات عسر الهضم</string>
+    <string name="ques4_point2">فقدان الشهية</string>
+    <string name="ques4_point3">حصوات المرارة</string>
+    <string name="ques4_point4">للوقاية من تسمم الكبد</string>
+
+    <string name="ques5_point1">الامساك</string>
+    <string name="ques5_point2">اضطرابات عسر الهضم</string>
+    <string name="ques5_point3">السعال وتشنج القصبات</string>
+    <string name="ques5_point4">التهابات الامعاء والقنوات الصفراوية</string>
+
+    <string name="ques6_point1">التهابات المسالك البولية وحصوات الكلى والمثانة</string>
+    <string name="ques6_point2">الامساك</string>
+    <string name="ques6_point3">اضطرابات عسر الهضم</string>
+    <string name="ques6_point4">التهابات الجهاز الهضمي</string>
+
+    <string name="ques7_point1">يخفض مستوى السكر في الدم</string>
+    <string name="ques7_point2">فعال لعلاج السمنة وتخفيض الوزن</string>
+    <string name="ques7_point3">يستخدم لعلاج اضطرابات الغدة الدرقية</string>
+    <string name="ques7_point4">يستخدم لعلاج السعال</string>
+
+    <string name="ques8_point1">للوقاية من القرحة المعدية</string>
+    <string name="ques8_point2">لعلاج ارتفاع الضغط الدموي</string>
+    <string name="ques8_point3">لعلاج التهاب الكبد الفيروسي</string>
+    <string name="ques8_point4">لعلاج التهاب المعدة</string>
+
+    <string name="ques9_point1">لعلاج السعال والتهاب الشعب التنفسية</string>
+    <string name="ques9_point2">لعلاج التهاب الاغشية المخاطية في الجهازين التنفسي والهضمي</string>
+    <string name="ques9_point3">لعلاج التهاب الجلد والجروح والقروح</string>
+    <string name="ques9_point4">لعلاج التهابات المسالك البولية</string>
+
+    <string name="ques10_point1">فقدان الشهية واضطرابات عسر الهضم</string>
+    <string name="ques10_point2">ارتفاع الضغط الدموي</string>
+    <string name="ques10_point3">التهابات الجهاز التنفسي</string>
+    <string name="ques10_point4">الارق والعصبية واضطرابات النوم</string>
+
+    <string name="ques11_point1">معزز للمناعة</string>
+    <string name="ques11_point2">محفز للجهاز العصبي المركزي</string>
+    <string name="ques11_point3">مضاد للسرطان</string>
+    <string name="ques11_point4">فعال في علاج اضطرابات والتهابات الجهاز الهضمي</string>
+
+    <string name="ques12_point1">الصبار</string>
+    <string name="ques12_point2">السنا</string>
+    <string name="ques12_point3">البيسيليوم</string>
+    <string name="ques12_point4">النعناع البري</string>
+
+    <string name="ques13_point1">الاضطرابات الهضمية والتهابات الجهاز التنفسي</string>
+    <string name="ques13_point2">التهابات المجاري البولية وحصوات الكلى والمثانة</string>
+    <string name="ques13_point3">اضطرابات الهرمونات والدورة الشهرية</string>
+    <string name="ques13_point4">يساعد لعلاج متلازمة المبيض متعدد الكيسات</string>
+
+    <string name="ques14_point1">الانسداد المعوي</string>
+    <string name="ques14_point2">التهاب الزائدة الدودية</string>
+    <string name="ques14_point3">الامساك</string>
+    <string name="ques14_point4">التهاب الامعاء الحاد</string>
+
+    <string name="ques15_point1">فقدان الشهية</string>
+    <string name="ques15_point2">اضطرابات عسر الهضم</string>
+    <string name="ques15_point3">التهابات الجهاز الهضمي والبولي</string>
+    <string name="ques15_point4">السعال والتهابات الجهاز التنفسي</string>
+
+    <string name="ques16_point1">صح</string>
+    <string name="ques16_point2">خطا</string>
 </resources>

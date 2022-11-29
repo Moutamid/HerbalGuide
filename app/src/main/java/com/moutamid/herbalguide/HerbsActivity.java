@@ -1,9 +1,11 @@
 package com.moutamid.herbalguide;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,24 +22,23 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HerbsActivity extends AppCompatActivity {
 
-    Button EvaluationBtn;
+    AppCompatButton EvaluationBtn;
     ItemDetailModel model;
-    DetailAdapter adapter;
-    CircleImageView herb_img;
+    ImageView herb_img;
     TextView herb_name, heading1, heading2, heading3, heading4, heading5, heading6, heading7;
     ImageView backbtn;
     RecyclerView heading1RC, heading2RC, heading3RC, heading4RC, heading5RC, heading6RC, heading7RC;
     String[] headings, msg1, msg2, msg3, msg4, msg5, msg6, msg7;
     int len;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_herbs);
 
-        EvaluationBtn = findViewById(R.id.EvaluationBtn);
+        EvaluationBtn = findViewById(R.id.evaluationBtn);
         herb_img = findViewById(R.id.herb_img);
-        herb_name = findViewById(R.id.herb_name);
         backbtn = findViewById(R.id.backbtn);
 
         heading1 = findViewById(R.id.heading1);
@@ -78,7 +79,6 @@ public class HerbsActivity extends AppCompatActivity {
 
 
         herb_img.setImageResource(model.getImg());
-        herb_name.setText(model.getName());
 
         len = headings.length;
 
@@ -222,35 +222,6 @@ public class HerbsActivity extends AppCompatActivity {
             getDetails7();
 
         }
-
-        heading1.setOnClickListener(v -> {
-            int vv = (heading1RC.getVisibility() == View.GONE) ? View.VISIBLE : View.GONE;
-            heading1RC.setVisibility(vv);
-        });
-        heading2.setOnClickListener(v -> {
-            int vv = (heading2RC.getVisibility() == View.GONE) ? View.VISIBLE : View.GONE;
-            heading2RC.setVisibility(vv);
-        });
-        heading3.setOnClickListener(v -> {
-            int vv = (heading3RC.getVisibility() == View.GONE) ? View.VISIBLE : View.GONE;
-            heading3RC.setVisibility(vv);
-        });
-        heading4.setOnClickListener(v -> {
-            int vv = (heading4RC.getVisibility() == View.GONE) ? View.VISIBLE : View.GONE;
-            heading4RC.setVisibility(vv);
-        });
-        heading5.setOnClickListener(v -> {
-            int vv = (heading5RC.getVisibility() == View.GONE) ? View.VISIBLE : View.GONE;
-            heading5RC.setVisibility(vv);
-        });
-        heading6.setOnClickListener(v -> {
-            int vv = (heading6RC.getVisibility() == View.GONE) ? View.VISIBLE : View.GONE;
-            heading6RC.setVisibility(vv);
-        });
-        heading7.setOnClickListener(v -> {
-            int vv = (heading7RC.getVisibility() == View.GONE) ? View.VISIBLE : View.GONE;
-            heading7RC.setVisibility(vv);
-        });
 
         EvaluationBtn.setOnClickListener(v -> {
             startActivity(new Intent(this, SurveyActivity.class));

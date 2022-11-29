@@ -46,7 +46,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemVH> implem
         ItemDetailModel model = list.get(position);
         holder.image.setImageResource(model.getImg());
         holder.name.setText(model.getName());
-        holder.image.setOnClickListener(v -> {
+        holder.name2.setText(model.getArabic_name());
+        holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, HerbsActivity.class);
             intent.putExtra("model", model);
             context.startActivity(intent);
@@ -55,9 +56,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemVH> implem
 
     @Override
     public int getItemCount() {
-        if (list.size() > 3){
-            return i;
-        }
         return list.size();
     }
 
@@ -100,11 +98,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemVH> implem
 
     public class ItemVH extends RecyclerView.ViewHolder{
         CircleImageView image;
-        TextView name;
+        TextView name,name2;
         public ItemVH(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.image1);
             name = itemView.findViewById(R.id.name1);
+            name2 = itemView.findViewById(R.id.name);
         }
     }
 }

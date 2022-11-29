@@ -10,45 +10,44 @@
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_margin="12dp"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true">
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/herbal_logo"/>
+            android:src="@drawable/logo" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="18sp"
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical"
             android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/sf_ui_text_regular"
-            android:text="@string/app_name_A" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:layout_marginLeft="8dp"
             android:fontFamily="@font/sf_ui_text_regular"
             android:text="@string/app_name_E" />
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/sf_ui_text_regular"
+            android:text="@string/text1" />
+
     </LinearLayout>
 
-    <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/logo"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:background="@color/green_light" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_view"
@@ -57,14 +56,13 @@
         android:background="@drawable/edittext"
         app:queryHint=" الرجاء تحديد البحث المطلوب"
         app:iconifiedByDefault="false"
-        android:layout_below="@id/line"
+        android:layout_below="@id/logo"
         android:layout_margin="16dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/itemsRC"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/pagination"
+        android:layout_height="match_parent"
         android:layout_below="@id/search_view" />
 
     <!--<ScrollView
@@ -172,79 +170,85 @@
 
     </ScrollView>-->
 
-    <LinearLayout
+    <!--<LinearLayout
         android:id="@+id/pagination"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:layout_margin="12dp"
-        android:gravity="center">
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/backbtn"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_margin="8dp"
-            android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
-            android:background="@drawable/edittext" />
+            android:background="@drawable/edittext"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
 
         <TextView
             android:id="@+id/p1"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:text="1"
-            android:gravity="center"
             android:layout_margin="8dp"
-            android:textColor="@color/blue"
-            android:background="@drawable/border_blue" />
+            android:background="@drawable/border_blue"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/blue" />
 
         <TextView
             android:id="@+id/p2"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:text="2"
-            android:gravity="center"
             android:layout_margin="8dp"
-            android:textColor="@color/black"
-            android:background="@drawable/edittext" />
+            android:background="@drawable/edittext"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/black" />
+
         <TextView
             android:id="@+id/p3"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:text="3"
-            android:textColor="@color/black"
-            android:gravity="center"
             android:layout_margin="8dp"
-            android:background="@drawable/edittext" />
+            android:background="@drawable/edittext"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/black" />
+
         <TextView
             android:id="@+id/p4"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:text="4"
-            android:textColor="@color/black"
-            android:gravity="center"
             android:layout_margin="8dp"
-            android:background="@drawable/edittext" />
+            android:background="@drawable/edittext"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/black" />
+
         <TextView
             android:id="@+id/p5"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:text="5"
-            android:textColor="@color/black"
-            android:gravity="center"
             android:layout_margin="8dp"
-            android:background="@drawable/edittext" />
+            android:background="@drawable/edittext"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/black" />
 
         <ImageView
             android:id="@+id/nextBtn"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_margin="8dp"
-            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
-            android:background="@drawable/edittext" />
+            android:background="@drawable/edittext"
+            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
-    </LinearLayout>
+    </LinearLayout>-->
 
 
 </RelativeLayout>

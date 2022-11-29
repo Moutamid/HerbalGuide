@@ -17,24 +17,25 @@ import java.util.ArrayList;
 
 public class ItemsActivity extends AppCompatActivity {
 
-    TextView page1, page2, page3, page4, page5;
-    ImageView next, prev;
+  //  TextView page1, page2, page3, page4, page5;
+  //  ImageView next, prev;
     boolean enabled = true;
     int count = 1;
     RecyclerView recyclerView;
     ItemDetailModel model1, model2, model3, model4, model5, model6, model7, model8, model9, model11, model12,
-            model13, model14, model15, model16, model17, model18, model19, model20, model21, model22, model23, model24, model25, model26, model27;
+            model13, model14, model15, model16, model17, model18, model19, model20, model21, model22, model23,
+            model24, model25, model26, model27,model28,model29,model30,model31,model32,model33;
     ArrayList<ItemDetailModel> list;
     ItemAdapter adapter;
     SearchView searchView;
 
-    String[] headings1, headings2, headings3, headings4, headings5, headings6, headings7, headings8, headings9, headings10, headings11, headings12, headings13, headings14, headings15, headings16, headings17, headings18, headings19, headings20, headings21, headings22, headings23, headings24, headings25, headings26, headings27;
-    String[] firstmsg1, firstmsg2, firstmsg3, firstmsg4, firstmsg5, firstmsg6, firstmsg7, firstmsg8, firstmsg9, firstmsg10, firstmsg11, firstmsg12, firstmsg13, firstmsg14, firstmsg15, firstmsg16, firstmsg17, firstmsg18, firstmsg19, firstmsg20, firstmsg21, firstmsg22, firstmsg23, firstmsg24, firstmsg25, firstmsg26, firstmsg27;
-    String[] seondmsg1, seondmsg2, seondmsg3, seondmsg4, seondmsg5, seondmsg6, seondmsg7, seondmsg8, seondmsg9, seondmsg10, seondmsg11, seondmsg12, seondmsg13, seondmsg14, seondmsg15, seondmsg16, seondmsg17, seondmsg18, seondmsg19, seondmsg20, seondmsg21, seondmsg22, seondmsg23, seondmsg24, seondmsg25, seondmsg26, seondmsg27;
-    String[] thirdmsg1, thirdmsg2, thirdmsg3, thirdmsg4, thirdmsg5, thirdmsg6, thirdmsg7, thirdmsg8, thirdmsg9, thirdmsg10, thirdmsg11, thirdmsg12, thirdmsg13, thirdmsg14, thirdmsg15, thirdmsg16, thirdmsg17, thirdmsg18, thirdmsg19, thirdmsg20, thirdmsg21, thirdmsg22, thirdmsg23, thirdmsg24, thirdmsg25, thirdmsg26, thirdmsg27;
-    String[] fourthmsg1, fourthmsg2, fourthmsg3, fourthmsg4, fourthmsg5, fourthmsg6, fourthmsg7, fourthmsg8, fourthmsg9, fourthmsg10, fourthmsg11, fourthmsg12, fourthmsg13, fourthmsg14, fourthmsg15, fourthmsg16, fourthmsg17, fourthmsg18, fourthmsg19, fourthmsg20, fourthmsg21, fourthmsg22, fourthmsg23, fourthmsg24, fourthmsg25, fourthmsg26, fourthmsg27;
-    String[] fifthmsg1, fifthmsg2, fifthmsg3, fifthmsg4, fifthmsg5, fifthmsg6, fifthmsg7, fifthmsg8, fifthmsg9, fifthmsg10, fifthmsg11, fifthmsg12, fifthmsg13, fifthmsg14, fifthmsg15, fifthmsg16, fifthmsg17, fifthmsg18, fifthmsg19, fifthmsg20, fifthmsg21, fifthmsg22, fifthmsg23, fifthmsg24, fifthmsg25, fifthmsg26, fifthmsg27;
-    String[] sixthmsg1, sixthmsg2, sixthmsg3, sixthmsg4, sixthmsg5, sixthmsg6, sixthmsg7, sixthmsg8, sixthmsg9, sixthmsg10, sixthmsg11, sixthmsg12, sixthmsg13, sixthmsg14, sixthmsg15, sixthmsg16, sixthmsg17, sixthmsg18, sixthmsg19, sixthmsg20, sixthmsg21, sixthmsg22, sixthmsg23, sixthmsg24, sixthmsg25, sixthmsg26, sixthmsg27;
+    String[] headings1, headings2, headings3, headings4, headings5, headings6, headings7, headings8, headings9, headings10, headings11, headings12, headings13, headings14, headings15, headings16, headings17, headings18, headings19, headings20, headings21, headings22, headings23, headings24, headings25, headings26, headings27,headings28,headings29,headings30,headings31,headings32,headings33;
+    String[] firstmsg1, firstmsg2, firstmsg3, firstmsg4, firstmsg5, firstmsg6, firstmsg7, firstmsg8, firstmsg9, firstmsg10, firstmsg11, firstmsg12, firstmsg13, firstmsg14, firstmsg15, firstmsg16, firstmsg17, firstmsg18, firstmsg19, firstmsg20, firstmsg21, firstmsg22, firstmsg23, firstmsg24, firstmsg25, firstmsg26, firstmsg27,firstmsg28,firstmsg29,firstmsg30,firstmsg31,firstmsg32,firstmsg33;
+    String[] seondmsg1, seondmsg2, seondmsg3, seondmsg4, seondmsg5, seondmsg6, seondmsg7, seondmsg8, seondmsg9, seondmsg10, seondmsg11, seondmsg12, seondmsg13, seondmsg14, seondmsg15, seondmsg16, seondmsg17, seondmsg18, seondmsg19, seondmsg20, seondmsg21, seondmsg22, seondmsg23, seondmsg24, seondmsg25, seondmsg26, seondmsg27,seondmsg28,seondmsg29,seondmsg30,seondmsg31,seondmsg32,seondmsg33;
+    String[] thirdmsg1, thirdmsg2, thirdmsg3, thirdmsg4, thirdmsg5, thirdmsg6, thirdmsg7, thirdmsg8, thirdmsg9, thirdmsg10, thirdmsg11, thirdmsg12, thirdmsg13, thirdmsg14, thirdmsg15, thirdmsg16, thirdmsg17, thirdmsg18, thirdmsg19, thirdmsg20, thirdmsg21, thirdmsg22, thirdmsg23, thirdmsg24, thirdmsg25, thirdmsg26, thirdmsg27,thirdmsg28,thirdmsg29,thirdmsg30,thirdmsg31,thirdmsg32,thirdmsg33;
+    String[] fourthmsg1, fourthmsg2, fourthmsg3, fourthmsg4, fourthmsg5, fourthmsg6, fourthmsg7, fourthmsg8, fourthmsg9, fourthmsg10, fourthmsg11, fourthmsg12, fourthmsg13, fourthmsg14, fourthmsg15, fourthmsg16, fourthmsg17, fourthmsg18, fourthmsg19, fourthmsg20, fourthmsg21, fourthmsg22, fourthmsg23, fourthmsg24, fourthmsg25, fourthmsg26, fourthmsg27,fourthmsg28,fourthmsg29,fourthmsg30,fourthmsg31,fourthmsg32,fourthmsg33;
+    String[] fifthmsg1, fifthmsg2, fifthmsg3, fifthmsg4, fifthmsg5, fifthmsg6, fifthmsg7, fifthmsg8, fifthmsg9, fifthmsg10, fifthmsg11, fifthmsg12, fifthmsg13, fifthmsg14, fifthmsg15, fifthmsg16, fifthmsg17, fifthmsg18, fifthmsg19, fifthmsg20, fifthmsg21, fifthmsg22, fifthmsg23, fifthmsg24, fifthmsg25, fifthmsg26, fifthmsg27,fifthmsg28,fifthmsg29,fifthmsg30,fifthmsg31,fifthmsg32,fifthmsg33;
+    String[] sixthmsg1, sixthmsg2, sixthmsg3, sixthmsg4, sixthmsg5, sixthmsg6, sixthmsg7, sixthmsg8, sixthmsg9, sixthmsg10, sixthmsg11, sixthmsg12, sixthmsg13, sixthmsg14, sixthmsg15, sixthmsg16, sixthmsg17, sixthmsg18, sixthmsg19, sixthmsg20, sixthmsg21, sixthmsg22, sixthmsg23, sixthmsg24, sixthmsg25, sixthmsg26, sixthmsg27,sixthmsg28,sixthmsg29,sixthmsg30,sixthmsg32;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +51,7 @@ public class ItemsActivity extends AppCompatActivity {
 
         modelsAdd();
 
-        listAdd();
+       // listAdd();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -65,127 +66,7 @@ public class ItemsActivity extends AppCompatActivity {
             }
         });
 
-        page1 = findViewById(R.id.p1);
-        page2 = findViewById(R.id.p2);
-        page3 = findViewById(R.id.p3);
-        page4 = findViewById(R.id.p4);
-        page5 = findViewById(R.id.p5);
 
-        next = findViewById(R.id.nextBtn);
-        prev = findViewById(R.id.backbtn);
-
-        pageOne();
-
-        next.setOnClickListener(v -> {
-            if (count == 1) {
-                pageTwo();
-                count = 2;
-            } else if (count == 2) {
-                pageThree();
-                count = 3;
-            } else if (count == 3) {
-                pageFour();
-                count = 4;
-            } else if (count == 4) {
-                pageFive();
-                count = 5;
-            } else if (count == 5) {
-                pageSix();
-                page1.setText("6");
-                page2.setText("7");
-                page3.setText("8");
-                page4.setText("9");
-                page5.setText("10");
-                enabled = false;
-                count = 6;
-            } else if (count == 6) {
-                pageSeven();
-                count = 7;
-            } else if (count == 7) {
-                pageEight();
-                count = 8;
-            } else if (count == 8) {
-                pageNine();
-                count = 9;
-            }
-        });
-
-        prev.setOnClickListener(v -> {
-            if (count == 2) {
-                pageOne();
-                count = 1;
-            } else if (count == 3) {
-                pageTwo();
-                count = 2;
-            } else if (count == 4) {
-                pageThree();
-                count = 3;
-            } else if (count == 5) {
-                pageFour();
-                count = 4;
-            } else if (count == 6) {
-                pageFive();
-                page1.setText("1");
-                page2.setText("2");
-                page3.setText("3");
-                page4.setText("4");
-                page5.setText("5");
-                enabled = true;
-                count = 5;
-            } else if (count == 7) {
-                pageSix();
-                count = 6;
-            } else if (count == 8) {
-                pageSeven();
-                count = 7;
-            } else if (count == 9) {
-                pageEight();
-                count = 8;
-            }
-        });
-
-        page1.setOnClickListener(v -> {
-            if (enabled) {
-                pageOne();
-                count = 1;
-            } else {
-                pageSix();
-                count = 6;
-            }
-        });
-        page2.setOnClickListener(v -> {
-            if (enabled) {
-                pageTwo();
-                count = 2;
-            } else {
-                pageSeven();
-                count = 7;
-            }
-        });
-        page3.setOnClickListener(v -> {
-            if (enabled) {
-                pageThree();
-                count = 3;
-            } else {
-                pageEight();
-                count = 8;
-            }
-        });
-        page4.setOnClickListener(v -> {
-            if (enabled) {
-                pageFour();
-                count = 4;
-            } else {
-                pageNine();
-                count = 9;
-            }
-        });
-        page5.setOnClickListener(v -> {
-            if (enabled) {
-                pageFive();
-                count = 5;
-            }
-        });
     }
 
     private void listAdd() {
@@ -215,7 +96,12 @@ public class ItemsActivity extends AppCompatActivity {
         list.add(model25);
         list.add(model26);
         list.add(model27);
-
+        list.add(model28);
+        list.add(model29);
+        list.add(model30);
+        list.add(model31);
+        list.add(model32);
+        list.add(model33);
         adapter = new ItemAdapter(ItemsActivity.this, list);
         recyclerView.setAdapter(adapter);
     }
@@ -248,6 +134,12 @@ public class ItemsActivity extends AppCompatActivity {
         getDetail26();
         getDetail27();
 
+        getDetail28();
+        getDetail29();
+        getDetail30();
+        getDetail31();
+        getDetail32();
+        getDetail33();
 
         model1 = new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "البابونج الحقيقي او الالماني", headings1, firstmsg1, seondmsg1, thirdmsg1, fourthmsg1, fifthmsg1, sixthmsg1);
         model2 = new ItemDetailModel(R.drawable.i2, "Nigella sativia", "الحبة السوداء", headings2, firstmsg2, seondmsg2, thirdmsg2, fourthmsg2, fifthmsg2, sixthmsg2);
@@ -283,6 +175,19 @@ public class ItemsActivity extends AppCompatActivity {
 
         model26 = new ItemDetailModel(R.drawable.i26, "Ammi visnaga", "الخلة",  headings26, firstmsg26, seondmsg26, thirdmsg26, fourthmsg26, fifthmsg26);
         model27 = new ItemDetailModel(R.drawable.i27, "Paronychia argentea", "زهرة الالماسة",  headings27, firstmsg27, seondmsg27, thirdmsg27, fourthmsg27, fifthmsg27);
+
+
+        model28 = new ItemDetailModel(R.drawable.i28, "Avena sativa", "قشور الشوفان", headings28, firstmsg28, seondmsg28, thirdmsg28, fourthmsg28);
+        model29 = new ItemDetailModel(R.drawable.i29, "Fucus vesiculosus", "مشرات الفوقس البحري", headings29, firstmsg29, seondmsg29, thirdmsg29, fourthmsg29, fifthmsg29);
+        model30 = new ItemDetailModel(R.drawable.i30, "Linum usitatissimum", "الكتان", headings30, firstmsg30, seondmsg30, thirdmsg30, fourthmsg30, fifthmsg30);
+
+        model31 = new ItemDetailModel(R.drawable.i31, "Mentha piperita", "النعناع البري",  headings31, firstmsg31, seondmsg31, thirdmsg31, fourthmsg31, fifthmsg31);
+        model32 = new ItemDetailModel(R.drawable.i32, "Plantago ovata forssk", "البسيلليوم",  headings32, firstmsg32, seondmsg32, thirdmsg32, fourthmsg32, fifthmsg32);
+        model33 = new ItemDetailModel(R.drawable.i33, "Cuminum cyminum", "الكمون",
+                headings33, firstmsg33, seondmsg33, thirdmsg33, fourthmsg33);
+
+        listAdd();
+
     }
 
     private void getDetail26() {
@@ -311,6 +216,159 @@ public class ItemsActivity extends AppCompatActivity {
         fifthmsg26 = new String[] {
                 "يعتبر هذا العقار غير امن اثناء الحمل وذلك يرجع لوجود مركب الخلين الذي يمكن ان يسبب  تقلصات للرحم مما يزيد من خطر حدوث اجهاض."
         };
+    }
+
+    private void getDetail29() {
+        headings29 = new String[] {
+                "الاسم العلمي",
+                "الجزء المستخدم من النبات",
+                "الخصائص والاستخداماتالطبية",
+                "الاثار الجانبية وموانع الاستحدام والتداخلات الدوائية",
+                "الاستخدام اثناء الحمل"
+        };
+        firstmsg29 = new String[] { "Fucus vesiculosus" };
+        seondmsg29 = new String[] { "جميع اجزاء النبات" };
+        thirdmsg29 = new String[] {
+          //      " يتمتع هذا العقار بالخصائص الطبية التالية",
+                "مضاد للبكتريا",
+                "يؤثر على مستوى السكر في الدم",
+                "يستخدم لعلاج اضطرابات الغدة الدرقية بسبب محتواه العالي من اليود",
+                "يمتلك فعالية في تخفيض الوزن وعلاج السمنة."
+        };
+        fourthmsg29 = new String[] {
+                "بسبب محتواه العالي والمتغير(0.03-1%) من اليود قد يسبب تحريض او فرط نشاط الغدة الدرقية ايضا لوحظ  انه من الممكن حدوت تفاعلات تحسسية."
+        };
+        fifthmsg29 = new String[] {
+                "ينصح بعدم استخدام مشرات الفوقس البحري مع الادوية الخافضة لمستوى السكر في الدم."
+        };
+        sixthmsg29 = new String[] {
+                "يمنع استخدام مشرات الفوقس البحري اثناء الحمل لانه يعتبر غير امن خلال هذه الفترة."
+        };
+
+    }
+
+    private void getDetail30() {
+        headings30 = new String[] {
+                "الاسم العلمي",
+                "الجزء المستخدم من النبات",
+                "الخصائص والاستخداماتالطبية",
+                "الاثار الجانبية وموانع الاستحدام والتداخلات الدوائية",
+                "الاستخدام اثناء الحمل"
+        };
+        firstmsg30 = new String[] { "Linum usitatissimum" };
+        seondmsg30 = new String[] { "البذور  والزيت المستخرج منها" };
+        thirdmsg30 = new String[] {
+              //  " يتمتع هذا العقار بالخصائص الطبية التالية",
+                "ملين",
+                "خافض لمستوى الكولسترول في الدم",
+                "خافض لمستوى السكر في الدم",
+                "مضاد للاورام",
+                "مضاد للاكسدة",
+                "مضاد للفطريات",
+                "يستخدم لعلاج الامساك",
+                "يستخدم لعلاج التهاب الجلد",
+                "يمكن ان تستخدم بذور الكتان  خارجيا لاخراج الاجسام الغريبة من العين"
+        };
+        fourthmsg30 = new String[] {
+                "يمنع استخدام الكتان في حال وجود امراض التهابية حادة في المري او المعدة او الامعاء ."
+        };
+        fifthmsg30 = new String[] {
+                "بالجرعات العلاجية لم يسجل اثار جانبية الا انه استهلاكه بكميات كبيرة يمكن ان يسبب ضعف في حركة الامعاء"
+        };
+        sixthmsg30 = new String[] {
+                "استخدام الكتان مع الادوية في وقت واحد قد يؤخر امتصاص الادوية."
+        };
+
+    }
+
+    private void getDetail31() {
+        headings31 = new String[] {
+                "الاسم العلمي",
+                "الجزء المستخدم من النبات",
+                "الخصائص والاستخداماتالطبية",
+                "الاثار الجانبية وموانع الاستحدام والتداخلات الدوائية"
+        };
+        firstmsg31 = new String[] { "Mentha piperita" };
+        seondmsg31 = new String[] { "النبات المجفف." };
+        thirdmsg31 = new String[] {
+                "طارد للريح",
+                "منشط",
+                "يستخدم لعلاج اضطرابات الجهاز الهضمي خاصة الانتفاخ."
+        };
+        fourthmsg31 = new String[] {
+                "لا توجد اثار جانبية او مخاطر من استخدام النعناع  البري بالجرعات العلاجية دون الافراط باستخدامه."
+        };
+
+
+    }
+
+    private void getDetail32() {
+        headings32 = new String[] {
+                "الاسم العلمي",
+                "الجزء المستخدم من النبات",
+                "الخصائص والاستخدامات الطبية",
+                "الاثارالجانبية وموانع الاستخدام والتداخلات الدوائية",
+                "الاستخدام اثناء الحمل"
+        };
+        firstmsg32 = new String[] { "Plantago ovata forssk" };
+        seondmsg32 = new String[] { "البذور الناضجة" };
+        thirdmsg32 = new String[] {
+                "ملين لمعالجة حالات الامساك",
+                "وكذلك يستخدم لعلاج الاسهال"
+        };
+        fourthmsg32 = new String[] {
+                "يمنع استخدام البسيلليوم في حال وجود امراض التهابية في الجهاز الهضمي وكذلك من قبل مرضى السكري الذين مستوى السكر في الدم لديهم متغير بشدة.",
+                "قد يسبب استخدام البسيلليوم اثار جانبية ردود فعل تحسسية ( التهاب انف,ربو شرى, التهاب ملتحمة) يمكن ان يسبب استخدام البسيلليوم في حال عدم تناول كميات كافية من السوائل انسداد في المري او الامعاء خاصة لدى كبار السن. "
+        };
+
+        fifthmsg32 = new String[] {
+                "قد يسبب استخدام البسيلليوم مع الادوية في نفس الوقت نقص في امتصاص الادوية."
+        };
+        sixthmsg32 = new String[] {
+                "ينصح بعدم استخدامه اثناء الحمل لعدم توفر معلومات وادلة مثبتة عن امان استخدامه اثناء هذه الفترة."
+        };
+        // fifthmsg27 = new String[] { "يعتبر هذا العقار غير امن خلال الحمل لانه يحرض انقباضات الرحم مما يزيد من خطر الاجهاض او الولادة المبكرة." };
+    }
+
+    private void getDetail33() {
+        headings33 = new String[] {
+                "الاسم العلمي",
+                "الجزء المستخدم من النبات",
+                "الخصائص والاستخدامات الطبية",
+                "موانع الاستخدام والاثار الجانبية"
+        };
+        firstmsg33 = new String[] { "Cuminum cyminum" };
+        seondmsg33 = new String[] { "الثمارالناضجة والزيت المستخرج منها" };
+        thirdmsg33 = new String[] {
+                "مضاد للميكروبات",
+                "مضاد لتخثر الدم",
+                "تاثير مشابه لتاثير هرمون الاستروجين",
+                "طارد للريح",
+                "منشط ومسكن",
+                "اضافة الى تاثيرات اخرى لكن لا توجد نتائج تجريبية لها( مدر للبول مثير للشهوة الجنسية, مضاد للتشنج)"
+        };
+        fourthmsg33 = new String[] {
+                "يعتبر الكمون امن اذا استخدم بالجرعات العلاجية دون الافراط باستخدامه."
+        };
+        // fifthmsg27 = new String[] { "يعتبر هذا العقار غير امن خلال الحمل لانه يحرض انقباضات الرحم مما يزيد من خطر الاجهاض او الولادة المبكرة." };
+    }
+
+    private void getDetail28() {
+        headings28 = new String[] {
+                "الاسم العلمي",
+                "الجزء المستخدم من النبات",
+                "الخصائص والاستخدامات الطبية",
+                "موانع الاستخدام والاثار الجانبية"
+        };
+        firstmsg28 = new String[] { "Avena sativa" };
+        seondmsg28 = new String[] { "القشور التي تغطي الثمار" };
+        thirdmsg28 = new String[] {
+                "يستخدم  قشور الشوفان لعلاج التهاب الجلد والبثور"
+        };
+        fourthmsg28 = new String[] {
+                "لم تسجل اثار جانبية او مخاطر لقشور الشوفان في حال استخدمت بالجرعات العلاجية دون الافراط بالاستخدام"
+        };
+       // fifthmsg27 = new String[] { "يعتبر هذا العقار غير امن خلال الحمل لانه يحرض انقباضات الرحم مما يزيد من خطر الاجهاض او الولادة المبكرة." };
     }
 
     private void getDetail27() {
@@ -370,11 +428,11 @@ public class ItemsActivity extends AppCompatActivity {
 
     private void getDetail24() {
         headings24 = new String[] {
-                "•\tالاسم العلمي",
-                "•\tالجزء المستخدم من النبات",
-                "•\tالخصائص والاستخدامات الطبية",
-                "•\tالاثارالجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "•\tالاستخدام اثناء الحمل"
+                "الاسم العلمي",
+                "الجزء المستخدم من النبات",
+                "الخصائص والاستخدامات الطبية",
+                "الاثارالجانبية وموانع الاستخدام والتداخلات الدوائية",
+                "الاستخدام اثناء الحمل"
         };
         firstmsg24 = new String[] { "Curcuma longa" };
         seondmsg24 = new String[] { "جذامير النبات" };
@@ -1033,236 +1091,5 @@ public class ItemsActivity extends AppCompatActivity {
 
     }
 
-    private void pageNine() {
-        list.remove(model26);
-        list.remove(model27);
 
-        list.add(0, model26);
-        list.add(1, model27);
-        list.add(2, new ItemDetailModel(0, "", ""));
-
-        adapter = new ItemAdapter(ItemsActivity.this, list);
-        recyclerView.setAdapter(adapter);
-
-        page1.setTextColor(getResources().getColor(R.color.black));
-        page2.setTextColor(getResources().getColor(R.color.black));
-        page3.setTextColor(getResources().getColor(R.color.black));
-        page4.setTextColor(getResources().getColor(R.color.blue));
-        page5.setTextColor(getResources().getColor(R.color.blue));
-        page5.setVisibility(View.GONE);
-
-        page1.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page2.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page3.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page4.setBackground(getResources().getDrawable(R.drawable.border_blue));
-        page5.setBackground(getResources().getDrawable(R.drawable.border_blue));
-    }
-
-    private void pageEight() {
-        list.remove(model23);
-        list.remove(model24);
-        list.remove(model25);
-
-        list.add(0, model23);
-        list.add(1, model24);
-        list.add(2, model25);
-
-        adapter = new ItemAdapter(ItemsActivity.this, list);
-        recyclerView.setAdapter(adapter);
-
-        page1.setTextColor(getResources().getColor(R.color.black));
-        page2.setTextColor(getResources().getColor(R.color.black));
-        page3.setTextColor(getResources().getColor(R.color.blue));
-        page4.setTextColor(getResources().getColor(R.color.black));
-        page5.setTextColor(getResources().getColor(R.color.black));
-        page5.setVisibility(View.GONE);
-
-        page1.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page2.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page3.setBackground(getResources().getDrawable(R.drawable.border_blue));
-        page4.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page5.setBackground(getResources().getDrawable(R.drawable.edittext));
-    }
-
-    private void pageSeven() {
-        list.remove(model20);
-        list.remove(model21);
-        list.remove(model22);
-
-        list.add(0, model20);
-        list.add(1, model21);
-        list.add(2, model22);
-
-        adapter = new ItemAdapter(ItemsActivity.this, list);
-        recyclerView.setAdapter(adapter);
-
-        page1.setTextColor(getResources().getColor(R.color.black));
-        page2.setTextColor(getResources().getColor(R.color.blue));
-        page3.setTextColor(getResources().getColor(R.color.black));
-        page4.setTextColor(getResources().getColor(R.color.black));
-        page5.setTextColor(getResources().getColor(R.color.black));
-        page5.setVisibility(View.GONE);
-
-        page1.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page2.setBackground(getResources().getDrawable(R.drawable.border_blue));
-        page3.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page4.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page5.setBackground(getResources().getDrawable(R.drawable.edittext));
-    }
-
-    private void pageSix() {
-        list.remove(model17);
-        list.remove(model18);
-        list.remove(model19);
-
-        list.add(0, model17);
-        list.add(1, model18);
-        list.add(2, model19);
-
-        adapter = new ItemAdapter(ItemsActivity.this, list);
-        recyclerView.setAdapter(adapter);
-
-        page1.setTextColor(getResources().getColor(R.color.blue));
-        page2.setTextColor(getResources().getColor(R.color.black));
-        page3.setTextColor(getResources().getColor(R.color.black));
-        page4.setTextColor(getResources().getColor(R.color.black));
-        page5.setTextColor(getResources().getColor(R.color.black));
-        page5.setVisibility(View.GONE);
-
-        page1.setBackground(getResources().getDrawable(R.drawable.border_blue));
-        page2.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page3.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page4.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page5.setBackground(getResources().getDrawable(R.drawable.edittext));
-    }
-
-    private void pageFive() {
-        list.remove(model14);
-        list.remove(model15);
-        list.remove(model16);
-
-        list.add(0, model14);
-        list.add(1, model15);
-        list.add(2, model16);
-
-        adapter = new ItemAdapter(ItemsActivity.this, list);
-        recyclerView.setAdapter(adapter);
-
-        page1.setTextColor(getResources().getColor(R.color.black));
-        page2.setTextColor(getResources().getColor(R.color.black));
-        page3.setTextColor(getResources().getColor(R.color.black));
-        page4.setTextColor(getResources().getColor(R.color.black));
-        page5.setTextColor(getResources().getColor(R.color.blue));
-        page5.setVisibility(View.VISIBLE);
-
-        page1.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page2.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page3.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page4.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page5.setBackground(getResources().getDrawable(R.drawable.border_blue));
-    }
-
-    private void pageFour() {
-        list.remove(model11);
-        list.remove(model12);
-        list.remove(model13);
-
-        list.add(0, model11);
-        list.add(1, model12);
-        list.add(2, model13);
-
-        adapter = new ItemAdapter(ItemsActivity.this, list);
-        recyclerView.setAdapter(adapter);
-
-        page1.setTextColor(getResources().getColor(R.color.black));
-        page2.setTextColor(getResources().getColor(R.color.black));
-        page3.setTextColor(getResources().getColor(R.color.black));
-        page4.setTextColor(getResources().getColor(R.color.blue));
-        page5.setTextColor(getResources().getColor(R.color.black));
-        page5.setVisibility(View.VISIBLE);
-
-        page1.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page2.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page3.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page4.setBackground(getResources().getDrawable(R.drawable.border_blue));
-        page5.setBackground(getResources().getDrawable(R.drawable.edittext));
-    }
-
-    private void pageThree() {
-        list.remove(model7);
-        list.remove(model8);
-        list.remove(model9);
-
-        list.add(0, model7);
-        list.add(1, model8);
-        list.add(2, model9);
-
-        adapter = new ItemAdapter(ItemsActivity.this, list);
-        recyclerView.setAdapter(adapter);
-
-        page1.setTextColor(getResources().getColor(R.color.black));
-        page2.setTextColor(getResources().getColor(R.color.black));
-        page3.setTextColor(getResources().getColor(R.color.blue));
-        page4.setTextColor(getResources().getColor(R.color.black));
-        page5.setTextColor(getResources().getColor(R.color.black));
-        page5.setVisibility(View.VISIBLE);
-
-        page1.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page2.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page3.setBackground(getResources().getDrawable(R.drawable.border_blue));
-        page4.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page5.setBackground(getResources().getDrawable(R.drawable.edittext));
-    }
-
-    private void pageTwo() {
-        list.remove(model4);
-        list.remove(model5);
-        list.remove(model6);
-
-        list.add(0, model4);
-        list.add(1, model5);
-        list.add(2, model6);
-
-        adapter = new ItemAdapter(ItemsActivity.this, list);
-        recyclerView.setAdapter(adapter);
-
-        page1.setTextColor(getResources().getColor(R.color.black));
-        page2.setTextColor(getResources().getColor(R.color.blue));
-        page3.setTextColor(getResources().getColor(R.color.black));
-        page4.setTextColor(getResources().getColor(R.color.black));
-        page5.setTextColor(getResources().getColor(R.color.black));
-        page5.setVisibility(View.VISIBLE);
-
-        page1.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page2.setBackground(getResources().getDrawable(R.drawable.border_blue));
-        page3.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page4.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page5.setBackground(getResources().getDrawable(R.drawable.edittext));
-    }
-
-    private void pageOne() {
-
-        list.remove(model1);
-        list.remove(model2);
-        list.remove(model3);
-
-        list.add(0, model1);
-        list.add(1, model2);
-        list.add(2, model3);
-
-        adapter = new ItemAdapter(ItemsActivity.this, list);
-        recyclerView.setAdapter(adapter);
-
-        page1.setTextColor(getResources().getColor(R.color.blue));
-        page2.setTextColor(getResources().getColor(R.color.black));
-        page3.setTextColor(getResources().getColor(R.color.black));
-        page4.setTextColor(getResources().getColor(R.color.black));
-        page5.setTextColor(getResources().getColor(R.color.black));
-
-        page1.setBackground(getResources().getDrawable(R.drawable.border_blue));
-        page2.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page3.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page4.setBackground(getResources().getDrawable(R.drawable.edittext));
-        page5.setBackground(getResources().getDrawable(R.drawable.edittext));
-    }
 }

@@ -10,8 +10,8 @@
 
     <color name="blue">#3F48CC</color>
     <color name="green">#22B14C</color>
-    <color name="green_light">#8DBF43</color>
-    <color name="statusBr">#6527B148</color>
+    <color name="green_light">#FFC025</color>
+    <color name="statusBr">#FFC025</color>
     <color name="border">#888888</color>
 
 </resources>

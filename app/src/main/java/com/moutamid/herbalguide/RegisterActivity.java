@@ -1,22 +1,26 @@
 package com.moutamid.herbalguide;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.moutamid.herbalguide.model.UserModel;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    Button registerBtn;
+    AppCompatButton registerBtn;
     UserModel userModel;
     EditText nameEt, familyEt, emailNumber, password, functionEt;
     ProgressDialog progressDialog;
+    private ImageView backImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +32,19 @@ public class RegisterActivity extends AppCompatActivity {
         familyEt = findViewById(R.id.familyEt);
         emailNumber = findViewById(R.id.emailNumber);
         password = findViewById(R.id.password);
-        functionEt = findViewById(R.id.familyEt);
+        functionEt = findViewById(R.id.functionEt);
 
         progressDialog = new ProgressDialog(RegisterActivity.this);
         progressDialog.setMessage("إنشاء حسابك");
+
+        backImg = findViewById(R.id.back);
+        backImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), SplashScreenActivity.class));
+                finish();
+            }
+        });
 
         registerBtn.setOnClickListener(v -> {
             if (validate()){

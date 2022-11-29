@@ -9,150 +9,160 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:id="@+id/logo"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:id="@+id/back"
+                android:paddingLeft="20dp"/>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_margin="12dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_alignParentTop="true">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/herbal_logo"/>
+                android:layout_below="@+id/back"
+                android:layout_margin="20dp">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="18sp"
+                    android:id="@+id/text1"
+                    android:text="@string/register_text1"
                     android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/sf_ui_text_regular"
-                    android:text="@string/app_name_A" />
+                    android:textColor="@color/black"
+                    android:textSize="30sp"/>
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/sf_ui_text_regular"
-                    android:text="@string/app_name_E" />
+                    android:id="@+id/text2"
+                    android:layout_below="@+id/text1"
+                    android:text="@string/login_text2"
+                    android:textSize="22sp"/>
 
-            </LinearLayout>
-
-            <View
-                android:id="@+id/line"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@id/logo"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="25dp"
-                android:background="@color/green_light" />
-
-            <LinearLayout
-                android:id="@+id/edittextLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="12dp"
-                android:layout_below="@id/line"
-                android:orientation="vertical">
-
-                <EditText
-                    android:id="@+id/nameEt"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/line"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="12dp"
-                    android:hint="@string/the_name"
-                    android:background="@drawable/edittext"
-                    android:fontFamily="@font/arial_regular"
-                    android:inputType="textPersonName"
-                    android:padding="15dp" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/linearlayout"
+                    android:layout_below="@id/text2"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="30dp">
 
-                <EditText
-                    android:id="@+id/familyEt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/line"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginEnd="12dp"
-                    android:background="@drawable/edittext"
-                    android:fontFamily="@font/arial_regular"
-                    android:hint="@string/the_family"
-                    android:inputType="textPersonName"
-                    android:padding="15dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/the_name"
+                        />
+                    <EditText
+                        android:id="@+id/nameEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/the_name"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/person"
+                        android:drawablePadding="8dp"
+                        android:gravity="left"
+                        android:fontFamily="@font/arial_regular"
+                        android:inputType="textPersonName"
+                        android:padding="15dp" />
 
-                <EditText
-                    android:id="@+id/emailNumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/line"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginEnd="12dp"
-                    android:background="@drawable/edittext"
-                    android:fontFamily="@font/arial_regular"
-                    android:hint="@string/email_mobile_hint"
-                    android:inputType="textPersonName"
-                    android:padding="15dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/the_other_name"
+                        android:layout_marginTop="8dp"/>
+                    <EditText
+                        android:id="@+id/familyEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/arial_regular"
+                        android:hint="@string/the_family"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/person"
+                        android:drawablePadding="8dp"
+                        android:gravity="left"
+                        android:inputType="textPersonName"
+                        android:padding="15dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email_mobile_hint"
+                        android:layout_marginTop="8dp"/>
+                    <EditText
+                        android:id="@+id/emailNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
+                        android:drawablePadding="8dp"
+                        android:gravity="left"
+                        android:fontFamily="@font/arial_regular"
+                        android:hint="@string/email_mobile_hint"
+                        android:inputType="textEmailAddress"
+                        android:padding="15dp" />
 
-                <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/emailNumber"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginEnd="12dp"
-                    android:background="@drawable/edittext"
-                    android:padding="15dp"
-                    android:gravity="end"
-                    android:fontFamily="@font/arial_regular"
-                    android:inputType="textPassword"
-                    android:hint="@string/password_hint" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/password_hint"
+                        android:layout_marginTop="8dp"/>
 
-                <EditText
-                    android:id="@+id/functionEt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/emailNumber"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginEnd="12dp"
-                    android:background="@drawable/edittext"
-                    android:padding="15dp"
-                    android:fontFamily="@font/arial_regular"
-                    android:inputType="textPersonName"
-                    android:hint="@string/function" />
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/ic_baseline_lock_24"
+                        android:drawablePadding="8dp"
+                        android:gravity="left"
+                        android:fontFamily="@font/arial_regular"
+                        android:inputType="textPassword"
+                        android:hint="@string/password_hint" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/function"
+                        android:layout_marginTop="8dp"/>
 
-            <Button
-                android:id="@+id/registerBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/edittextLayout"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="12dp"
-                android:backgroundTint="@color/green_light"
-                android:padding="20dp"
-                android:text="@string/register_now"
-                android:textAllCaps="false"
-                android:textSize="20sp" />
+                    <EditText
+                        android:id="@+id/functionEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/ic_baseline_lock_24"
+                        android:drawablePadding="8dp"
+                        android:gravity="left"
+                        android:padding="15dp"
+                        android:fontFamily="@font/arial_regular"
+                        android:inputType="textPassword"
+                        android:hint="@string/function" />
+
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/register_now"
+                        android:id="@+id/registerBtn"
+                        android:textSize="20sp"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/white"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_background2"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
 
         </RelativeLayout>
 
