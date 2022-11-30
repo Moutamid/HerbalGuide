@@ -35,18 +35,6 @@ public class SplashScreenActivity extends AppCompatActivity {
                 finish();
             }
         });
-       /* new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (Constants.auth().getCurrentUser() != null) {
-                    startActivity(new Intent(SplashScreenActivity.this, ItemsActivity.class));
-                    finish();
-                } else {
-                    startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
-                    finish();
-                }
-            }
-        }, 2000);*/
     }
 
     @Override
