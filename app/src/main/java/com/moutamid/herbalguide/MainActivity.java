@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup group1,group2,group3,group4,group5,group6,group7,group8,group9,group10,group11,group12,group13,group14,group15,group16,group17,group18,group19,group20,group21,group22,group23,group24,group25;
     private AppCompatButton submitBtn;
     private boolean sent = false;
+    int selectedId1,selectedId2,selectedId3,selectedId4,selectedId5,selectedId6,selectedId7,selectedId8,selectedId9,selectedId10,selectedId11,selectedId12,selectedId13,selectedId14,selectedId15,selectedId16,selectedId17,selectedId18,selectedId19,selectedId20,selectedId21,selectedId22,selectedId23,selectedId24,selectedId25 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,10 +103,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId1 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId1);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques1),String.valueOf(radioButton.getText())));
             }
         });
@@ -114,10 +115,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId2 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId2);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques2),String.valueOf(radioButton.getText())));
             }
         });
@@ -126,10 +127,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId3 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId3);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques3),String.valueOf(radioButton.getText())));
             }
         });
@@ -138,10 +139,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId4 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId4);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques4),String.valueOf(radioButton.getText())));
             }
         });
@@ -150,10 +151,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId5 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId5);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques5),String.valueOf(radioButton.getText())));
             }
         });
@@ -162,10 +163,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId6 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId6);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques6),String.valueOf(radioButton.getText())));
             }
         });
@@ -174,10 +175,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId7 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId7);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques7),String.valueOf(radioButton.getText())));
             }
         });
@@ -186,10 +187,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId8 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId8);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques8),String.valueOf(radioButton.getText())));            }
         });
 
@@ -197,10 +198,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId9 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId9);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques9),String.valueOf(radioButton.getText())));
             }
         });
@@ -209,10 +210,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId10 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId10);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques10),String.valueOf(radioButton.getText())));
             }
         });
@@ -221,10 +222,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId11 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId11);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques11),String.valueOf(radioButton.getText())));
             }
         });
@@ -233,10 +234,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId12 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId12);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques12),String.valueOf(radioButton.getText())));
             }
         });
@@ -245,10 +246,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId13 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId13);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques13),String.valueOf(radioButton.getText())));
             }
         });
@@ -257,10 +258,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId14 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId14);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques14),String.valueOf(radioButton.getText())));
             }
         });
@@ -269,10 +270,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId15 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId15);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques15),String.valueOf(radioButton.getText())));
             }
         });
@@ -281,10 +282,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId16 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId16);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques16),String.valueOf(radioButton.getText())));
             }
         });
@@ -293,10 +294,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId17 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId17);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques17),String.valueOf(radioButton.getText())));
             }
         });
@@ -305,10 +306,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId18 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId18);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques18),String.valueOf(radioButton.getText())));
             }
         });
@@ -317,10 +318,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId19 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId19);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques19),String.valueOf(radioButton.getText())));
             }
         });
@@ -329,10 +330,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId20 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId20);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques20),String.valueOf(radioButton.getText())));
             }
         });
@@ -341,10 +342,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId21 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId21);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques21),String.valueOf(radioButton.getText())));
             }
         });
@@ -353,10 +354,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId22 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId22);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques22),String.valueOf(radioButton.getText())));
             }
         });
@@ -365,10 +366,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId23 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId23);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques23),String.valueOf(radioButton.getText())));
             }
         });
@@ -377,10 +378,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId24 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId24);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques24),String.valueOf(radioButton.getText())));
             }
         });
@@ -388,26 +389,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+                selectedId25 = radioGroup.getCheckedRadioButtonId();
 
                 // find the radiobutton by returned id
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                RadioButton radioButton = (RadioButton) findViewById(selectedId25);
                 questionListModels.add(new QuestionListModel(getString(R.string.ques25),String.valueOf(radioButton.getText())));
             }
         });
-      /*  for (int i = 0; i < questions.length; i++){
-            QuestionListModel model = new QuestionListModel(questions[i],point1[i],point2[i],point3[i],point4[i]);
-            questionListModels.add(model);
-        }
-
-
-        QuestionsItemAdapter adapter = new QuestionsItemAdapter(MainActivity.this,questionListModels);
-        recyclerView.setAdapter(adapter);*/
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              if (questionListModels.size() > 0){
+              if (selectedId1 != 0 && selectedId2 != 0 && selectedId3 !=0 && selectedId4 != 0 && selectedId5 != 0 &&
+                      selectedId6 !=0 && selectedId7 != 0 && selectedId8 != 0 && selectedId9 != 0 && selectedId10 != 0 &&
+                      selectedId11 != 0 && selectedId12 != 0 && selectedId13 !=0 && selectedId14 != 0 && selectedId15 != 0 &&
+                      selectedId16 !=0 && selectedId17 != 0 && selectedId18 != 0 && selectedId19 != 0 && selectedId20 != 0 &&
+                      selectedId21 != 0 && selectedId22 != 0 && selectedId23 != 0 && selectedId24 != 0 && selectedId25 != 0){
                   /*Intent intent = new Intent(Intent.ACTION_SENDTO);
                   intent.putExtra(Intent.EXTRA_EMAIL,new String[]{"kainatkhan1546@gmail.com"});
                   intent.putExtra(Intent.EXTRA_SUBJECT, "Abc");
@@ -431,7 +428,7 @@ public class MainActivity extends AppCompatActivity {
                   }*/
 
                   String to = "0533665281kamar@gmail.com";
-                //  String to = "kainatkhan1546@gmail.com";
+                  //String to = "kainatkhan1546@gmail.com";
                   String subject = "Herbal Guide's ANSWERS\nYes";
                  // String message = "Yes";
 
