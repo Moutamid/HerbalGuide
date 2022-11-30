@@ -65,7 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
                                .child(Constants.auth().getCurrentUser().getUid())
                                .setValue(userModel).addOnSuccessListener(unused -> {
                                    progressDialog.dismiss();
-                                   startActivity(new Intent(RegisterActivity.this, ItemsActivity.class));
+                                   startActivity(new Intent(RegisterActivity.this, MainActivity.class));
                                     finish();
                                }).addOnFailureListener(e -> {
                                    progressDialog.dismiss();

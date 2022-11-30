@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ques1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:id="@+id/question"
+            android:layout_gravity="end|right"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/q11"
+                android:layout_gravity="right|center"
+                android:layoutDirection="rtl"
+                android:layout_marginRight="5dp"
+                android:text="@string/ques1_point1"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/q12"
+                android:layout_gravity="right|center"
+                android:layoutDirection="rtl"
+                android:layout_marginRight="5dp"
+                android:text="@string/ques1_point2"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/q13"
+                android:layout_gravity="right|center"
+                android:layoutDirection="rtl"
+                android:layout_marginRight="5dp"
+                android:text="@string/ques1_point3"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/q14"
+                android:layout_gravity="right|center"
+                android:layoutDirection="rtl"
+                android:layout_marginRight="5dp"
+                android:text="@string/ques1_point4"/>
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -68,13 +68,19 @@
         android:layout_marginBottom="12dp"
         android:id="@+id/herbs"
         android:layout_below="@id/backbtn">
-        <ImageView
-            android:id="@+id/herb_img"
+
+        <androidx.cardview.widget.CardView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/i1"
-            app:civ_border_color="@color/border"
-            app:civ_border_width="1dp" />
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:id="@+id/herb_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/i1"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
 
         <!-- <TextView
             android:id="@+id/herb_name"
