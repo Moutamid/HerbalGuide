@@ -7,7 +7,7 @@ public class ItemDetailModel implements Serializable {
     int img;
     String name, arabic_name;
     String[] headings;
-    String[] firstlist, secondList, thirdlist, fourthlist, fifthlist, sixthlist, seventhlst;
+    String[] firstlist, secondList, thirdlist, fourthlist, fifthlist, sixthlist, seventhlst,eightlist,ninethlist;
 
     public ItemDetailModel(int img, String name, String arabic_name) {
         this.img = img;
@@ -27,6 +27,39 @@ public class ItemDetailModel implements Serializable {
         this.sixthlist = sixthlist;
         this.seventhlst = seventhlst;
         this.arabic_name = arabic_name;
+    }
+
+    public ItemDetailModel(int img, String name, String arabic_name, String[] headings, String[] firstlist,
+                           String[] secondList, String[] thirdlist, String[] fourthlist, String[] fifthlist,
+                           String[] sixthlist, String[] seventhlst,String[] eightlist) {
+        this.img = img;
+        this.name = name;
+        this.headings = headings;
+        this.firstlist = firstlist;
+        this.secondList = secondList;
+        this.thirdlist = thirdlist;
+        this.fourthlist = fourthlist;
+        this.fifthlist = fifthlist;
+        this.sixthlist = sixthlist;
+        this.seventhlst = seventhlst;
+        this.eightlist = eightlist;
+        this.arabic_name = arabic_name;
+    }
+
+    public String[] getEightlist() {
+        return eightlist;
+    }
+
+    public void setEightlist(String[] eightlist) {
+        this.eightlist = eightlist;
+    }
+
+    public String[] getNinethlist() {
+        return ninethlist;
+    }
+
+    public void setNinethlist(String[] ninethlist) {
+        this.ninethlist = ninethlist;
     }
 
     public ItemDetailModel(int img, String name, String arabic_name, String[] headings, String[] firstlist, String[] secondList, String[] thirdlist, String[] fourthlist, String[] fifthlist, String[] sixthlist) {

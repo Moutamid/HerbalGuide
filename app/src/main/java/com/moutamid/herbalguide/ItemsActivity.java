@@ -36,6 +36,9 @@ public class ItemsActivity extends AppCompatActivity {
     String[] fourthmsg1, fourthmsg2, fourthmsg3, fourthmsg4, fourthmsg5, fourthmsg6, fourthmsg7, fourthmsg8, fourthmsg9, fourthmsg10, fourthmsg11, fourthmsg12, fourthmsg13, fourthmsg14, fourthmsg15, fourthmsg16, fourthmsg17, fourthmsg18, fourthmsg19, fourthmsg20, fourthmsg21, fourthmsg22, fourthmsg23, fourthmsg24, fourthmsg25, fourthmsg26, fourthmsg27,fourthmsg28,fourthmsg29,fourthmsg30,fourthmsg31,fourthmsg32,fourthmsg33;
     String[] fifthmsg1, fifthmsg2, fifthmsg3, fifthmsg4, fifthmsg5, fifthmsg6, fifthmsg7, fifthmsg8, fifthmsg9, fifthmsg10, fifthmsg11, fifthmsg12, fifthmsg13, fifthmsg14, fifthmsg15, fifthmsg16, fifthmsg17, fifthmsg18, fifthmsg19, fifthmsg20, fifthmsg21, fifthmsg22, fifthmsg23, fifthmsg24, fifthmsg25, fifthmsg26, fifthmsg27,fifthmsg28,fifthmsg29,fifthmsg30,fifthmsg31,fifthmsg32,fifthmsg33;
     String[] sixthmsg1, sixthmsg2, sixthmsg3, sixthmsg4, sixthmsg5, sixthmsg6, sixthmsg7, sixthmsg8, sixthmsg9, sixthmsg10, sixthmsg11, sixthmsg12, sixthmsg13, sixthmsg14, sixthmsg15, sixthmsg16, sixthmsg17, sixthmsg18, sixthmsg19, sixthmsg20, sixthmsg21, sixthmsg22, sixthmsg23, sixthmsg24, sixthmsg25, sixthmsg26, sixthmsg27,sixthmsg28,sixthmsg29,sixthmsg30,sixthmsg32;
+    String[] sevenmsg2,sevenmsg3,sevenmsg4,sevenmsg5;
+    String[] eightmsg3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -142,11 +145,17 @@ public class ItemsActivity extends AppCompatActivity {
         getDetail33();
 
         model1 = new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "البابونج الحقيقي او الالماني", headings1, firstmsg1, seondmsg1, thirdmsg1, fourthmsg1, fifthmsg1, sixthmsg1);
-        model2 = new ItemDetailModel(R.drawable.i2, "Nigella sativia", "الحبة السوداء", headings2, firstmsg2, seondmsg2, thirdmsg2, fourthmsg2, fifthmsg2, sixthmsg2);
-        model3 = new ItemDetailModel(R.drawable.i3, "Alo vera, Aloe barabadensis, Aloe capennsis", "الصبار", headings3, firstmsg3, seondmsg3, thirdmsg3, fourthmsg3, fifthmsg3, sixthmsg3);
+        model2 = new ItemDetailModel(R.drawable.i2, "Nigella sativia", "الحبة السوداء",
+                headings2, firstmsg2, seondmsg2, thirdmsg2, fourthmsg2, fifthmsg2, sixthmsg2,sevenmsg2);
+        model3 = new ItemDetailModel(R.drawable.i3, "Alo vera, Aloe barabadensis, Aloe capennsis",
+                "الصبار", headings3, firstmsg3, seondmsg3, thirdmsg3, fourthmsg3, fifthmsg3,
+                sixthmsg3,sevenmsg3,eightmsg3);
 
-        model4 = new ItemDetailModel(R.drawable.i4, "Origanum syriacum", "البردقوش ", headings4, firstmsg4, seondmsg4, thirdmsg4, fifthmsg4, sixthmsg4);
-        model5 = new ItemDetailModel(R.drawable.i5, "Coeffia arabica", "البن (القهوة)", headings5, firstmsg5, seondmsg5, thirdmsg5, fourthmsg5, fifthmsg5);
+        model4 = new ItemDetailModel(R.drawable.i4, "Origanum syriacum", "البردقوش ",
+                headings4, firstmsg4, seondmsg4, thirdmsg4,fourthmsg4, fifthmsg4, sixthmsg4);
+        model5 = new ItemDetailModel(R.drawable.i5, "Coeffia arabica", "البن (القهوة)",
+                headings5, firstmsg5, seondmsg5, thirdmsg5, fourthmsg5, fifthmsg5,sixthmsg5,sevenmsg5);
+
         model6 = new ItemDetailModel(R.drawable.i6, "Salvia officinalis", "المريمية", headings6, firstmsg6, seondmsg6, thirdmsg6, fourthmsg6, fifthmsg6, sixthmsg6);
 
         model7 = new ItemDetailModel(R.drawable.i7, "Rosmarinus officinalis", "اكليل الجبل", headings7, firstmsg7, seondmsg7, thirdmsg7, fourthmsg7, fifthmsg7);
@@ -177,12 +186,17 @@ public class ItemsActivity extends AppCompatActivity {
         model27 = new ItemDetailModel(R.drawable.i27, "Paronychia argentea", "زهرة الالماسة",  headings27, firstmsg27, seondmsg27, thirdmsg27, fourthmsg27, fifthmsg27);
 
 
-        model28 = new ItemDetailModel(R.drawable.i28, "Avena sativa", "قشور الشوفان", headings28, firstmsg28, seondmsg28, thirdmsg28, fourthmsg28);
-        model29 = new ItemDetailModel(R.drawable.i29, "Fucus vesiculosus", "مشرات الفوقس البحري", headings29, firstmsg29, seondmsg29, thirdmsg29, fourthmsg29, fifthmsg29);
-        model30 = new ItemDetailModel(R.drawable.i30, "Linum usitatissimum", "الكتان", headings30, firstmsg30, seondmsg30, thirdmsg30, fourthmsg30, fifthmsg30);
+        model28 = new ItemDetailModel(R.drawable.i28, "Avena sativa", "قشور الشوفان",
+                headings28, firstmsg28, seondmsg28, thirdmsg28, fourthmsg28);
+        model29 = new ItemDetailModel(R.drawable.i29, "Fucus vesiculosus", "مشرات الفوقس البحري",
+                headings29, firstmsg29, seondmsg29, thirdmsg29, fourthmsg29, fifthmsg29);
+        model30 = new ItemDetailModel(R.drawable.i30, "Linum usitatissimum", "الكتان",
+                headings30, firstmsg30, seondmsg30, thirdmsg30, fourthmsg30, fifthmsg30);
 
-        model31 = new ItemDetailModel(R.drawable.i31, "Mentha piperita", "النعناع البري",  headings31, firstmsg31, seondmsg31, thirdmsg31, fourthmsg31, fifthmsg31);
-        model32 = new ItemDetailModel(R.drawable.i32, "Plantago ovata forssk", "البسيلليوم",  headings32, firstmsg32, seondmsg32, thirdmsg32, fourthmsg32, fifthmsg32);
+        model31 = new ItemDetailModel(R.drawable.i31, "Mentha piperita", "النعناع البري",
+                headings31, firstmsg31, seondmsg31, thirdmsg31, fourthmsg31, fifthmsg31);
+        model32 = new ItemDetailModel(R.drawable.i32, "Plantago ovata forssk", "البسيلليوم",
+                headings32, firstmsg32, seondmsg32, thirdmsg32, fourthmsg32, fifthmsg32);
         model33 = new ItemDetailModel(R.drawable.i33, "Cuminum cyminum", "الكمون",
                 headings33, firstmsg33, seondmsg33, thirdmsg33, fourthmsg33);
 
@@ -939,8 +953,10 @@ public class ItemsActivity extends AppCompatActivity {
                 "الاسم العلمي",
                 "الجزء المستخدم من النبات",
                 "الخصائص والاستخدامات الطبية ",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "الامان الاثناء الحمل"
+                "موانع الاستخدام والتداخلات الدوائية",
+                "الاثار الجانبية",
+                "التداخلات الدوائية",
+                "الاستخدام اثناء الحمل والارضاع"
         };
         firstmsg5 = new String[]{"Coeffia arabica"};
         seondmsg5 = new String[]{"البذور"};
@@ -957,6 +973,22 @@ public class ItemsActivity extends AppCompatActivity {
         fifthmsg5 = new String[]{
                 " ان الكميات المعتدلة من الكافيئين ( 200- 300 ملليجرام) ما يعادل من فنجان الى فنجانين قهوة يوميا  لا تضر بالجنين اما الجرعات العالية  منه ما يعادل سبعة فناجين من القهوة  يوميا  له تاثيرات سلبية على الجنين حيثيسبب انخفاض وزن الجنين ويمكن ان يسبب موت الجنين داخل الرحم ."
         };
+
+        sixthmsg5 = new String[] {
+                "الافدرين",
+                "الادينوزين ",
+                "مانعات الحمل الفموية",
+                "الليثيوم",
+                "الادوية المضادة للاكتئاب من فئة (MAOIs )",
+                "المضادات الحيوية من فئة الكينولون",
+                "الادوية المستخدمة لعلاج الربو من فئة ( B-adrenergic agonist)",
+                "الادوية المضادة للتخثر والمضادة للصفيحات",
+                "المستحضرات الدوائية التي تحوي على الحديد"
+        };
+
+        sevenmsg5 = new String[] {
+                "يجب على الحامل تجنب الكميات الكبيرة من الكافيئين والتي تتجاوز 300 ملغ يوميا اي ما يعادل 3 اكواب من القهوة على مدار اليوم وينصح بعدم الاكثار من القهوة اثناء الارضاع الطبيعي لان الكافيئين ينتقل عن طريق الحليب ويسبب اضطرابات في النوم لدى الرضع."
+        };
     }
 
     private void getDetail4() {
@@ -964,8 +996,8 @@ public class ItemsActivity extends AppCompatActivity {
                 "الاسم العلمي",
                 "الجزء المستخدم من النبات",
                 "الخصائص والاستخدامات الطبية ",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "ينصح بعدم استخدام البردقوش مع بعض المستحضرات الدوائية",
+                "موانع الاستخدام والتداخلات الدوائية",
+                "التداخلات الدوائية",
                 "الاستخدام اثناء الحمل "
         };
         firstmsg4 = new String[] {"Origanum syriacum"};
@@ -983,11 +1015,23 @@ public class ItemsActivity extends AppCompatActivity {
                 "الادوية المضادة للتخثر تناول البردقوش مع هذه الادوية يمكن ان يسبب زيادة احتمال حدوث خطر النزيف",
                 "الادوية المضادة للكولين(الاتروبين سكوبولامين) التي تستخدم لعلاج مرض الغلوكوما والزهايمر استخدام البردقوش مع هذه الادوية قد يسبب ظهور الاثار الجانبية لهذه الادوية."
         };
-        sixthmsg4 = new String[] { " يعتبر هذا العقار غير امن اثناء الحمل  لعدم توفر دراسات وابحاث كافية تثبت امان استخدامه خلال هذه الفترة." };
+        sixthmsg4 = new String[] {
+                " يعتبر هذا العقار غير امن اثناء الحمل  لعدم توفر دراسات وابحاث كافية تثبت امان استخدامه خلال هذه الفترة."
+        };
+
     }
 
     private void getDetail3() {
-        headings3 = new String[] {"الاسم العلمي", "الجزء المستخدم من النبات", "الخصائص والاستخدامات الطبية", "الاثار الجانبية وموانع الاستخدام", "التداخلات الدوائية", "الاستخدام اثناء الحمل"};
+        headings3 = new String[] {
+                "الاسم العلمي",
+                "الجزء المستخدم من النبات",
+                "الخصائص والاستخدامات الطبية",
+                "موانع الاستخدام",
+                "الاثار الجانبية",
+                "التداخلات الدوائية",
+                "الاستخدام اثناء الحمل",
+                "الاستخدام لدى الاطفال"
+        };
         firstmsg3 = new String[] {"Alo vera, Aloe barabadensis, Aloe capennsis))"};
         seondmsg3 = new String[] {"الاوراق والهلام المستخرج من الاوراق."};
         thirdmsg3 = new String[] {
@@ -1018,6 +1062,13 @@ public class ItemsActivity extends AppCompatActivity {
         sixthmsg3 = new String[] {
           " يعتبر هذا العقار غير امن اثناء الحمل."
         };
+        sevenmsg3 = new String[] {
+                "يمنع استخدام الصبار اثناء الحمل فهو يعتبر غير امن خلال هذه الفترة."
+        };
+
+        eightmsg3 = new String[] {
+                "يمنع الاستخدام لدى الاطفال دون 12 عام."
+        };
     }
 
     private void getDetail2() {
@@ -1025,9 +1076,10 @@ public class ItemsActivity extends AppCompatActivity {
                 "الاسم العلمي",
                 "الجزء المستخدم",
                 "الاستخدامات والخصائص الطبية",
-                "tالاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "الاستخدام اثناء الحمل ",
-                "يوصى بعدم تناول الحبة السوداء مع الادوية التالية"
+                "موانع الاستخدام والاثار الجانبية",
+                "يوصى بعدم تناول الحبة السوداء مع الادوية التالية",
+                "التداخلات الدوائية",
+                "الاستخدام اثناء الحمل "
         };
         firstmsg2 = new String[] {
                 "Nigella sativia"
@@ -1058,6 +1110,9 @@ public class ItemsActivity extends AppCompatActivity {
             "الادوية الخافضة للسكر( انسولين ميتفورمين وغيرها) المشاركة مع الحبة السوداء قد يسبب اخفاض في مستوى السكر في الدم.",
             "الادوية المضادة لتخثر الدم والمضادة للصفيحات(الوارفرين, الهيبارين كلوبيدوغريل وغيرها) الاستخدام مع الحبة السوداء قد يزيد من احتمالية حدوث النزيف.",
             "الادوية الخافضة للضغط الدموي( فيراباميل ,نيفيدبين وغيرها)"
+        };
+        sevenmsg2 = new String[] {
+                "ينصح بعدم استخدامها اثناء الحمل والارضاع لعدم وجود ادلة كافية حول امان استخدامها خلال هذه الفترة."
         };
     }
 

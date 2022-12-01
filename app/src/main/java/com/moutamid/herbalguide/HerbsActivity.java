@@ -25,10 +25,10 @@ public class HerbsActivity extends AppCompatActivity {
     AppCompatButton EvaluationBtn;
     ItemDetailModel model;
     ImageView herb_img;
-    TextView herb_name, heading1, heading2, heading3, heading4, heading5, heading6, heading7;
+    TextView herb_name, heading1, heading2, heading3, heading4, heading5, heading6, heading7,heading8;
     ImageView backbtn;
-    RecyclerView heading1RC, heading2RC, heading3RC, heading4RC, heading5RC, heading6RC, heading7RC;
-    String[] headings, msg1, msg2, msg3, msg4, msg5, msg6, msg7;
+    RecyclerView heading1RC, heading2RC, heading3RC, heading4RC, heading5RC, heading6RC, heading7RC,heading8RC;
+    String[] headings, msg1, msg2, msg3, msg4, msg5, msg6, msg7,msg8;
     int len;
 
     @SuppressLint("MissingInflatedId")
@@ -48,6 +48,7 @@ public class HerbsActivity extends AppCompatActivity {
         heading5 = findViewById(R.id.heading5);
         heading6 = findViewById(R.id.heading6);
         heading7 = findViewById(R.id.heading7);
+        heading8 = findViewById(R.id.heading8);
 
         heading1RC = findViewById(R.id.heading1RC);
         heading2RC = findViewById(R.id.heading2RC);
@@ -56,6 +57,7 @@ public class HerbsActivity extends AppCompatActivity {
         heading5RC = findViewById(R.id.heading5RC);
         heading6RC = findViewById(R.id.heading6RC);
         heading7RC = findViewById(R.id.heading7RC);
+        heading8RC = findViewById(R.id.heading8RC);
 
         heading1RC.setLayoutManager(new LinearLayoutManager(this));
         heading2RC.setLayoutManager(new LinearLayoutManager(this));
@@ -64,6 +66,7 @@ public class HerbsActivity extends AppCompatActivity {
         heading5RC.setLayoutManager(new LinearLayoutManager(this));
         heading6RC.setLayoutManager(new LinearLayoutManager(this));
         heading7RC.setLayoutManager(new LinearLayoutManager(this));
+        heading8RC.setLayoutManager(new LinearLayoutManager(this));
 
         heading1RC.setHasFixedSize(false);
         heading2RC.setHasFixedSize(false);
@@ -72,6 +75,7 @@ public class HerbsActivity extends AppCompatActivity {
         heading5RC.setHasFixedSize(false);
         heading6RC.setHasFixedSize(false);
         heading7RC.setHasFixedSize(false);
+        heading8RC.setHasFixedSize(false);
 
         model = (ItemDetailModel) getIntent().getSerializableExtra("model");
 
@@ -95,6 +99,7 @@ public class HerbsActivity extends AppCompatActivity {
             heading5.setVisibility(View.GONE);
             heading6.setVisibility(View.GONE);
             heading7.setVisibility(View.GONE);
+            heading8.setVisibility(View.GONE);
         }
         else if (len == 2){
             heading1.setText(headings[0]);
@@ -111,6 +116,7 @@ public class HerbsActivity extends AppCompatActivity {
             heading5.setVisibility(View.GONE);
             heading6.setVisibility(View.GONE);
             heading7.setVisibility(View.GONE);
+            heading8.setVisibility(View.GONE);
         }
         else if (len == 3){
             heading1.setText(headings[0]);
@@ -129,6 +135,7 @@ public class HerbsActivity extends AppCompatActivity {
             heading5.setVisibility(View.GONE);
             heading6.setVisibility(View.GONE);
             heading7.setVisibility(View.GONE);
+            heading8.setVisibility(View.GONE);
         }
         else if (len == 4){
             heading1.setText(headings[0]);
@@ -149,6 +156,7 @@ public class HerbsActivity extends AppCompatActivity {
             heading5.setVisibility(View.GONE);
             heading6.setVisibility(View.GONE);
             heading7.setVisibility(View.GONE);
+            heading8.setVisibility(View.GONE);
         }
         else if (len == 5){
             heading1.setText(headings[0]);
@@ -171,6 +179,7 @@ public class HerbsActivity extends AppCompatActivity {
 
             heading6.setVisibility(View.GONE);
             heading7.setVisibility(View.GONE);
+            heading8.setVisibility(View.GONE);
         }
         else if (len == 6){
             heading1.setText(headings[0]);
@@ -195,6 +204,7 @@ public class HerbsActivity extends AppCompatActivity {
             getDetails6();
 
             heading7.setVisibility(View.GONE);
+            heading8.setVisibility(View.GONE);
         }
         else if (len == 7){
             heading1.setText(headings[0]);
@@ -204,6 +214,7 @@ public class HerbsActivity extends AppCompatActivity {
             heading5.setText(headings[4]);
             heading6.setText(headings[5]);
             heading7.setText(headings[6]);
+
 
             msg1 = model.getFirstlist();
             msg2 = model.getSecondList();
@@ -221,10 +232,39 @@ public class HerbsActivity extends AppCompatActivity {
             getDetails6();
             getDetails7();
 
+            heading8.setVisibility(View.GONE);
+        }
+        else if (len == 8){
+            heading1.setText(headings[0]);
+            heading2.setText(headings[1]);
+            heading3.setText(headings[2]);
+            heading4.setText(headings[3]);
+            heading5.setText(headings[4]);
+            heading6.setText(headings[5]);
+            heading7.setText(headings[6]);
+            heading8.setText(headings[7]);
+
+            msg1 = model.getFirstlist();
+            msg2 = model.getSecondList();
+            msg3 = model.getThirdlist();
+            msg4 = model.getFourthlist();
+            msg5 = model.getFifthlist();
+            msg6 = model.getSixthlist();
+            msg7 = model.getSeventhlst();
+            msg8 = model.getEightlist();
+
+            getDetails1();
+            getDetails2();
+            getDetails3();
+            getDetails4();
+            getDetails5();
+            getDetails6();
+            getDetails7();
+            getDetails8();
         }
 
         EvaluationBtn.setOnClickListener(v -> {
-            startActivity(new Intent(this, SurveyActivity.class));
+            startActivity(new Intent(this, SurveyScreen.class));
         });
 
         backbtn.setOnClickListener(v -> {
@@ -295,5 +335,15 @@ public class HerbsActivity extends AppCompatActivity {
         }
         adapter = new DetailAdapter(this, list);
         heading7RC.setAdapter(adapter);
+    }
+
+    private void getDetails8() {
+        DetailAdapter adapter;
+        ArrayList<String> list = new ArrayList<>();
+        for (int i =0; i < msg8.length; i++){
+            list.add(msg8[i]);
+        }
+        adapter = new DetailAdapter(this, list);
+        heading8RC.setAdapter(adapter);
     }
 }

@@ -4,30 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SurveyScreen">
 
-<!--    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/recyclerView"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="vertical"/>
+    <!--    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerView"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"/>
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/entryBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@drawable/button_background2"
-        android:text="@string/submit"
-        android:layout_alignParentBottom="true"
-        android:textColor="@color/white"
-        android:textSize="20sp" />-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/entryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_background2"
+            android:text="@string/submit"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:textSize="20sp" />-->
+
+    <ImageView
+        android:id="@+id/backbtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/backbtn">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,21 +50,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ques_head"
+                android:text="@string/survey_head"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_gravity="end|right"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ques_head1"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:layout_marginTop="5dp"
-                android:textStyle="bold"
-                android:layout_gravity="end|right"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,7 +66,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques1"
+                    android:text="@string/survey_ques1"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -79,7 +83,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques1_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -88,7 +92,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques1_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -97,7 +101,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques1_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -106,7 +110,16 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques1_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q15"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
 
@@ -122,7 +135,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques2"
+                    android:text="@string/survey_ques2"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -139,7 +152,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques2_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -148,7 +161,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques2_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -157,7 +170,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques2_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -166,11 +179,22 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques2_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q25"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
 
+
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -181,7 +205,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques3"
+                    android:text="@string/survey_ques3"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -198,7 +222,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques3_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -207,7 +231,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques3_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -216,7 +240,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques3_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -225,9 +249,19 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques3_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q35"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -239,7 +273,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques4"
+                    android:text="@string/survey_ques4"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -256,7 +290,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques4_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -265,7 +299,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques4_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -274,7 +308,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques4_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -283,9 +317,19 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques4_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q45"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -297,7 +341,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques5"
+                    android:text="@string/survey_ques5"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -314,7 +358,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques5_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -323,7 +367,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques5_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -332,7 +376,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques5_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -341,9 +385,19 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques5_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q55"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -355,7 +409,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques6"
+                    android:text="@string/survey_ques6"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -372,7 +426,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques6_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -381,7 +435,8 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques6_point2"/>
+                        android:text="@string/survey_point2"/>
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -389,7 +444,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques6_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -398,9 +453,20 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques6_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q65"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -411,7 +477,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques7"
+                    android:text="@string/survey_ques7"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -428,7 +494,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques7_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -437,7 +503,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques7_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -446,7 +512,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques7_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -455,9 +521,19 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques7_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q75"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -469,7 +545,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques8"
+                    android:text="@string/survey_ques8"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -486,7 +562,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques8_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -495,7 +571,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques8_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -504,7 +580,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques8_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -513,9 +589,19 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques8_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q85"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -527,7 +613,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques9"
+                    android:text="@string/survey_ques9"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -544,7 +630,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques9_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -553,7 +639,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques9_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -562,7 +648,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques9_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -571,9 +657,19 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques9_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q95"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -585,7 +681,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques10"
+                    android:text="@string/survey_ques10"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -602,7 +698,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques10_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -611,7 +707,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques10_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -620,7 +716,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques10_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -629,9 +725,19 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques10_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q105"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -643,7 +749,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques11"
+                    android:text="@string/survey_ques11"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -660,7 +766,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques11_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -669,7 +775,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques11_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -678,7 +784,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques11_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -687,12 +793,21 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques11_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q115"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
 
-            </LinearLayout>
 
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -702,7 +817,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques12"
+                    android:text="@string/survey_ques12"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -719,7 +834,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques12_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -728,7 +843,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques12_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -737,7 +852,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques12_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -746,12 +861,21 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques12_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q125"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
 
-            </LinearLayout>
 
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -761,7 +885,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques13"
+                    android:text="@string/survey_ques13"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -778,7 +902,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques13_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -787,7 +911,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques13_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -796,7 +920,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques13_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -805,12 +929,21 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques13_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q135"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
 
-            </LinearLayout>
 
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -820,7 +953,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques14"
+                    android:text="@string/survey_ques14"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -837,7 +970,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques14_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -846,7 +979,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques14_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -855,21 +988,30 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques14_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q144"
+                        android:id="@+id/q2144"
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques14_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q145"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
 
-            </LinearLayout>
 
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -879,7 +1021,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques15"
+                    android:text="@string/survey_ques15"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -896,7 +1038,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques15_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -905,7 +1047,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques15_point2"/>
+                        android:text="@string/survey_point2"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -914,7 +1056,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques15_point3"/>
+                        android:text="@string/survey_point3"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -923,33 +1065,31 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques15_point4"/>
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q155"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
 
+
             </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ques_head2"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="end|right"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="6dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques16"
+                    android:text="@string/survey_ques16"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -966,7 +1106,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -975,10 +1115,37 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:text="@string/survey_point2"/>
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q163"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q164"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q165"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -990,7 +1157,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques17"
+                    android:text="@string/survey_ques17"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -1007,7 +1174,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -1016,12 +1183,39 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:text="@string/survey_point2"/>
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q173"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q174"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q175"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
-            </LinearLayout>
 
+
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1031,7 +1225,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques18"
+                    android:text="@string/survey_ques18"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -1048,7 +1242,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -1057,10 +1251,37 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:text="@string/survey_point2"/>
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q183"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q184"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q185"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -1072,7 +1293,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques19"
+                    android:text="@string/survey_ques19"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -1089,7 +1310,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -1098,8 +1319,34 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:text="@string/survey_point2"/>
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q193"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q194"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q195"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
 
@@ -1114,7 +1361,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques20"
+                    android:text="@string/survey_ques20"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -1131,7 +1378,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -1140,8 +1387,34 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:text="@string/survey_point2"/>
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q203"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q204"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q205"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
 
@@ -1156,10 +1429,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques21"
+                    android:text="@string/survey_ques21"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
+
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1172,7 +1446,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -1181,10 +1455,37 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:text="@string/survey_point2"/>
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q213"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q214"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q215"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -1196,7 +1497,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques22"
+                    android:text="@string/survey_ques22"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -1213,7 +1514,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -1222,10 +1523,37 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:text="@string/survey_point2"/>
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q223"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q224"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q225"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -1237,7 +1565,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques23"
+                    android:text="@string/survey_ques23"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -1254,7 +1582,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -1263,10 +1591,37 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:text="@string/survey_point2"/>
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q233"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q234"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q235"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -1278,10 +1633,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques24"
+                    android:text="@string/survey_ques24"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
+
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1294,7 +1650,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -1303,10 +1659,37 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:text="@string/survey_point2"/>
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q243"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q244"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q245"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
+
 
             </LinearLayout>
             <LinearLayout
@@ -1318,7 +1701,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ques25"
+                    android:text="@string/survey_ques25"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_gravity="end|right"/>
@@ -1335,7 +1718,7 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:text="@string/survey_point1"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -1344,13 +1727,379 @@
                         android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:text="@string/survey_point2"/>
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q253"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q254"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q255"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
 
                 </RadioGroup>
 
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/survey_ques26"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_gravity="end|right"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/group26">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q261"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point1"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q262"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point2"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q263"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q264"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q265"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/survey_ques27"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_gravity="end|right"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/group27">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q271"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point1"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q272"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point2"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q273"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q274"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q275"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/survey_ques28"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_gravity="end|right"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/group28">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q281"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point1"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q282"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point2"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q283"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q284"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q285"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/survey_ques29"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_gravity="end|right"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/group29">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q291"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point1"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q292"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point2"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q293"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q294"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point4"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q295"
+                        android:layout_gravity="right|center"
+                        android:layoutDirection="rtl"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/survey_point5"/>
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/survey_ques30"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_gravity="end|right"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/group30">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/q301"
+                    android:layout_gravity="right|center"
+                    android:layoutDirection="rtl"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/survey_point1"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/q302"
+                    android:layout_gravity="right|center"
+                    android:layoutDirection="rtl"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/survey_point2"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/q303"
+                    android:layout_gravity="right|center"
+                    android:layoutDirection="rtl"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/survey_point3"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/q304"
+                    android:layout_gravity="right|center"
+                    android:layoutDirection="rtl"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/survey_point4"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/q305"
+                    android:layout_gravity="right|center"
+                    android:layoutDirection="rtl"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/survey_point5"/>
+
+            </RadioGroup>
+
+
+        </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/entryBtn"
