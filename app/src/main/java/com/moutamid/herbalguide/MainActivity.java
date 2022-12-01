@@ -405,9 +405,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if (sent) {
-            startActivity(new Intent(MainActivity.this, ItemsActivity.class));
+            Intent intent = new Intent(MainActivity.this, ItemsActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
             finish();
          //   Toast.makeText(MainActivity.this, "Email Sent", Toast.LENGTH_SHORT).show();
         }
     }
+
 }

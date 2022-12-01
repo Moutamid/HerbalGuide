@@ -52,7 +52,9 @@ public class EntryActivity extends AppCompatActivity {
                     Constants.auth().signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
                             .addOnSuccessListener(authResult -> {
                                 progressDialog.dismiss();
-                                startActivity(new Intent(this, ItemsActivity.class));
+                                Intent intent = new Intent(EntryActivity.this, ItemsActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(intent);
                                 finish();
                             })
                             .addOnFailureListener(e -> {
