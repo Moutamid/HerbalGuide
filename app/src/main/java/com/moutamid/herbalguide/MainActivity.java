@@ -1,5 +1,6 @@
 package com.moutamid.herbalguide;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,47 +22,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<QuestionListModel> questionListModels = new ArrayList<>();
-
-   /* private String[] questions = {getResources().getString(R.string.ques1),
-            getResources().getString(R.string.ques2),getResources().getString(R.string.ques3),
-            getResources().getString(R.string.ques4),getResources().getString(R.string.ques5),
-            getResources().getString(R.string.ques6),getResources().getString(R.string.ques7),getResources().getString(R.string.ques8),getResources().getString(R.string.ques9),getResources().getString(R.string.ques10),
-            getResources().getString(R.string.ques11),getResources().getString(R.string.ques12),getResources().getString(R.string.ques13),getResources().getString(R.string.ques14),getResources().getString(R.string.ques15),
-            getResources().getString(R.string.ques16),getResources().getString(R.string.ques17),
-            getResources().getString(R.string.ques18),getResources().getString(R.string.ques19),getResources().getString(R.string.ques20),getResources().getString(R.string.ques21),getResources().getString(R.string.ques22),getResources().getString(R.string.ques23),
-            getResources().getString(R.string.ques24),getResources().getString(R.string.ques25)
-    };
-    private String[] point1 = {getResources().getString(R.string.ques1_point1),getResources().getString(R.string.ques2_point1),getResources().getString(R.string.ques3_point1),getResources().getString(R.string.ques4_point1),getResources().getString(R.string.ques5_point1),
-            getResources().getString(R.string.ques6_point1),getResources().getString(R.string.ques7_point1)
-            ,getResources().getString(R.string.ques8_point1), getResources().getString(R.string.ques9_point1),getResources().getString(R.string.ques10_point1),
-            getResources().getString(R.string.ques11_point1),getResources().getString(R.string.ques12_point1),getResources().getString(R.string.ques13_point1),
-            getResources().getString(R.string.ques14_point1),getResources().getString(R.string.ques15_point1),
-            getResources().getString(R.string.ques16_point1),getResources().getString(R.string.ques16_point1),
-            getResources().getString(R.string.ques16_point1),getResources().getString(R.string.ques16_point1),
-            getResources().getString(R.string.ques16_point1), getResources().getString(R.string.ques16_point1),
-            getResources().getString(R.string.ques16_point1),getResources().getString(R.string.ques16_point1),
-            getResources().getString(R.string.ques16_point1),getString(R.string.ques16_point1)
-    };
-
-    private String[] point2 = {getResources().getString(R.string.ques1_point2),getResources().getString(R.string.ques2_point2),getResources().getString(R.string.ques3_point2),getResources().getString(R.string.ques4_point2),
-            getResources().getString(R.string.ques5_point2), getResources().getString(R.string.ques6_point2),getResources().getString(R.string.ques7_point2),getResources().getString(R.string.ques8_point2),
-            getResources().getString(R.string.ques9_point2),getResources().getString(R.string.ques10_point2),getResources().getString(R.string.ques11_point2),getResources().getString(R.string.ques12_point2),getResources().getString(R.string.ques13_point2),getResources().getString(R.string.ques14_point2),
-            getResources().getString(R.string.ques15_point2),getResources().getString(R.string.ques16_point2),getResources().getString(R.string.ques16_point2),
-            getResources().getString(R.string.ques16_point2),getResources().getString(R.string.ques16_point2),getResources().getString(R.string.ques16_point2),getResources().getString(R.string.ques16_point2),
-            getResources().getString(R.string.ques16_point2),getResources().getString(R.string.ques16_point2),
-            getResources().getString(R.string.ques16_point2),getResources().getString(R.string.ques16_point2)
-    };
-    private String[] point3 = { getString(R.string.ques1_point3),getString(R.string.ques2_point3),getString(R.string.ques3_point3),
-            getString(R.string.ques4_point3),getString(R.string.ques5_point3), getString(R.string.ques6_point3),getString(R.string.ques7_point3),
-            getString(R.string.ques8_point3),getString(R.string.ques9_point3),getString(R.string.ques10_point3),
-            getString(R.string.ques11_point3),getString(R.string.ques12_point3),getString(R.string.ques13_point3),
-            getString(R.string.ques14_point3),getString(R.string.ques15_point3),"","","","","","","","","",""
-    };
-    private String[] point4 = {getString(R.string.ques1_point4),getString(R.string.ques2_point4),getString(R.string.ques3_point4),getString(R.string.ques4_point4),
-            getString(R.string.ques5_point4), getString(R.string.ques6_point4),getString(R.string.ques7_point4),getString(R.string.ques8_point4),
-            getString(R.string.ques9_point4),getString(R.string.ques10_point4), getString(R.string.ques11_point4),
-            getString(R.string.ques12_point4),getString(R.string.ques13_point4),getString(R.string.ques14_point4),getString(R.string.ques15_point4),"","","","","","","","","",""
-    };*/
+    public static final int REQUEST_CODE_MAIL = 1000;
     private RadioGroup group1,group2,group3,group4,group5,group6,group7,group8,group9,group10,group11,group12,group13,group14,group15,group16,group17,group18,group19,group20,group21,group22,group23,group24,group25;
     private AppCompatButton submitBtn;
     private boolean sent = false;
@@ -405,30 +366,8 @@ public class MainActivity extends AppCompatActivity {
                       selectedId11 != 0 && selectedId12 != 0 && selectedId13 !=0 && selectedId14 != 0 && selectedId15 != 0 &&
                       selectedId16 !=0 && selectedId17 != 0 && selectedId18 != 0 && selectedId19 != 0 && selectedId20 != 0 &&
                       selectedId21 != 0 && selectedId22 != 0 && selectedId23 != 0 && selectedId24 != 0 && selectedId25 != 0){
-                  /*Intent intent = new Intent(Intent.ACTION_SENDTO);
-                  intent.putExtra(Intent.EXTRA_EMAIL,new String[]{"kainatkhan1546@gmail.com"});
-                  intent.putExtra(Intent.EXTRA_SUBJECT, "Abc");
-                  intent.putExtra(Intent.EXTRA_TEXT, "Hello");
-
-                 // intent.setType("text/plain");
-                  //start your intent
-                  intent.setData(Uri.parse("mailto:"));
-
-                  if (intent.resolveActivity(getPackageManager()) != null) {
-                      //startActivity(Intent.createChooser(intent, "Select your Email app"));
-                      startActivity(intent);
-                      startActivity(new Intent(MainActivity.this, ItemsActivity.class));
-                      finish();
-
-                      Toast.makeText(MainActivity.this, "Email Sent!",
-                              Toast.LENGTH_SHORT).show();
-                  } else {
-                      Toast.makeText(MainActivity.this, "There is no application that support this action",
-                              Toast.LENGTH_SHORT).show();
-                  }*/
-
-                  String to = "0533665281kamar@gmail.com";
-                  //String to = "kainatkhan1546@gmail.com";
+                //  String to = "0533665281kamar@gmail.com";
+                  String to = "kainatkhan1546@gmail.com";
                   String subject = "Herbal Guide's ANSWERS\nYes";
                  // String message = "Yes";
 
@@ -440,14 +379,19 @@ public class MainActivity extends AppCompatActivity {
                   }
 
                   Intent email = new Intent(Intent.ACTION_SEND);
+
                   email.putExtra(Intent.EXTRA_EMAIL, new String[]{ to});
                   email.putExtra(Intent.EXTRA_SUBJECT, subject);
                   email.putExtra(Intent.EXTRA_TEXT, messageList.toString());
                  //need this to prompts email client only
                   email.setType("message/rfc822");
+                  if (email.resolveActivity(getPackageManager()) != null) {
+                      startActivity(email);
+                      sent = true;
+                  }else {
+                      Toast.makeText(MainActivity.this,"Couldn't find an email app and account",Toast.LENGTH_SHORT).show();
+                  }
 
-                  startActivity(Intent.createChooser(email, "Choose an Email client :"));
-                  sent = true;
               }else {
                   Toast.makeText(MainActivity.this,"Please Answer these Questions",Toast.LENGTH_SHORT).show();
               }
@@ -455,13 +399,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+
     @Override
     protected void onResume() {
         super.onResume();
         if (sent) {
             startActivity(new Intent(MainActivity.this, ItemsActivity.class));
             finish();
-            Toast.makeText(MainActivity.this, "Email Sent", Toast.LENGTH_SHORT).show();
+         //   Toast.makeText(MainActivity.this, "Email Sent", Toast.LENGTH_SHORT).show();
         }
     }
 }
