@@ -22,22 +22,26 @@ public class ItemsActivity extends AppCompatActivity {
     boolean enabled = true;
     int count = 1;
     RecyclerView recyclerView;
-    ItemDetailModel model1, model2, model3, model4, model5, model6, model7, model8, model9, model11, model12,
-            model13, model14, model15, model16, model17, model18, model19, model20, model21, model22, model23,
+    ItemDetailModel model1, model2, model3, model4, model5, model6, model7, model8, model9,
+            model10, model11, model12,
+            model13, model14, model15, model16, model17, model18, model19, model20,
+            model21, model22, model23,
             model24, model25, model26, model27,model28,model29,model30,model31,model32,model33;
     ArrayList<ItemDetailModel> list;
     ItemAdapter adapter;
     SearchView searchView;
 
-    String[] headings1, headings2, headings3, headings4, headings5, headings6, headings7, headings8, headings9, headings10, headings11, headings12, headings13, headings14, headings15, headings16, headings17, headings18, headings19, headings20, headings21, headings22, headings23, headings24, headings25, headings26, headings27,headings28,headings29,headings30,headings31,headings32,headings33;
-    String[] firstmsg1, firstmsg2, firstmsg3, firstmsg4, firstmsg5, firstmsg6, firstmsg7, firstmsg8, firstmsg9, firstmsg10, firstmsg11, firstmsg12, firstmsg13, firstmsg14, firstmsg15, firstmsg16, firstmsg17, firstmsg18, firstmsg19, firstmsg20, firstmsg21, firstmsg22, firstmsg23, firstmsg24, firstmsg25, firstmsg26, firstmsg27,firstmsg28,firstmsg29,firstmsg30,firstmsg31,firstmsg32,firstmsg33;
-    String[] seondmsg1, seondmsg2, seondmsg3, seondmsg4, seondmsg5, seondmsg6, seondmsg7, seondmsg8, seondmsg9, seondmsg10, seondmsg11, seondmsg12, seondmsg13, seondmsg14, seondmsg15, seondmsg16, seondmsg17, seondmsg18, seondmsg19, seondmsg20, seondmsg21, seondmsg22, seondmsg23, seondmsg24, seondmsg25, seondmsg26, seondmsg27,seondmsg28,seondmsg29,seondmsg30,seondmsg31,seondmsg32,seondmsg33;
-    String[] thirdmsg1, thirdmsg2, thirdmsg3, thirdmsg4, thirdmsg5, thirdmsg6, thirdmsg7, thirdmsg8, thirdmsg9, thirdmsg10, thirdmsg11, thirdmsg12, thirdmsg13, thirdmsg14, thirdmsg15, thirdmsg16, thirdmsg17, thirdmsg18, thirdmsg19, thirdmsg20, thirdmsg21, thirdmsg22, thirdmsg23, thirdmsg24, thirdmsg25, thirdmsg26, thirdmsg27,thirdmsg28,thirdmsg29,thirdmsg30,thirdmsg31,thirdmsg32,thirdmsg33;
-    String[] fourthmsg1, fourthmsg2, fourthmsg3, fourthmsg4, fourthmsg5, fourthmsg6, fourthmsg7, fourthmsg8, fourthmsg9, fourthmsg10, fourthmsg11, fourthmsg12, fourthmsg13, fourthmsg14, fourthmsg15, fourthmsg16, fourthmsg17, fourthmsg18, fourthmsg19, fourthmsg20, fourthmsg21, fourthmsg22, fourthmsg23, fourthmsg24, fourthmsg25, fourthmsg26, fourthmsg27,fourthmsg28,fourthmsg29,fourthmsg30,fourthmsg31,fourthmsg32,fourthmsg33;
-    String[] fifthmsg1, fifthmsg2, fifthmsg3, fifthmsg4, fifthmsg5, fifthmsg6, fifthmsg7, fifthmsg8, fifthmsg9, fifthmsg10, fifthmsg11, fifthmsg12, fifthmsg13, fifthmsg14, fifthmsg15, fifthmsg16, fifthmsg17, fifthmsg18, fifthmsg19, fifthmsg20, fifthmsg21, fifthmsg22, fifthmsg23, fifthmsg24, fifthmsg25, fifthmsg26, fifthmsg27,fifthmsg28,fifthmsg29,fifthmsg30,fifthmsg31,fifthmsg32,fifthmsg33;
-    String[] sixthmsg1, sixthmsg2, sixthmsg3, sixthmsg4, sixthmsg5, sixthmsg6, sixthmsg7, sixthmsg8, sixthmsg9, sixthmsg10, sixthmsg11, sixthmsg12, sixthmsg13, sixthmsg14, sixthmsg15, sixthmsg16, sixthmsg17, sixthmsg18, sixthmsg19, sixthmsg20, sixthmsg21, sixthmsg22, sixthmsg23, sixthmsg24, sixthmsg25, sixthmsg26, sixthmsg27,sixthmsg28,sixthmsg29,sixthmsg30,sixthmsg32;
-    String[] sevenmsg2,sevenmsg3,sevenmsg4,sevenmsg5;
-    String[] eightmsg3;
+    String[] headings1, headings2, headings3, headings4, headings5, headings6, headings7, headings8, headings9, headings11, headings12, headings13, headings14, headings15, headings16, headings17, headings18, headings19, headings20, headings21, headings22, headings23, headings24, headings25, headings26, headings27, headings28, headings29, headings30, headings31, headings32, headings33;
+    String[] firstmsg1, firstmsg2, firstmsg3, firstmsg4, firstmsg5, firstmsg6, firstmsg7, firstmsg8, firstmsg9, firstmsg11, firstmsg12, firstmsg13, firstmsg14, firstmsg15, firstmsg16, firstmsg17, firstmsg18, firstmsg19, firstmsg20, firstmsg21, firstmsg22, firstmsg23, firstmsg24, firstmsg25, firstmsg26, firstmsg27, firstmsg28, firstmsg29, firstmsg30, firstmsg31, firstmsg32, firstmsg33;
+    String[] seondmsg1, seondmsg2, seondmsg3, seondmsg4, seondmsg5, seondmsg6, seondmsg7, seondmsg8, seondmsg9, seondmsg11, seondmsg12, seondmsg13, seondmsg14, seondmsg15, seondmsg16, seondmsg17, seondmsg18, seondmsg19, seondmsg20, seondmsg21, seondmsg22, seondmsg23, seondmsg24, seondmsg25, seondmsg26, seondmsg27, seondmsg28, seondmsg29, seondmsg30, seondmsg31, seondmsg32, seondmsg33;
+    String[] thirdmsg1, thirdmsg2, thirdmsg3, thirdmsg4, thirdmsg5, thirdmsg6, thirdmsg7, thirdmsg8, thirdmsg9, thirdmsg11, thirdmsg12, thirdmsg13, thirdmsg14, thirdmsg15, thirdmsg16, thirdmsg17, thirdmsg18, thirdmsg19, thirdmsg20, thirdmsg21, thirdmsg22, thirdmsg23, thirdmsg24, thirdmsg25, thirdmsg26, thirdmsg27, thirdmsg28, thirdmsg29, thirdmsg30, thirdmsg31, thirdmsg32, thirdmsg33;
+    String[] fourthmsg1, fourthmsg2, fourthmsg3, fourthmsg4, fourthmsg5, fourthmsg6, fourthmsg7, fourthmsg8, fourthmsg9, fourthmsg11, fourthmsg12, fourthmsg13, fourthmsg14, fourthmsg15, fourthmsg16, fourthmsg17, fourthmsg18, fourthmsg19, fourthmsg20, fourthmsg21, fourthmsg22, fourthmsg23, fourthmsg24, fourthmsg25, fourthmsg26, fourthmsg27, fourthmsg28, fourthmsg29, fourthmsg30, fourthmsg31, fourthmsg32, fourthmsg33;
+    String[] fifthmsg1, fifthmsg2, fifthmsg3, fifthmsg4, fifthmsg5, fifthmsg6, fifthmsg7, fifthmsg8, fifthmsg9, fifthmsg11, fifthmsg12, fifthmsg13, fifthmsg14, fifthmsg15, fifthmsg16, fifthmsg17, fifthmsg18, fifthmsg19, fifthmsg20, fifthmsg21, fifthmsg22, fifthmsg23, fifthmsg24, fifthmsg25, fifthmsg26, fifthmsg27, fifthmsg28,fifthmsg29, fifthmsg30, fifthmsg31, fifthmsg32,fifthmsg33;
+    String[] sixthmsg1, sixthmsg2, sixthmsg3, sixthmsg4, sixthmsg5, sixthmsg6, sixthmsg7, sixthmsg8, sixthmsg9, sixthmsg11, sixthmsg12, sixthmsg13, sixthmsg14, sixthmsg15, sixthmsg16, sixthmsg17, sixthmsg18, sixthmsg19, sixthmsg20, sixthmsg21, sixthmsg22, sixthmsg23, sixthmsg24, sixthmsg25, sixthmsg26, sixthmsg27, sixthmsg29, sixthmsg30,  sixthmsg32;
+    String[] sevenmsg1, sevenmsg2, sevenmsg3, sevenmsg4, sevenmsg5, sevenmsg6, sevenmsg7, sevenmsg8, sevenmsg9, sevenmsg11, sevenmsg12, sevenmsg13, sevenmsg14, sevenmsg15, sevenmsg16, sevenmsg17, sevenmsg18, sevenmsg19, sevenmsg20, sevenmsg21, sevenmsg22, sevenmsg23, sevenmsg24, sevenmsg25, sevenmsg26, sevenmsg27,  sevenmsg29, sevenmsg30, sevenmsg32;
+    String[]  eightmsg2, eightmsg3,  eightmsg5,  eightmsg8, eightmsg9, eightmsg11, eightmsg12, eightmsg13,  eightmsg17, eightmsg18, eightmsg20, eightmsg22, eightmsg32;
+    String[]  ninthmsg3,  ninthmsg9,  ninthmsg11, ninthmsg18;
+    String[] tenthmsg11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +123,8 @@ public class ItemsActivity extends AppCompatActivity {
         getDetail7();
         getDetail8();
         getDetail9();
+                        /*
+        getDetail10();   THIS IS ADDED automatically*/
         getDetail11();
         getDetail12();
         getDetail13();
@@ -144,61 +150,143 @@ public class ItemsActivity extends AppCompatActivity {
         getDetail32();
         getDetail33();
 
-        model1 = new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "البابونج الحقيقي او الالماني", headings1, firstmsg1, seondmsg1, thirdmsg1, fourthmsg1, fifthmsg1, sixthmsg1);
+        model1 = new ItemDetailModel(R.drawable.i1, "Matricaria Chamomilla", "البابونج الحقيقي او الالماني"
+                , headings1, firstmsg1, seondmsg1, thirdmsg1, fourthmsg1,
+                fifthmsg1, sixthmsg1,
+                sevenmsg1);
         model2 = new ItemDetailModel(R.drawable.i2, "Nigella sativia", "الحبة السوداء",
-                headings2, firstmsg2, seondmsg2, thirdmsg2, fourthmsg2, fifthmsg2, sixthmsg2,sevenmsg2);
+                headings2, firstmsg2, seondmsg2, thirdmsg2, fourthmsg2, fifthmsg2, sixthmsg2
+                ,sevenmsg2,
+                eightmsg2);
         model3 = new ItemDetailModel(R.drawable.i3, "Alo vera, Aloe barabadensis, Aloe capennsis",
                 "الصبار", headings3, firstmsg3, seondmsg3, thirdmsg3, fourthmsg3, fifthmsg3,
-                sixthmsg3,sevenmsg3,eightmsg3);
+                sixthmsg3,sevenmsg3,
+                eightmsg3, ninthmsg3);
 
         model4 = new ItemDetailModel(R.drawable.i4, "Origanum syriacum", "البردقوش ",
-                headings4, firstmsg4, seondmsg4, thirdmsg4,fourthmsg4, fifthmsg4, sixthmsg4);
+                headings4, firstmsg4, seondmsg4, thirdmsg4,fourthmsg4, fifthmsg4,
+                sixthmsg4, sevenmsg4);
         model5 = new ItemDetailModel(R.drawable.i5, "Coeffia arabica", "البن (القهوة)",
-                headings5, firstmsg5, seondmsg5, thirdmsg5, fourthmsg5, fifthmsg5,sixthmsg5,sevenmsg5);
+                headings5, firstmsg5, seondmsg5, thirdmsg5, fourthmsg5, fifthmsg5,
+                sixthmsg5,sevenmsg5,
+                eightmsg5);
 
-        model6 = new ItemDetailModel(R.drawable.i6, "Salvia officinalis", "المريمية", headings6, firstmsg6, seondmsg6, thirdmsg6, fourthmsg6, fifthmsg6, sixthmsg6);
+        model6 = new ItemDetailModel(R.drawable.i6, "Salvia officinalis", "المريمية",
+                headings6, firstmsg6, seondmsg6, thirdmsg6, fourthmsg6, fifthmsg6, sixthmsg6,
+                sevenmsg6);
 
-        model7 = new ItemDetailModel(R.drawable.i7, "Rosmarinus officinalis", "اكليل الجبل", headings7, firstmsg7, seondmsg7, thirdmsg7, fourthmsg7, fifthmsg7);
-        model8 = new ItemDetailModel(R.drawable.i8, "Glycyrrhiza glabra", "عرق السوس", headings8, firstmsg8, seondmsg8, thirdmsg8, fourthmsg8, fifthmsg8);
-        model9 = new ItemDetailModel(R.drawable.i9, "Zingiber officinalle", "الزنجبيل", headings9, firstmsg9, seondmsg9, thirdmsg9, fourthmsg9, fifthmsg9);
+        model7 = new ItemDetailModel(R.drawable.i7, "Rosmarinus officinalis",
+                "اكليل الجبل"
 
-        model11 = new ItemDetailModel(R.drawable.i11, "Senna alexandrina", "السنا", headings11, firstmsg11, seondmsg11, thirdmsg11, fourthmsg11);
-        model12 = new ItemDetailModel(R.drawable.i12, "Camellia sinesis", "الشاي الاخضر", headings12, firstmsg12, seondmsg12, thirdmsg12, fourthmsg12);
-        model13 = new ItemDetailModel(R.drawable.i13, "Panax quinquefol", "الجنسنغ( الامريكي )", headings13, firstmsg13, seondmsg13, thirdmsg13, fourthmsg13, fifthmsg13);
+                , headings7, firstmsg7, seondmsg7, thirdmsg7, fourthmsg7,
+                fifthmsg7, sixthmsg7,
+                sevenmsg7);
+        model8 = new ItemDetailModel(R.drawable.i8, "Glycyrrhiza glabra", "عرق السوس",
+                headings8, firstmsg8, seondmsg8, thirdmsg8, fourthmsg8,
+                fifthmsg8, sixthmsg8, sevenmsg8, eightmsg8, ninthmsg18);
+        model9 = new ItemDetailModel(R.drawable.i9, "Zingiber officinalle", "الزنجبيل",
+                headings9, firstmsg9, seondmsg9, thirdmsg9, fourthmsg9,
+                fifthmsg9, sixthmsg9, sevenmsg9, eightmsg9,
+                ninthmsg9);
+        model10 = new ItemDetailModel(R.drawable.i30, "Linum usitatissimum", "الكتان",
+                headings30, firstmsg30, seondmsg30, thirdmsg30, fourthmsg30,
+                fifthmsg30, sixthmsg30, sevenmsg30);
 
-        model14 = new ItemDetailModel(R.drawable.i14, "Mellisa officinalis", "المليسة", headings14, firstmsg14, seondmsg14, thirdmsg14, fourthmsg14);
-        model15 = new ItemDetailModel(R.drawable.i15, "Hibiscus sabdariffa", "الكركديه",  headings15, firstmsg15, seondmsg15, thirdmsg15, fourthmsg15);
-        model16 = new ItemDetailModel(R.drawable.i16, "Calendula officinalis", "الاقحوان",  headings16, firstmsg16, seondmsg16, thirdmsg16, fourthmsg16);
+        model11 = new ItemDetailModel(R.drawable.i11, "Senna alexandrina", "السنا",
+                headings11, firstmsg11, seondmsg11, thirdmsg11,
+                fourthmsg11, fifthmsg11, sixthmsg11, sevenmsg11, eightmsg11, ninthmsg11, tenthmsg11);
+        model12 = new ItemDetailModel(R.drawable.i12, "Camellia sinesis",
+                "الشاي الاخضر", headings12, firstmsg12, seondmsg12,
+                thirdmsg12,
+                fourthmsg12, fifthmsg12, sixthmsg12, sevenmsg12, eightmsg12);
+        model13 = new ItemDetailModel(R.drawable.i13, "Panax quinquefol",
+                "الجنسنغ( الامريكي )", headings13, firstmsg13, seondmsg13, thirdmsg13,
+                fourthmsg13,
+                fifthmsg13, sixthmsg13, sevenmsg13, eightmsg13);
 
-        model17 = new ItemDetailModel(R.drawable.i17, "Thymus vulgaris", "الزعتر", headings17, firstmsg17, seondmsg17, thirdmsg17, fourthmsg17, fifthmsg17);
-        model18 = new ItemDetailModel(R.drawable.i18, "Myrtus communis", "الاس (الريحان)", headings18, firstmsg18, seondmsg18, thirdmsg18, fourthmsg18, fifthmsg18);
-        model19 = new ItemDetailModel(R.drawable.i19, "Lavandula angustifolia", "الخزامى", headings19, firstmsg19, seondmsg19, thirdmsg19, fourthmsg19, fifthmsg19);
+        model14 = new ItemDetailModel(R.drawable.i14, "Mellisa officinalis",
+                "المليسة", headings14, firstmsg14, seondmsg14, thirdmsg14,
+                fourthmsg14, fifthmsg14, sixthmsg14, sevenmsg14);
+        model15 = new ItemDetailModel(R.drawable.i15, "Hibiscus sabdariffa",
+                "الكركديه",  headings15, firstmsg15, seondmsg15, thirdmsg15,
+                fourthmsg15, fifthmsg15, sixthmsg15, sevenmsg15);
+        model16 = new ItemDetailModel(R.drawable.i16, "Calendula officinalis",
+                "الاقحوان",  headings16, firstmsg16, seondmsg16,
+                thirdmsg16,
+                fourthmsg16, fifthmsg16, sixthmsg16, sevenmsg16);
 
-        model20 = new ItemDetailModel(R.drawable.i20, "Pimpinella anisum", "اليانسون", headings20, firstmsg20, seondmsg20, thirdmsg20, fourthmsg20);
-        model21 = new ItemDetailModel(R.drawable.i21, "Taraxacum officinale", "الهندباء ", headings21, firstmsg21, seondmsg21, thirdmsg21, fourthmsg21);
-        model22 = new ItemDetailModel(R.drawable.i22, "Eucalyptus camaldulensis", "الاوكاليبتوس ( الكافور)",  headings22, firstmsg22, seondmsg22, thirdmsg22, fourthmsg22, fifthmsg22);
+        model17 = new ItemDetailModel(R.drawable.i17, "Thymus vulgaris",
+                "الزعتر", headings17, firstmsg17, seondmsg17, thirdmsg17,
+                fourthmsg17,
+                fifthmsg17, sixthmsg17, sevenmsg17, eightmsg17);
+        model18 = new ItemDetailModel(R.drawable.i18, "Myrtus communis",
+                "الاس (الريحان)", headings18, firstmsg18, seondmsg18,
+                thirdmsg18, fourthmsg18,
+                fifthmsg18, sixthmsg18, sevenmsg18, eightmsg18, ninthmsg18);
+        model19 = new ItemDetailModel(R.drawable.i19, "Lavandula angustifolia",
+                "الخزامى", headings19, firstmsg19, seondmsg19, thirdmsg19,
+                fourthmsg19,
+                fifthmsg19, sixthmsg19, sevenmsg19);
 
-        model23 = new ItemDetailModel(R.drawable.i23, "Trigonella foenum -graecum", "الحلبة", headings23, firstmsg23, seondmsg23, thirdmsg23, fourthmsg23);
-        model24 = new ItemDetailModel(R.drawable.i24, "Curcuma longa", "الكركم", headings24, firstmsg24, seondmsg24, thirdmsg24, fourthmsg24, fifthmsg24);
-        model25 = new ItemDetailModel(R.drawable.i25, "Equisetaceaearvense", "ذنب الخيل", headings25, firstmsg25, seondmsg25, thirdmsg25, fourthmsg25, fifthmsg25);
+        model20 = new ItemDetailModel(R.drawable.i20, "Pimpinella anisum",
+                "اليانسون", headings20, firstmsg20, seondmsg20,
+                thirdmsg20,
+                fourthmsg20, fifthmsg20, sixthmsg20, sevenmsg20, eightmsg20);
+        model21 = new ItemDetailModel(R.drawable.i21, "Taraxacum officinale",
+                "الهندباء ", headings21, firstmsg21, seondmsg21,
+                thirdmsg21,
+                fourthmsg21, fifthmsg21, sixthmsg21, sevenmsg21);
+        model22 = new ItemDetailModel(R.drawable.i22, "Eucalyptus camaldulensis",
+                "الاوكاليبتوس ( الكافور)",  headings22, firstmsg22,
+                seondmsg22, thirdmsg22, fourthmsg22,
+                fifthmsg22, sixthmsg22, sevenmsg22, eightmsg22);
 
-        model26 = new ItemDetailModel(R.drawable.i26, "Ammi visnaga", "الخلة",  headings26, firstmsg26, seondmsg26, thirdmsg26, fourthmsg26, fifthmsg26);
-        model27 = new ItemDetailModel(R.drawable.i27, "Paronychia argentea", "زهرة الالماسة",  headings27, firstmsg27, seondmsg27, thirdmsg27, fourthmsg27, fifthmsg27);
+        model23 = new ItemDetailModel(R.drawable.i23, "Trigonella foenum -graecum",
+                "الحلبة", headings23, firstmsg23, seondmsg23,
+                thirdmsg23,
+                fourthmsg23, fifthmsg23, sixthmsg23, sevenmsg23);
+        model24 = new ItemDetailModel(R.drawable.i24, "Curcuma longa",
+                "الكركم", headings24, firstmsg24, seondmsg24, thirdmsg24,
+                fourthmsg24,
+                fifthmsg24, sixthmsg24, sevenmsg24);
+        model25 = new ItemDetailModel(R.drawable.i25, "Equisetaceaearvense",
+                "ذنب الخيل", headings25, firstmsg25, seondmsg25,
+                thirdmsg25, fourthmsg25,
+                fifthmsg25, sixthmsg25, sevenmsg25);
+
+        model26 = new ItemDetailModel(R.drawable.i26, "Ammi visnaga",
+                "الخلة",  headings26, firstmsg26, seondmsg26,
+                thirdmsg26, fourthmsg26,
+                fifthmsg26, sixthmsg26, sevenmsg26);
+        model27 = new ItemDetailModel(R.drawable.i27, "Paronychia argentea",
+                "زهرة الالماسة",  headings27, firstmsg27,
+                seondmsg27, thirdmsg27, fourthmsg27,
+                fifthmsg27, sixthmsg27, sevenmsg27);
 
 
-        model28 = new ItemDetailModel(R.drawable.i28, "Avena sativa", "قشور الشوفان",
-                headings28, firstmsg28, seondmsg28, thirdmsg28, fourthmsg28);
-        model29 = new ItemDetailModel(R.drawable.i29, "Fucus vesiculosus", "مشرات الفوقس البحري",
-                headings29, firstmsg29, seondmsg29, thirdmsg29, fourthmsg29, fifthmsg29);
+        model28 = new ItemDetailModel(R.drawable.i28, "Avena sativa",
+                "قشور الشوفان",
+                headings28, firstmsg28, seondmsg28, thirdmsg28,
+                fourthmsg28, fifthmsg28);
+        model29 = new ItemDetailModel(R.drawable.i29, "Fucus vesiculosus",
+                "مشرات الفوقس البحري",
+                headings29, firstmsg29, seondmsg29, thirdmsg29,
+                fourthmsg29, fifthmsg29, sixthmsg29,
+                sevenmsg29);
         model30 = new ItemDetailModel(R.drawable.i30, "Linum usitatissimum", "الكتان",
-                headings30, firstmsg30, seondmsg30, thirdmsg30, fourthmsg30, fifthmsg30);
+                headings30, firstmsg30, seondmsg30, thirdmsg30, fourthmsg30,
+                fifthmsg30, sixthmsg30, sevenmsg30);
 
         model31 = new ItemDetailModel(R.drawable.i31, "Mentha piperita", "النعناع البري",
-                headings31, firstmsg31, seondmsg31, thirdmsg31, fourthmsg31, fifthmsg31);
-        model32 = new ItemDetailModel(R.drawable.i32, "Plantago ovata forssk", "البسيلليوم",
-                headings32, firstmsg32, seondmsg32, thirdmsg32, fourthmsg32, fifthmsg32);
+                headings31, firstmsg31, seondmsg31, thirdmsg31, fourthmsg31,
+                fifthmsg31);
+        model32 = new ItemDetailModel(R.drawable.i32, "Plantago ovata forssk",
+                "البسيلليوم",
+                headings32, firstmsg32, seondmsg32, thirdmsg32, fourthmsg32, fifthmsg32
+        , sixthmsg32, sevenmsg32, eightmsg32);
         model33 = new ItemDetailModel(R.drawable.i33, "Cuminum cyminum", "الكمون",
-                headings33, firstmsg33, seondmsg33, thirdmsg33, fourthmsg33);
+                headings33, firstmsg33, seondmsg33, thirdmsg33,
+                fourthmsg33, fifthmsg33);
 
         listAdd();
 
@@ -208,42 +296,54 @@ public class ItemsActivity extends AppCompatActivity {
         headings26 = new String[] {
                 "الاسم العلمي:",
                 "الجزء المستخدم من النبات:ا",
-                "الخصائص والاستخداماتالطبية:",
-                "الاثار الجانبية وموانع الاستحدام والتداخلات الدوائية:",
-                "الاستخدام اثناء الحمل:"
+                "الخصائص واالستخدامات الطبية",
+                "موانع االستخدام واالثار الجانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg26 = new String[] { "Ammi visnaga" };
         seondmsg26 = new String[] { "لثمار والزيت الطيار المستخرج منها." };
         thirdmsg26 = new String[] {
-                " تتمتع الخلة بخصائص مقوية لعضلة القلب وللاوعية الدموية التاجية وخصائص مضادة لتشنج العضلات الملساء اضافة الى خصائص مدرة للبول وكذلك  فعالية مضادة للبكتريا والفيروسات كما تتمتع بفعالية خافضة لمستوى السكر في الدم.",
-               "اضافة الى  فعاليتها  في زيادة مستوى الكولسترول الجيد في الجسم ",
-                "تستخدم لعلاج القصور القلبي وتسرع ضربات القلب وبسبب خصائصها المضادة للتشنج والمدرة للبول تستخدم لعلاج تشنج الجهاز البولي وتساعد في خروج حصوات  الكلى و الحالب كما انها تقلل من تشكل الحصيات البولية لانها تقلل من ترسب اوكسالات الكالسيوم في الكلى .",
-                "كما انها تساعد في علاج الصدفية."
+                "تتمتع الخلة بالخصائص الطبية التالية: \n" +
+                        "• تاثير ايجابي خفيف في تعزيز الدورة الدموية التاجية وتقوية عضلة القلب \n" +
+                        "• مضاد تشنج للعضالت الملساء\n" +
+                        "• استخدمت استخدامات غير مثبتة لعالج الذبحة الصدرية, قصور القلب, عدم انتظام ضربات القلب,زيادة االنقباضات, \n" +
+                        "الربو,السعال الديكي. "
         };
         fourthmsg26 = new String[] {
-                "ان استخدام هذا العقار قد يزيد من حساسية الجلد  لاشعة الشمس لذا ينصح بعدم التعرض لاشعة الشمس اثناء استخدامه كما ان استخدام الخلة لفترات طويلة يسبب تراكم مركب الخلين في الجسم ويسبب ظهور اثار جانبية كالاقياء  والغثيان والارق  والصداع وزيادة مستوى انزيمات الكبد في الدم.",
-                "التداخلات الدوائية : ينصح بعدم استهلاك الخلة مع بعض المستحضرات الدوائية : ",
-                "الديجوكسين: قد يسبب استهلاك الخلة مع الديجوكسين انخفاض في فعالية هذا الدواء بسبب التاثير المتعاكس لكل منهما.",
-                "الادوية التي تسبب اذية للكبد: كالاسيتامينوفين والاميودارون ميثوتريكسات اريثرومايسين وغيرها يمكن ان يسبب استهلاك الخلة مع هذه الادوية من زيادة الاصابة بتلف للكبد.",
-                "الادوية التي تزيد من الحساسية لاشعة الشمس: النورفلوكساسين والسيبروفلوكساسين سلفاميثوكسازول تتراسكلين وغيرها  استخدام الخلة مع هذه الادوية قد يزيد من خطر الاصابة بالحروق او الطفح الجلدي المسبب باشعة الشمس."
+                "االستخدام لفترات طويلة او جرعات زائدة من الخلة قد يسبب الدوار , فقدان الشهية, \n" +
+                        "اضطرابات في النوم , الجرعات العالية جدا تسبب ارتفاع في مستوي انريمات الكبد في بالزما الدم وفي حاالت نادرة \n" +
+                        "تسبب النبات بحدوث يرقببان ركودي, اضافة الى حساسية ضوئية الشعة الشمس. "
         };
         fifthmsg26 = new String[] {
-                "يعتبر هذا العقار غير امن اثناء الحمل وذلك يرجع لوجود مركب الخلين الذي يمكن ان يسبب  تقلصات للرحم مما يزيد من خطر حدوث اجهاض."
+                "ال يوجد معلومات وادلة مثبتة عن تداخل عقار الخلة مع المستحضرات الدوائية"
         };
+        sixthmsg26 = new String[] {
+                " ينصح بعدم استخدام الخلة اثناء الحمل لعدم وجود ادلة كافية عن امان استخدامه خالل هذه الفترة."
+        };
+        sevenmsg26 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, \n" +
+                        "4\n" +
+                        "thedition, p (81-82)\n"
+        };
+
     }
 
     private void getDetail29() {
         headings29 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
+                "الجزء المستخدم",
                 "الخصائص والاستخداماتالطبية",
-                "الاثار الجانبية وموانع الاستحدام والتداخلات الدوائية",
-                "الاستخدام اثناء الحمل"
+                "موانع االستخدام واالثار الجانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg29 = new String[] { "Fucus vesiculosus" };
         seondmsg29 = new String[] { "جميع اجزاء النبات" };
         thirdmsg29 = new String[] {
-          //      " يتمتع هذا العقار بالخصائص الطبية التالية",
+                " يتمتع هذا العقار بالخصائص الطبية التالية",
                 "مضاد للبكتريا",
                 "يؤثر على مستوى السكر في الدم",
                 "يستخدم لعلاج اضطرابات الغدة الدرقية بسبب محتواه العالي من اليود",
@@ -258,21 +358,27 @@ public class ItemsActivity extends AppCompatActivity {
         sixthmsg29 = new String[] {
                 "يمنع استخدام مشرات الفوقس البحري اثناء الحمل لانه يعتبر غير امن خلال هذه الفترة."
         };
+        sevenmsg29 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition, p (357-358)\n"
+        };
 
     }
 
     private void getDetail30() {
         headings30 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
-                "الخصائص والاستخداماتالطبية",
-                "الاثار الجانبية وموانع الاستحدام والتداخلات الدوائية",
-                "الاستخدام اثناء الحمل"
+                "الجزء المستخدم",
+                "االستخدامات والخصائص الطبية",
+                "موانع االستخدام واالثار الجانبية",
+                "استخدام الكتان",
+                "التداخالت الدوائية",
+                "المراجع"
         };
         firstmsg30 = new String[] { "Linum usitatissimum" };
         seondmsg30 = new String[] { "البذور  والزيت المستخرج منها" };
         thirdmsg30 = new String[] {
-              //  " يتمتع هذا العقار بالخصائص الطبية التالية",
+                " يتمتع هذا العقار بالخصائص الطبية التالية",
                 "ملين",
                 "خافض لمستوى الكولسترول في الدم",
                 "خافض لمستوى السكر في الدم",
@@ -292,25 +398,35 @@ public class ItemsActivity extends AppCompatActivity {
         sixthmsg30 = new String[] {
                 "استخدام الكتان مع الادوية في وقت واحد قد يؤخر امتصاص الادوية."
         };
+        sevenmsg30 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition ,p (313-315)\n"
+        };
 
     }
 
     private void getDetail31() {
         headings31 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
-                "الخصائص والاستخداماتالطبية",
-                "الاثار الجانبية وموانع الاستحدام والتداخلات الدوائية"
+                "الجزء المستخدم",
+                "االستخدامات والخصائص الطبية",
+                "موانع االستخدام واالثار الجانبية",
+                "المراجع"
         };
         firstmsg31 = new String[] { "Mentha piperita" };
         seondmsg31 = new String[] { "النبات المجفف." };
         thirdmsg31 = new String[] {
+                " يتمتع النعناع البري بالخصائص الطبية التالية: ",
                 "طارد للريح",
                 "منشط",
                 "يستخدم لعلاج اضطرابات الجهاز الهضمي خاصة الانتفاخ."
         };
         fourthmsg31 = new String[] {
                 "لا توجد اثار جانبية او مخاطر من استخدام النعناع  البري بالجرعات العلاجية دون الافراط باستخدامه."
+        };
+        fifthmsg31 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition ,p (258-259)\n"
         };
 
 
@@ -319,37 +435,52 @@ public class ItemsActivity extends AppCompatActivity {
     private void getDetail32() {
         headings32 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
+                "الجزء المستخدم",
                 "الخصائص والاستخدامات الطبية",
-                "الاثارالجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "الاستخدام اثناء الحمل"
+                "موانع االستخدام واالثار الجانبية",
+                "قد يسبب استخدام البسيلليوم اثار جانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg32 = new String[] { "Plantago ovata forssk" };
         seondmsg32 = new String[] { "البذور الناضجة" };
         thirdmsg32 = new String[] {
+                "يتمتع البسيللوم بالخصائص الطبية التالية:",
                 "ملين لمعالجة حالات الامساك",
                 "وكذلك يستخدم لعلاج الاسهال"
         };
         fourthmsg32 = new String[] {
-                "يمنع استخدام البسيلليوم في حال وجود امراض التهابية في الجهاز الهضمي وكذلك من قبل مرضى السكري الذين مستوى السكر في الدم لديهم متغير بشدة.",
-                "قد يسبب استخدام البسيلليوم اثار جانبية ردود فعل تحسسية ( التهاب انف,ربو شرى, التهاب ملتحمة) يمكن ان يسبب استخدام البسيلليوم في حال عدم تناول كميات كافية من السوائل انسداد في المري او الامعاء خاصة لدى كبار السن. "
+                "يمنع استخدام البسيلليوم في حال وجود امراض التهابية في الجهاز الهضمي وكذلك من قبل \n" +
+                        "مرضى السكري الذين مستوى السكر في الدم لديهم متغير بشدة."
         };
 
         fifthmsg32 = new String[] {
-                "قد يسبب استخدام البسيلليوم مع الادوية في نفس الوقت نقص في امتصاص الادوية."
+                "ردود فعل تحسسية ) التهاب انف,ربو شرى, التهاب ملتحمة( يمكن ان يسبب \n" +
+                        "استخدام البسيلليوم في حال عدم تناول كميات كافية من السوائل انسداد في المري او االمعاء خاصة لدى كبار السن."
         };
         sixthmsg32 = new String[] {
-                "ينصح بعدم استخدامه اثناء الحمل لعدم توفر معلومات وادلة مثبتة عن امان استخدامه اثناء هذه الفترة."
+                "قد يسبب استخدام البسيلليوم مع االدوية في نفس الوقت نقص في امتصاص االدوية."
         };
-        // fifthmsg27 = new String[] { "يعتبر هذا العقار غير امن خلال الحمل لانه يحرض انقباضات الرحم مما يزيد من خطر الاجهاض او الولادة المبكرة." };
+        sevenmsg32 = new String[] {
+                "ينصح بعدم استخدامه اثناء الحمل لعدم توفر معلومات وادلة مثبتة عن امان استخدامه اثناء هذه \n" +
+                        "الفترة. "
+        };
+        eightmsg32 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbl medicines. Thomson, Reuters, 2007, \n" +
+                        "4\n" +
+                        "thedition ,p (612 -614)"
+        };
+
     }
 
     private void getDetail33() {
         headings33 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
+                "الجزء المستخدم",
                 "الخصائص والاستخدامات الطبية",
-                "موانع الاستخدام والاثار الجانبية"
+                "موانع الاستخدام والاثار الجانبية",
+                "المراجع"
         };
         firstmsg33 = new String[] { "Cuminum cyminum" };
         seondmsg33 = new String[] { "الثمارالناضجة والزيت المستخرج منها" };
@@ -364,15 +495,20 @@ public class ItemsActivity extends AppCompatActivity {
         fourthmsg33 = new String[] {
                 "يعتبر الكمون امن اذا استخدم بالجرعات العلاجية دون الافراط باستخدامه."
         };
-        // fifthmsg27 = new String[] { "يعتبر هذا العقار غير امن خلال الحمل لانه يحرض انقباضات الرحم مما يزيد من خطر الاجهاض او الولادة المبكرة." };
+        fifthmsg33 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition, p (488-489)\n"
+        };
+
     }
 
     private void getDetail28() {
         headings28 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
+                "الجزء المستخدم:",
                 "الخصائص والاستخدامات الطبية",
-                "موانع الاستخدام والاثار الجانبية"
+                "موانع الاستخدام والاثار الجانبية",
+                "المراجع"
         };
         firstmsg28 = new String[] { "Avena sativa" };
         seondmsg28 = new String[] { "القشور التي تغطي الثمار" };
@@ -382,282 +518,507 @@ public class ItemsActivity extends AppCompatActivity {
         fourthmsg28 = new String[] {
                 "لم تسجل اثار جانبية او مخاطر لقشور الشوفان في حال استخدمت بالجرعات العلاجية دون الافراط بالاستخدام"
         };
-       // fifthmsg27 = new String[] { "يعتبر هذا العقار غير امن خلال الحمل لانه يحرض انقباضات الرحم مما يزيد من خطر الاجهاض او الولادة المبكرة." };
+        fifthmsg28 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition, p (551-552)\n"
+        };
+
     }
 
     private void getDetail27() {
         headings27 = new String[] {
             "الاسم العلمي",
-                "الجزء المستخدم من النبات",
+                "الجزء المستخدم",
                 "الخصائص والاستخدامات الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "الاستخدام اثناء الحمل"
+                "موانع االستخدام واالثار الجانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg27 = new String[] { "Paronychia argentea" };
         seondmsg27 = new String[] { "جميع اجزاء النبات" };
         thirdmsg27 = new String[] {
-                " يتمتع هذا النبات بخصائص مدرة للبول  وخصائص واقية ومنشطة للكلى  اضافة الى فعاليتها في تفتيت الحصيات في الكلى وتنظيفها من ترسبات الرمل.",
-                "تتمتع بفعالية خافضة لمستوى الدهون في الجسم.",
-                "لها فعالية مضادة للاسهال وطاردة للديدان وطاردة للغازات اضافة الى فعاليتها في علاج القروح والبثور .",
+                "تتمتع زهرة االلماسة بالخصائص الطبية التالية: \n" +
+                        "• مضاد لالكسدة. \n" +
+                        "• يتمتع بتاثيرات واقية للخاليا البطانية الكلوية لذلك تستخدم لعالج امراض الكلى. \n" +
+                        "• اضافة الى فعاليتها في تفتيت الحصيات في الكلى وتنظيفها من ترسبات الرمل.",
         };
         fourthmsg27 = new String[] {
-                "ان استهلاك هذا النبات بكميات كبيرة ولفترات طويلة قد يسبب اضطرابات في الجهاز الهضمي وتسبب حدوث الاسهال والغثيان والاقياء.",
-                "لا توجد ادلة ومعلومات عن تداخلات هذا العقار مع المستحضرات الدوائية."
+                "االكثار من زهرة االلماسة يمكن ان يسبب اضطرابات في الجهاز الهضمي كالغثيان \n" +
+                        "واالقياء واالسهال"
         };
-        fifthmsg27 = new String[] { "يعتبر هذا العقار غير امن خلال الحمل لانه يحرض انقباضات الرحم مما يزيد من خطر الاجهاض او الولادة المبكرة." };
+        fifthmsg27 = new String[] { "ال تتوفر معلومات وادلة حول التداخالت الدوائية لزهرة االلماسة" };
+        sixthmsg27 = new String[] { "ينصح بعدم استخدامها اثناء الحمل خاصة خالل الثلث االول من الحمل النها قد تسبب زيادة في نشاط \n" +
+                "الرحم. " };
+        sevenmsg27 = new String[] { "• L.A Hamitouche, ……….O.M Palamino, ‘’Paronychia argentea Lam. Protects renal endothelial \n" +
+                "cells against oxidative injury’’\n" +
+                "J Ethno Pharmacol. 2020 Feb. [ PubMed]\n" +
+                "• S. Bouanani, ……, M.Lecouvey ‘’Pharmacologic and toxicological effects of paronychia \n" +
+                "argentea in experimental calcium oxalate nephrolithiasis in rats’’ Ethnopharmacol. 2010 May, \n" +
+                "4, 129(1): 38-45. [ PubMed]\n" +
+                "• S. Sait, …., F.Pellati ‘’HPLC-UV/DAD and ESI-MS(n) analysis of flavonoids and antioxidant \n" +
+                "activity of an Algerian medicinal plant: paronychia argentea Lam’’ J Pharm Biomed Anal. 2015, \n" +
+                "111: 231-40. [PubMed]\n" };
     }
 
     private void getDetail25() {
         headings25 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
+                "الجزء المستخدم",
                 "الخصائص والاستخدامات الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدائية:",
-                "الاستخدام اثناء الحمل"
+                "موانع االستخدام واالثار الجانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل:",
+                "المراجع"
         };
-        firstmsg25 = new String[] { "Equisetaceaearvense" };
+        firstmsg25 = new String[] { "Equisetaceae arvense" };
         seondmsg25 = new String[] { "الرؤوس المزهرة والنبات العشبي" };
         thirdmsg25 = new String[] {
-              " يتمتع هذا النبات بخصائص مدرة للبول وخافضة للضغط وخافضة لحمض اليوريك وحالة للتشنج  وخصائص مغذية للشعر وخصائص مضادة للالتهاب.",
-              "يستخدم للوقاية من هشاشة العظام وذلك لمحتواه العالي من السيلكا والمعادن.",
-               "يستخدم لعلاج التهابات الجهاز البولي   وحصى الكلى والمثانة ولعلاج الوذمة.",
-                "يستخدم لعلاج الام المفاصل والروماتيزم.",
-                "له فعالية في تسريع التئام الجروح والقروح. "
+                "يتمتع ذنب الخيل بتاثيرات الطبية التالية: \n" +
+                        "• تاثيرات مدرة للبول \n" +
+                        "• تاثيرات مضادة للتشنج \n" +
+                        "• يستخدم لعالج التهابات المسالك البولية \n" +
+                        "• يستخدم لعالج حصوات الكلى والمثانة \n" +
+                        "• يستخدم لعالج الجروح والحروق"
         };
         fourthmsg25 = new String[] {
-                "قد يسبب بعض الاثار الجانبية اهمها  زيادة التبول نقص فيتامين الثيامينB1  ))  نقص مستوى البوتاسيوم في الدم  عدم انتظام ضربات القلب التهاب جلدي تحسسي.",
-                "يمنع استخدام هذا النبات من قبل الاشخاص الذين يتناولون الكحول بكثرة لان كل منهما يسبب نقص في فيتامين الثيامين.",
-                "يمنع استخدامه من قبل الاشخاص الذين يعانون من حساسية اتجاه النيكوتين نظرا لاحتواءه على هذا المركب.",
-               "الاشخاص الذين يعانون من حساسية تجاه الجزر غالبا ما يعانون من حساسية تجاه هذا النبات لذا ينصح بعدم استهلاكه من قبل هؤلاء الاشخاص.",
-                "التداخلات الدوائية : ينصح بعدم استخدام هذا النبات مع مجموعة من المستحضرات الدوائية:",
-                "المدرات( هيدوكلورتيازيد فوروسيميد كلورتاليدون ) : قد يسبب الاستخدام مع هذه الادوية انخفاض في مستويات البوتاسيوم في الدم .",
-                "الديجوكسين: يسبب استهلاك  هذا النبات معالديجوكسين من ظهور الاثار الجانبية للديجوكسين نظرا لفعالية النبات المدرة للبول والتي تسبب انخفاض في مستوى البوتاسيوم في الدم.",
-               "الادوية الخافضة للسكر:(الانسولين بيوغبيتازون غليمبريميد وغيرها ) يمكن ان يسبب استهلاك النبات مع هذه الادوية انخفاض في مستوى السكر في الدم.",
-                "الادوية التي يدخل في تركيبها الليثيوم استخدام النبات مع هذه الادوية يمكن ان يسبب في تراكم الليثيوم في الجسم وظهور اثاره الجانبية."
+                "يمنع استخدام من قبل االشخاص الذين يعانون من وذمة بسبب قصور في وظائف القلب \n" +
+                        "والكلى, وارتفاع الضغط الدموي واالشخاص المصابين بامراض وافات جلدية شديدة."
         };
         fifthmsg25 = new String[] {
-                "ينصح بعدم استخدم هذا النبات اثناء الحمل لعدم توفر ادلة كافية عن امان استخدامه خلال هذه الفترة."
+                "ينصح بعدم استخدام ذنب الخيل مع بعض المستحضرات الدوائية \n" +
+                        "• المدرات البولية \n" +
+                        "• الغليكوزيدات القلبية \n" +
+                        "• االدوية الخافضة للسكر \n" +
+                        "• االدوية التي يدخل في تركيبها الليثيوم \n" +
+                        "• االدوية المستخدمة في عالج فيروس نقص المناعة البشرية المكتسب من فئة مثبطات النسخ العكسي للنكليوزيد NR"
         };
+        sixthmsg25 = new String[] {
+                "ينصح بعدم استخدام ذنب الخيل اثناء الحمل لعدم توفر ادلة كافية عن امان استخدامه خالل هذه الفترة"
+        };
+        sevenmsg25 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition, p (560-561)\n" +
+                        "• D.M Carnerio……, L.C Cunha, ‘’ Randomized, double-blind clinical trial to assess the acute \n" +
+                        "diuretic effect of equisetum arvense (field horsetail) in healthy volunteers’’\n" +
+                        "Evidence-Based Complementary and Alternative Medicine. 2014, Mar. [Google Scholar]\n" +
+                        "• D.Pyevich, M P. Bogensschutz ‘’ Herbal diuretics and lithium toxicity’’\n" +
+                        "Puplished online. 2001 Aug, 158(8): 1329 .https//doi.org/10.117/appi.ajp.\n" +
+                        "• Assessment report on Equisetum arvense L. herba.\n" +
+                        "• E. Cordova, L. Morganti, C. Rodrigues, ‘’Possible drug-herb interaction between herbal \n" +
+                        "supplement containing horsetail (Equisetum arvense) and antiretroviral drugs’’\n" +
+                        "J Int Assoc Provid Aids Care. 2017 Jan,16(1): 11-13. [PubMed]\n" +
+                        "• European Medicine Agency. 2016 Feb.\n"
+        };
+
     }
 
     private void getDetail24() {
         headings24 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
+                "الجزء المستخدم:",
                 "الخصائص والاستخدامات الطبية",
-                "الاثارالجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "الاستخدام اثناء الحمل"
+                "موانع االستخدام واالثار الجانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg24 = new String[] { "Curcuma longa" };
-        seondmsg24 = new String[] { "جذامير النبات" };
+        seondmsg24 = new String[] { "جذامير النبات المجففة " };
         thirdmsg24 = new String[] {
-                "يتمتع الكركم بتاثير مضاد للالتهاب ومحفز للجهاز المناعي كما انه يتمتع بفعالية مضادة للاكتئاب الشديد اضافة الى فعاليته لعلاج اعراض متلازمة القولون العصبي والتهاب القولون التقرحي كما يتمتع بخصائصمضادة للاكسدة ومضادة للسرطان والاورام اضافة الى فعاليته في علاج التهاب المفاصل كما انه يتمتع بفعالية خافضة للسكر في الدم  ويتمتع بفعالية في علاج امراض الكبد."
+                "يتمتع الكركم بالخصائص الطبية التالية: \n" +
+                        "• مضاد لتسمم الكبد \n" +
+                        "• خافض لمستوى الشحوم في الدم\n" +
+                        "• مضاد لالكسدة\n" +
+                        "• مضاد لاللتهاب \n" +
+                        "• مضاد لالورام \n" +
+                        "• مضاد للميكروبات \n" +
+                        "• يستخدم لعالج عسر الهضم وفقدان الشهية"
         };
         fourthmsg24 = new String[] {
-                " قد يسبب استخدام الكركم  بجرعات كبيرة  اضطرابات في الجهاز الهضمي ,التهاب جلدي تحسسي , التهاب كبد, فقر دم , انخفاض في تعداد الكريات البيض.",
-                "ينصح المرضى الذين يعانون من حصوات الكلى او لديهم استعداد لتتكون لديهم بعدم استخدام الكركم وذلك بسبب احتواءه على نسبة كبيرة من الاوكسالات.",
-                "ينصح بعدم مشاركة الكركم مع بعض المستحضرات الدوائية:",
-                "مضادات التخثر ومضادات الصفيحات المشاركة مع الكركم قد تسبب زيادة في خطر حدوث النزيف.",
-                "الادوية المستخدمة في علاج بعض انواع السرطان: الكامبتوثيسين, ميكلوريثامين, باكليتاكسيل, دوكسوروبسين, سيكلوفوسفاميد قد يسبب استخدام الكركم مع هذه الادوية نقص في فعاليتها.",
-                "الاسيتامينوفين والايبوبروفين قد يسبب استخدام هذه الادوية مع الكركم ظهوراثار غير مرغوبة لها.",
-                "الامفوتريسين ب: المشاركة مع الكركم قد تسبب في زيادة تاثير هذا الدواء.",
-                "السيليبرولول والميدازولام:  قد يسبب الاستخدام مع الكركم زيادة في تركيز هذه الادوية ممايسبب في ظهور اثارها الجانبية.",
-                "فيراباميل: يمكن ان يسبب الاستخدام مع الكركم زيادة في تركيز هذا ",
-                "الدواء.",
-                "تاكروليموس: يمكن ان يسبب  تناول الكركم  مع هذه الدواء تغير في تركيزه مما يؤثر على فعاليته في تثبيط مناعة الجسم ورفض الجسم للعضو المزروع."
+                "يجب عدم استخدام الكركم من قبل االشخاص المصابين بانسداد القنوات الصفراوية والذين \n" +
+                        "يعانون من حصوات المرارة\n"
         };
         fifthmsg24 = new String[] {
-                "يوصى بعدم استهلاك عقار الكركم اثناء الحمل حيث اظهرت دراسة اجريت علي الحيوانات ان استهلاك الكركم قد سبب نقص في وزن المواليد كما ان الكركم يمكن ان يحرض انقباض عضلات الرحم بسبب تاثيراته المشابهة للاستروجين مما يسبب الاجهاض او الولادة المبكرة. "
+                " ينصح بعدم استخدام الكركم مع بعض المستحضرات الدوائية اهمها: \n" +
+                        "• مضادات التخثر ومضادات الصفيحات الدموية \n" +
+                        "• االدوية المستخدمة لعالج بعض انواع السرطانات الكامبتوثيسين. ميكلورثيامين, دوكسوروبسين, سيكلوفوسفاميد االستخدام \n" +
+                        "مع الكركم قد يسبب نقص في فعاليتها. \n" +
+                        "• االسيتامينوفين وااليبوبروفين \n" +
+                        "• االمفوتريسين ب \n" +
+                        "• السيليبرولول والميدازوالم \n" +
+                        "• تاكروليموس: استخدام الكركم مع هذا الدواء يقلل من فعالية الدواء في تثبيط مناعة الجسم ممايسبب رفض الجسم للعضو \n" +
+                        "المزروع."
         };
+         sixthmsg24 = new String[] {
+                " يجب عدم استخدام الكركم اثناء الحمل يعتبر غير امن خالل هذه الفترة"
+        };
+         sevenmsg24 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition, p-(775-777)\n" +
+                        "• P. Prakash, et al. ‘’ Anti-platelat effects of curcuma oil in experimental models of myocardial \n" +
+                        "ischemia-reperfusion and thrombosis’’\n" +
+                        "Thromb Res. 2011 Feb, 127(2): 111-8. [PubMed]\n" +
+                        "• A. Daveluy, et al. ‘’Probable interaction between an oral vitamin k antagonist and turmeric \n" +
+                        "(Curcuma longa)’’\n" +
+                        "Therapie. 2014 Nov, 69(6): 510-20. [PubMed]\n" +
+                        "• S. Somasundaram, et al. ‘’Dietary curcuma inhibits chemotherapy-induced apoptosis in models \n" +
+                        "of human breast cancer’’\n" +
+                        "Cancer Res. 2002 Jul, 62(13): 3868-75. [PubMed]\n" +
+                        "• W. Zhang,et al . ‘’ Impact of curcuma -induced changes in p-glycoprotein and CYP3A expression \n" +
+                        "on the pharmacokinetics of peroral celiprolol and midazolam in rats’’\n" +
+                        "Drug Metab Dispos. 2007 Jan, 35(1): 110-5. [PubMed]\n" +
+                        "• H.A Choi,et al . ‘’Interaction of over-the-counter drugs with curcuma: influence on stability and \n" +
+                        "bioactivities in intestinal cells’’\n" +
+                        "J Agric Food Chem. 2012 Oct, 60(42): 10578-84. [PubMed]\n" +
+                        "• A.K Kudva, et al. ‘’Complexation of amphotericin B and curcuma with serum albumines: \n" +
+                        "solubility and effect on erythrocyte membrane damage’’ \n" +
+                        "J Exp PHamacol. 2010 Des, 31(3): 1-6. [PubMed]\n" +
+                        "• K.Egashira, et al . ‘’Food- drug interaction of tacrolimus with pomelo, ginger, and turmeric \n" +
+                        "juice in rats’’\n" +
+                        "Drug Metab Pharmacokinet. 2012, 27(2): 242-7. [PubMed]"
+        };
+
     }
 
     private void getDetail23() {
         headings23 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات ",
+                "الجزء المستخدم",
                 "الخصائص والاستخدامات الطبية",
-                "الاستخدام اثناء الحمل"
+                "موانع االستخدام واالثار الجدانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع: "
         };
         firstmsg23 = new String[] { "Trigonella foenum -graecum" };
         seondmsg23 = new String[] { "البذور" };
         thirdmsg23 = new String[] {
-            " تتمتع الحلبة بتاثيرات خافضة للكولسترول والدهون الثلاثية لذلك فهي تساعد في الوقاية من الاصابة بامراض القلب والاوعية الدموية وكذلك تتمتع بفعالية خافضة للسكر ومضادة للجراثيم اضافة الى فعاليتها في الوقاية من امراض الكبد ولها فعالية كمضاد للسرطان.",
-            "تستخدم لعلاج اعراض انقطاع الطمث ومتلازمة المبيض المتعدد الكيسات ولعلاج التقرحات الجلدية ",
-            "تتمتع الحلبة بتاثير مشابه لتاثير الاستروجين.",
-             "اظهرت بعض الدراسات ان الحلبة تساعد على زيادة مستويات السيروتونين.",
-              "تستخدم الحلبة بشكل شائع لزيادة ادرار الحليب الا ان الادلة حول هذه الفعالية محدودة.",
-               "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية: ان استهلاك الحلبة قد يسبب اعراض تحسسية (الطفح الجلدي  سيلان الانف صعوبة التنفس وتورم بالوجه) ويمكن ان تسبب الاسهال والام في المعدة .",
-               "تناول كميات كبيرة من الحلبة قد يزيد من خطر الاصابة بالنزيف .",
-             "ينصح بعدم مشاركة الحلبة مع بعض المستحضرات الدوائية:",
-               "الوارفارين قد تسبب المشاركة زيادة في تاثير الوارفارين مما يزيد من خطر الاصابة بالنزف.",
-               "مضادات الاكتئاب من فئة SSRI ( مثبطات اعادة قبض السيروتونين) المشاركة مع الحلبة يمكن ان يزيد من خطر الاصابة بمتلازمة السيروتونين.",
-                "الثيوفيللين: يمكن ان تسبب الحلبة نقص في امتصاص هذا الدواء مما يؤثر على فعاليته.",
-               "الادوية الخافضة للسكر تسبب  الاستخدام المتزامن للحلبة مع هذه الادوية انخفاض في مستوى السكرفي الدم."
+               "تتمتع الحلبة بالخصائص الطبية التالية: \n" +
+                       "• خافضة لمستوى السكر في الدم\n" +
+                       "• خافضة لمستوى الكولسترول والدهون الثالثية في الدم \n" +
+                       "• تستخدم كفاتح للشهية \n" +
+                       "• تستخدم لعالج التهاب الجلد \n" +
+                       "• تستخدم الحلبة بشكل شائع لزيادة ادرار الحليب اال انه ال تتوفر ادلة ودراسات مثبة حول ذلك"
         };
-        fourthmsg23 = new String[] { " يجب تجنب استهلاك الحلبة اثناء الحمل لانها قد تسبب تشوهات خلقية للاجنة وكذلك يمكن ان تسبب حدوث تقلصات للرحم مما يسبب الاجهاض او الولادة المبكرة." };
+        fourthmsg23 = new String[] { "ان استخدام الحلبة يمكن ان يسبب اعراض تحسسية كالطفح الجلدي وسيالن االنف وقد \n" +
+                "يسبب االم في المعدة واسهال." };
+        fifthmsg23 = new String[] { "ينصح بعدم مشاركة الحلبة مع بعض المستحضرات الدوائية اهمها: \n" +
+                "• االدوية الخافضة لمستوى السكر في الدم \n" +
+                "• االدوية المضادة للتخثر) الوارفارين( \n" +
+                "• التيوفيللين \n" +
+                "• مضادات االكتئاب من فئة مثبطات اعادة قبض السيروتونين) SSRI " };
+        sixthmsg23 = new String[] { "يجب عدم استخدام الحلبة اثناء الحمل النها تعتبر غير امنة" };
+        sevenmsg23 = new String[] { "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbl medicines. Thomson, Reuters, 2007, 4th\n" +
+                "edition ,p (304-306)\n" +
+                "• J.P Lambert, J. Cormier ‘’ Potential interaction between warfarin and boldo-fenugreek’’ \n" +
+                "Pharmacotherapy. 2001 Apr, 21(4): 509-12. [PubMed]\n" +
+                "• F. I Al-Jenoobi, ……. S. A Al-Suwayeh ‘’ Effect of fenugreek, garden cress, and black seed on \n" +
+                "theophylline pharmacokinetics in beagle dogs’’\n" +
+                "Pharm Biol. 2015 Feb,53(2): 296-300. [PubMed]\n" +
+                "• K. Doolabh, ……S. Farrand ‘’Oral fenugreek seed consumption and serotonin syndrome’’ Aust N \n" +
+                "Z J Psychiatry. 2019 Dec,53(12): 1225. [PubMed]\n" };
+
     }
 
     private void getDetail22() {
         headings22 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
-                "الخصائص والاستخدامات الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "الاستخدام اثناء الحمل"
+                "الجزء المستخدم",
+                "االستخدامات والخصائص الطبية",
+                "موانع االستخدام واالثارالجانبية",
+                "الجرعات الزائدة",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg22 = new String[] { "Eucalyptus camaldulensis " };
-        seondmsg22 = new String[] { "الاوراق والزيت المستخرج منها ومن الاغصان الفتية."  };
+        seondmsg22 = new String[] { "االوراق والزيت المستخرج منها ومن االغصان الفتية"  };
         thirdmsg22 = new String[] {
-                " يتمتع الاوكاليبوس بخصائص مضادة للجراثيم والفطريات وكذلك له فعالية مقشعة فهو يزيد من الافرازات القصبية وكخافض للسكر الدموي ومدر للبول وكمضاد التهاب ومضاد للاكسدة.",
-                "السعال يستخدم لعلاج وله تاثير ايجابي على وظائف الرئتين.",
-                "يمكن استخدامه بشكل خارجي لعلاج الروماتيزم ولعلاج حب الشباب.",
-                "يستخدم لعلاج امراض البرد والتهاب القصبات وكذلك لعلاج امراض الكبد والمرارة والتهابات الجهاز البولي."
+                "يتمتع زيت االوكاليبتوس بالخصائص الطبية التالية: \n" +
+                        "• مضاد للجراثيم \n" +
+                        "• مضاد للفطريات \n" +
+                        "• طارد للبلغم ومقشع \n" +
+                        "• مضاد لاللتهاب \n" +
+                        "• مضاد للتشنج ومضاد احتقان موضعي خفيف \n" +
+                        "• يستخدم زيت االوكاليبتوس لعالج السعال والتهاب الشعب الهوائية \n" +
+                        "• يستخدم زيت االوكاليبتوس لعالج الروماتيزم بشكل خارجي. \n" +
+                        "• اوراق االوكاليبتوس ت تمتع بفعالية مقشعة ومضادة لالللتهاب ومضادة للتشنج ومدرة للبول ومزيلة للروائح الكريهة\n" +
+                        "• اوراق االوكاليبتوس تستخدم لعالج السعال والتهاب الشعب الهوائية \n" +
+                        "• ويمكن ان تستخدم االوراق داخليا لعالج نزالت البرد "
         };
         fourthmsg22 = new String[] {
-            "استخدامه بكميات كبيرة او استخدام الزيت من غير تخفيف يسبب اعراض تسمم تشمل الالام في البطن ,تشنج القصبات الهوائية ,ازرقاق ,هذيان ,دوخة اقياء , تسرع في التنفس ضعف في العضلات والشعور بالاختناق.",
-             "ان زيت الاوكاليبتوس غير المخفف يعتبر سام ويمنع استخدامه داخليا من غير تخفيف حيث تعتبر جرعة 3.5 مل منه مميتة .",
-             "يجب عدم استخدام هذا العقار من قبل المرضى المصابين بامراض الكبد والمجاري الصفراوية.",
-             "ينصح بعدم مشاركة الاوكاليبتوس مع بعض المستحضرات الدوائية:",
-              "الادوية الخافضة للسكر الدموي الاستخدام المتزامن يمكن ان يسبب انخفاض في مستوى السكر في الدم.",
-              "الامفيتامين المشاركة بينهما قد تسبب انخفاض في فعالية الامفيتامين.",
-                "الادوية التي يتم استقلابها بواسطة خمائر الكبد سيتوكروم (CYP1A2 P450) من هذه الادوية بروبرانالول,تيوفيللين, هالوبيردول فيراباميل وغيرها",
-                "الادوية التي يتم استقلابها بواسطة  خمائر الكبد سيتوكروم P450 CYP2C19)) منها لانسوبرازول, ديازيبام, اومبيرازول وغيرها",
-               "الادوية التي يتم استقلابها بواسطة خمائر الكبد سيتوكروم P450 CYP3A4)) منها كيتوكونازول فيكسوفينادين, لوفاستاتين وغيرها "
+               "قد يسبب زيت واوراق االوكاليبتوس الغثيان والقيء واالسهال, يمنع استخدام الزيت \n" +
+                       "واالوراق داخليا من قبل االشخاص الذين يعانون من التهابات في الجهاز الهضمي والقنوات الصفراوية والتهابات الكبد \n" +
+                       "الشديدة كما يمنع استخدام االوكاليبتوس للرضع واالطفال الصغار النه قد يسبب تشنجات في القصبات الهوائية ونوبات تشبه \n" +
+                       "الربو وقد يسبب الوفاة بسبب االختناق."
 
         };
         fifthmsg22 = new String[] {
-            " ينصح بعدم استهلاك الاوكاليبتوس خاصة الزيت اثناء الحمل والارضاع الطبيعي لعدم وجود ادلة كافية حول امان استخدمه خلال هذه الفترة."
+            "من زيت االوكاليبتوس تؤدي الى تسمم يهدد الحياة بضع قطرات منه لدى االطفال ومقدار 4 -5 مل للبالغين \n" +
+                    "وتشمل اعراض التسمم انخفاض في الضغط الدموي والدورة الدموية واالختناق. "
         };
+        sixthmsg22 = new String[] {
+            "ينصح بعد مشاركة االوكاليبتوس مع بعض المستحضرات الدوائية اهمها: \n" +
+                    "• االمفيتامين \n" +
+                    "• االدوية الخافضة للسكر في الدم\n" +
+                    "• البينتوباربيتال \n" +
+                    "• االدوية التي يتم استقالبها بالخمائر الكبدية سيتوكروم CPY450( CYP2C9,CYP2C19, CYP1A2 )مما يسبب نقص فعالية \n" +
+                    "هذه االدوية او ظهور االثار الجانبية غير المرغوبة لها) التيوفيللين ,البروبرانول, النسوبرازول اومبيرازول,كيتوكونازول, \n" +
+                    "لوفاستاتين وغيرها("
+        };
+        sevenmsg22 = new String[] {
+            "ينصح بعدم استخدام االوكاليبتوس وخاصة الزيت اثناء الحمل لعدم توفر ادلة كافية عن امان \n" +
+                    "استخدامه خالل هذه الفترة"
+        };
+        eightmsg22 = new String[] {
+            "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                    "edition p (283-285)\n" +
+                    "• M.Unger, et al. ‘’Simulaneous determination of the inhibitory potency of herbal extracts on \n" +
+                    "the activity of six major cytochrome P450 enzymes using liquid chromatography/mass \n" +
+                    "spectrometry and automated online extraction’’\n" +
+                    "Rapid Commun Mass Spectrom. 2004, 18(19): 2273-81. [PubMed]\n" +
+                    "• A. Jori….S.Garattini, ‘’Effect of eucalyptol(1,8-cineole) on the metabolism of other drugs in rats \n" +
+                    "and in man’’\n" +
+                    "Eur J Pharmacol. 1970 Mar, 9(3): 362-6. [PubMed]\n" +
+                    "• E. Kato, K. Kawakami, ‘’Macrocarpal C isolated from eucalyptus globulus inhibits dipeptidyl \n" +
+                    "peptidase 4 in aggregated form’’\n" +
+                    "J Enzyme Inhib Med Chem. 2018 Dec, 33(1): 106-109. [PubMed]\n"
+        };
+
     }
 
     private void getDetail21() {
         headings21 = new String[] {
                 "الاسم العلمي ",
-                "الجزء المستخدم من النبات",
+                "الجزء المستخدم",
                 "الخصائص والاستخدامات الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية"
+                "موانع االستخدام واالثار الجانبية",
+                "لوحظت بعض ",
+                "التداخالت الدوائية",
+                "المراجع"
         };
         firstmsg21 = new String[] { "Taraxacum officinale" };
-        seondmsg21 = new String[] { "النبات كاملا." };
+        seondmsg21 = new String[] { "النبات كامال يحصد قبل موسم التزهير" };
         thirdmsg21 = new String[] {
-                " تتمتع الهنباء بخصائص مدرة للبول وخصائص مضادة للروماتيزم  ومضادة للالتهاب وفاتحة للشهية كما انها تتمتع بتاثير واقي للكبد  اضافة الى فعاليتها كخافض للدهون .",
-                "تتمتع بتاثير مضاد للاكسدة ومضاد لبعض انواع السرطانات كسرطان الجلد وسرطان الدم وسرطان القولون والمستقيم."
+                " تتمتع الهندباء بالخصائص الطبية التالية: \n" +
+                        "• مدرة ومنشطة الفراز الصفراء\n" +
+                        "• تستخدم لعالج التهابات المسالك البولية \n" +
+                        "• تستخدم كفاتح للشهية \n" +
+                        "• تستخدم لعالج اضطرابات الكبد والمرارة \n" +
+                        "• تستخدم لعالج اضطرابات عسر الهضم"
         };
         fourthmsg21 = new String[] {
-              " استخدام الهندباء قد يسبب عسر هضم ,حموضة معدية ,التهاب جلدي تحسسي ,اسهال وانخفاض مستوى السكر في الدم .",
-               "ينصح بعدم تناول الهندباء مع بعض المستحضرات الدوائية:",
-              "المدرات قد تسبب الاستخدام المتزامن زيادة فعالية هذه الادوية بسبب التاثير المدر للبول الذي تتمتع به الهندباء.",
-              "الادوية الخافضة للسكر يمكن ان تسبب المشاركة بينهما انخفاض مستوى السكر الدموي وذلك يرجع لفعالية الهندباء الخافضة للسكر.",
-             "الادوية التي تستقلب بخمائر السيتوكروم P450(CYP)1 وذلك يرجع لتاثير الهندباء على عمل هذه الخمائر مما يسبب زيادة في تركيز هذه الادوية وظهور اثارها الجانبية."
+             "يمنع استخدام الهندباء في حال وجود التهاب او انسداد في القنوات الصفراوية. "
         };
+        fifthmsg21 = new String[] {
+             "االثار الجانبية نادرة الحدوث اضطرابات وحموضة في المعدة والتهاب جلد تحسسي."
+        };
+        sixthmsg21 = new String[] {
+             "ينصح بعدم مشاركة الهندباء مع بعض المستحضرات الدوائية اهمها: \n" +
+                     "• المدرات البولية. \n" +
+                     "• االدوية الخافضة لمستوى السكر في الدم. \n" +
+                     "• االدوية التي تستقلب بخمائر الكبد السيتوكروم P450(CYP3A4, CYP1A2)"
+        };
+        sevenmsg21 = new String[] {
+             "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbl medicines. Thomson, Reuters, 2007, 4th\n" +
+                     "edition ,p (367-369)\n" +
+                     "• B. A Clare, …., K.Spelman ‘’The diuretic effect in human subjects of an extract of Taraxacum \n" +
+                     "officinale folium over a single day’’\n" +
+                     "J Altern Complement Med. 2009 Aug, 15(8): 929-34. [PubMed]\n" +
+                     "• M.Martinez, ……G.Ruzi ‘’Taraxacum officinale and related species-An ethnopharmacological \n" +
+                     "review and its potential as a commercial medicinal plant’’ J Ethnopharmacol. 2015 Jul, 1, 169: \n" +
+                     "244-62. [PubMed]\n" +
+                     "• P. P Maliakal, S.Wanwimolruk ‘’Effect of herbal teas on hepatic drug metabolizing enzymes in \n" +
+                     "rats’’ J Pharm Pharmacol. 2001 Oct, 53(10): 1323-9. [PubMed]\n"
+        };
+
     }
 
     private void getDetail20() {
         headings20 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات ",
-                "الخصائص والاستخدامات الطبية",
-               "الاستخدام اثناء الحمل"
+                "الجزء المستخدم",
+                "الخصائص واالستخدامات الطبية",
+               "موانع االستخدام واالثار الجانبية",
+               "يعتبر اليانسون",
+               "التداخالت الدوائية",
+               "االستخدام اثناء الحمل",
+               "المراجع"
         };
         firstmsg20 = new String[] { "Pimpinella anisum" };
-        seondmsg20 = new String[] { "الثمار الجافة والزيت العطري المستخرج منها." };
+        seondmsg20 = new String[] { "الثمار الجافة والزيت العطري المستخرج منها" };
         thirdmsg20 = new String[] {
-                "يتمتع اليانسون بخصائص فاتحة للشهية وخصائص مقشعة ومضادة للجراثيم والفطريات وكذلك خصائص مضادة للاكسدة اضافة الى فعاليته كطارد للغازات وكمضاد للتشنج والمغص ويساعد في تخفيف اعراض عسر الهضم.",
-                "يستعمل زيت اليانسون لعلاج امراض الجهاز التنفسي (السعال الجاف التهاب الحنجرة سيلان",
-                "يتمتع هذا العقار بتاثير مشابه لهرمون الاستروجين.",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائبة: يعتبر البانسون امن عند استخدامه بشكل معتدل الا ان استهلاكه بشكل مفرط ولفترات طويلة قد يسبب اعراض تحسسية لذ لك يجب تجنب استخدامه لدى الاشخاص الذين لديهم حساسية  لاحد مكوناته او  لديهم حساسية لبعض الاعشاب كالشمر والكراوية والكمون .",
-                "يوصى بعدم استخدامه من قبل المرضى المصابين بانواع من السرطان الحساسة للهرمونات (الاستروجين) كسرطان الثدي والرحم والمبايض وذلك يرجع لفعاليته المشابهة لهرمون الاستروجين.",
-                "التداخلات الدوائية: ينصح بعدم استخدام اليانسون بشكل متزامن مع بعض المستحضرات الدوائية:",
-                "مانعات الحمل التي يدخل في تركيبها الاستروجين(استراديول ايتنيل استراديول وغيرها) ",
-                "الادوية المستخدمة لعلاج السرطان الهرموني  ( الثدي المبايض الرحم) :  تاموكسيفين تورمفين اكسيميستان وغيرها",
+                "يتمتع اليانسون بالخصائص الطبية التالية: \n" +
+                        "• طارد للبلغم \n" +
+                        "• مضاد للتشنج \n" +
+                        "• زيت اليانسون يتمتع بتاثير مضاد للجراثيم والفيروسات وطارد للديدان كما انه مقشع ومزيل للتشنج ويمتلك تاثيرا مشابها \n" +
+                        "لتاثير هرمون االستروجين. \n" +
+                        "• يستخدم لعالج نزالت البرد الشائعة \n" +
+                        "• يستخدم لعالج السعال والتهاب الشعب الهوائية \n" +
+                        "• يستخدم لعالج الحمى والزكام \n" +
+                        "• يستخدم لعالج التهاب الفم والبلعوم \n" +
+                        "• يستخدم كفاتح للشهية \n" +
+                        "• يستخدم لعالج اضطرابات عسر الهضم",
 
         };
-        fourthmsg20 = new String[] { "ينصح بعدم استخدام  عقار اليانسون اثناء الحمل والارضاع الطبيعي لعدم وجود ادلة كافية حول امان استخدامه خلال هذه الفترة." };
+        fourthmsg20 = new String[] { "يمنع استخدام اليانسون من قبل االشخاص الذين يعانون من الحساسية تجاه اليانسون او احد \n" +
+                "المركبات التي يحتويها ) االنثول(" };
+        fifthmsg20 = new String[] { "من االعشاب االمنة اذا استخدم بصورة معتدلة دون االفراط في استخدامه وقد لوحظ حدوث حساسية نادرة \n" +
+                "جدا." };
+        sixthmsg20 = new String[] { "ينصح بعدم استخدام اليانسون مع بعض المستحضرات الدوائية اهمها: \n" +
+                "• االدوية التي تؤثرعلى الجهاز العصبي المركزي) الكودايين, البنتوباربيتال, الميدازوالم, الفلوكستين وغيرها( " };
+        sevenmsg20 = new String[] { "ينصح بعدم استخدامه اثناء الحمل لعدم وج ود ادلة مثبتة عن امان اليانسون خالل هذه الفترة" };
+        eightmsg20 = new String[] { "Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbl medicines. Thomson, Reuters, 2007, 4th\n" +
+                "edition ,p (35-36)\n" +
+                "I.Samojlik……, B.Bozin ‘’The influence of essential oil of anised(Pimpinella anisum,L) on drug \n" +
+                "effects on the central nervous system’’\n" +
+                "Fitoterapia. 2012 Dec, 83(8): 1466-73. [PubMed]\n" };
     }
 
     private void getDetail19() {
         headings19 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
-                "الخصائص والاستخدامات الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "الاستخدام اثناء الحمل"
+                "الجزء المستخدم",
+                "الخصائص واالستخدامات الطبية",
+                "موانع االستخدام واالثار الجانبية",
+                "الاستخدام اثناء الحمل",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg19 = new String[] { "Lavandula angustifolia" };
-        seondmsg19 = new String[] { "الاوراق والازهار والزيت المستخرج منها." };
+        seondmsg19 = new String[] { "االزهار والزيت المستخرج منها" };
         thirdmsg19 = new String[] {
-             "يتمتع عقار الخزامى بخصائص مهدئة ومزيلة للقلق ومضادة للاكتئاب كما انه يساعد في تحسين جودة ",
-              "كما يتمتع بخصائص مضادة للالتهابات ومضادة للبكتريا وخصائص مضادة للاكسدة اضافة الى ذلك فهو يساعد في التخفيف من متلازمة التوتر العصبي ما قبل الحيض.",
-               "يتمتع الخزامى بخصائص مضادة للسرطان.",
-               "زيت الخزامى يساعد على التئام الجروح ."
+               "تتمتع الخزامى بالخصائص الطبية التالية: \n" +
+                       "• خصائص مهدئة ومزيلة للقلق\n" +
+                       "• يقلل من التوتر العصبي \n" +
+                       "• يحسن من جودة النوم \n" +
+                       "• مضاد للميكروبات \n" +
+                       "• منشط الفراز العصارات الصفراوية \n" +
+                       "• يستخدم كفاتح الشهية \n" +
+                       "• يستخدم لعالج االرق والعصبية \n" +
+                       "• لعالج عسر الهضم"
         };
         fourthmsg19 = new String[] {
-               " قد يسبب الاستهلاك بكميات كبيرة ولفترات طويلة من الخزامى ظهور بعض الاعراض الجانبية كالغثيان والتجشؤ وكذلك قد يسبب اضطرابات هرمونية ويمكن ان  يسبب الاستخدام الموضعي لزيت الخزامى التهاب جلد تحسسي.",
-               "قد يسبب الاستخدام زيت خزامى للاطفال الذكور لفترات طويلة قبل سن البلوغ  تضخم الثدي(التثدي)  وقد تراجعت هذه الاعراض عند التوقف عن استهلاك الخزامى.",
-               "يجب تجنب استخدام هذا العقار لدى الاشخاص الذين يعانون من حساسية تجاه الخزامى او احد مكوناته.",
-                "يجب تجنب استخدامه عند المرضى المصابين بالسرطان الهرموني كسرطان الثدي وسرطان المبيض.",
-                "ينصح بعدم مشاركة الخزامى مع بعض المستحضرات الدوائية:",
-                "الادوية المهدئة ( الفينوباربيتال , البنزوديازبينات) قد يسبب عقار الخزامى زيادة فعالية هذة الادوية.",
-                "مثبطات الجهاز العصبي المركزي( هيدرات الكلورال) يمكن ان يسبب الاعطاء المتزامن مع الخزامى زيادة الفعالية المهدئة والمخدرة لهذه الادوية."
+                "لم يالحظ ظهور اثار جانبية اذا استخدم بالجرعات العالجية اال ان االستهالك بكميات \n" +
+                        "كبيرة ولفترات طويلة من الخزامى قد يسبب ظهور بعض االعراض الجانبية كالغثيان والتجشؤ تهيج عصبي للمعدة \n" +
+                        "واضطراب عصبي لالمعاء ويمكن ان يسبب االستخدام الموضعي لزيت الخزامى التهاب جلد تحسسي وحساسية ضوئية"
         };
         fifthmsg19 = new String[] {
-                "ينصح بتجنب استخدام  الخزامى  داخليا بشكل مفرط اثناء الحمل والارضاع الطبيعي لعدم توفر ادلة كافية حول امان العقار خلال هذه الفترة."
+                "ينصح بعدم استخدام الخزامى مع بعض المستحضرات الدوائية اهمها: \n" +
+                        "• االدوية المهدئة ) الفينوباربيتال , البنزوديازبينات( قد يسبب عقار الخزامى زيادة فعالية هذة االدوية \n" +
+                        "• مثبطات الجهاز العصبي المركزي) هيدرات الكلورال( يمكن ان يسبب استخدام الخزامى مع هذه االدوية من زيادة الفعالية \n" +
+                        "المخدرة والمهدئة لهذه االدوية"
         };
+        sixthmsg19 = new String[] {
+                        " يوصى بعدم استهالك الخزامى بكميات كبيرة اثناء الحمل لعدم توفر معلومات وادلة تثبت سالمة \n" +
+                                "استخدامها خالل هذه الفترة"
+        };
+        sevenmsg19 = new String[] {
+                        "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                                "edition ,p (394-396)\n" +
+                                "• D.Donelli…., F.Firenzuoli ‘’Effect of lavender on anixiety:A systemic review and meta-analysis’’\n" +
+                                "Phtomedicine. 2019 Dec,65:153099. [PubMed]\n"
+        };
+
     }
 
     private void getDetail18() {
         headings18 = new String[] {
                "الاسم العلمي",
-               "الجزء المستخدم من النبات",
-                "الخصائص والاستخدامات الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "الاستخدام اثناء الحمل"
+               "الجزء المستخدم",
+                "الخصائص واالستخدامات الطبية",
+                "موانع االستخدام واالثار الجانبية",
+                "قد تظهر بعض االثار الجانبية",
+                "قد يسبب الجرعات الزائدة",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg18 = new String[] { "Myrtus communis" };
-        seondmsg18 = new String[] { "الاوراقوالفروع المزهرة والثماروالزيت العطري المستخرج منها." };
+        seondmsg18 = new String[] { "االوراق والفروع المزهرة والثماروالزيت العطري المستخرج منها" };
         thirdmsg18 = new String[] {
-               "يتمتععقارالاس بخصائص مضادة للبكتريا والفطريات والفيروس كما ان  له تاثير ايجابي على دورة النوم  يخفف من  اعراض الانفلونز اضافة الى خصائصه الخافضة للسكر الدموي.",
-               "له فعالية في علاج التهابات الجهاز البولي والتهابات الامعاء ",
-               "الزيت الطيار يستخدم لتطهير الجروح  وازالة البثور و يساعد في علاج الصدفية والبواسير .",
-               "يستخدم الاس  لعلاج  التهاب القصبات الهوائية المزمن والتهاب الجيوب والسعال الديكي .",
-                "تتمتع اوراق الاس بتاثير ايجابي على نمو وتقوية الشعر والحد من تساقطه.",
-                "تتمتع ثمار الاس بتاثير فاتح للشهية وتساعد في علاج الاسهال."
+                "يتمتع زيت االس بالخصائص الطبية التالية: \n" +
+                        "• مطهر ومضاد للبكتريا والفطريات \n" +
+                        "• تتمتع اوراق االس بالخصائص الطبية التالية: \n" +
+                        "• مضاد للبكتريا \n" +
+                        "• خافض لمستوى السكر في الدم\n" +
+                        "• له تاثيرعلى الجهاز العصبي المركزي فقد وجد انه يزيد مدة النوم \n" +
+                        "• خافض لمستوى السكر في الدم\n" +
+                        "• مزيل الفرازات الشعب التنفسية \n" +
+                        "• يمتلك تاثير في عالج التهابات المصاحبة لنزالت البرد"
         };
         fourthmsg18 = new String[] {
-                "قد يسبب هذا العقار حساسية ووجفاف للجلد والتقيؤ والكميات الكبيرة منه تسبب الاسهال والغثيان وقد يهدد مقدار 10 غرام من زيت الاس الحياة بسبب محتواه العالي من مركب السينول والتسمم به يسبب اضطرابات في الدورة الدموية وانخفاض في الضغط الدموي وفشل تنفسي.",
-                "يمنع استخدام زيت الاس للاطفال لانه يسبب نوبات شبيهة بالربو وتشنج بالقصبات الهوائية وفشل تنفسي.",
-                "لم تعرف حتى الان تداخلات دوائية لهذا النبات مع المستحضرات الدوائية."
+                "يجب عدم استخدام االس داخليا عند وجود التهاب في الجهاز الهضمي او التهاب كبد شديد \n" +
+                        "او التهاب في القنوات الصفراوية ويمنع استخدام الزيت لالطفال الصغار النه يسبب نوبات شبيهة بالربو وتشنج بالقصبات \n" +
+                        "الهوائية وفشل تنفسي"
         };
         fifthmsg18 = new String[] {
-                "يعتبر الاس غير امن خلال فترة الحمل والارضاع لذلك يوصى بعدم استخدمه خلال الحمل والارضاع الطبيعي."
+                "عند استخدام االس كالغثيان واالقياء واالسهال"
         };
+        sixthmsg18 = new String[] {
+                "من زيت االس اكثر من 10 غرام الى تسمم مهدد للحياة بسبب احتوائه على نسبة عالية من \n" +
+                        "مركب السينول وتشمل اعراض التسمم اضطرابات في الدورة الدموية وانخفاض الضغط الدموي وفشل تنفسي."
+        };
+        sevenmsg18 = new String[] {
+                "ال تتوفر معلومات وادلة مثبتة عن تداخالت دوائية لالس."
+        };
+        eightmsg18 = new String[] {
+                "ينصح بعدم استخدام االس خالل الحمل النه يعتبر غير امن."
+        };
+        ninthmsg18 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, \n" +
+                        "4\n" +
+                        "thedition ,p (536-538)\n"
+        };
+
     }
 
     private void getDetail17() {
         headings17 = new String[] {
                "الاسم العلمي",
-                "الجزء المستخدم من النبات",
-                "الخصائص والاستخدامات الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "الاستخدام اثناء الحمل"
+                "الجزء المستخدم",
+                "الخصائص واالستخدامات الطبية",
+                "موانع االستخدام واالثار الجانبية",
+                "زيت الزعتر يجب توخي الحذر عند استخدامه",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg17 = new String[] { "Thymus vulgaris" };
-        seondmsg17 = new String[] { "النبات المزهر" };
+        seondmsg17 = new String[] { "النبات المزهر والزيت العطري المستخرج منه" };
         thirdmsg17 = new String[] {
-                "يتمتع الزعتر بفعالية مضادة للبكتريا والفطور وفعالية كمضاد للاكسدة",
-                "يتمتع بتاثير مطهر للامعاء من الديدان والطفيليات.",
-                "يستخدم لعلاج التهابات الجهاز التنفسي والسعال الديكي  والربو كما انه يتمتع بخصائص مقوية لجهاز المناعة اضافة الى فعاليته المضادة للتخثر."
+                " يتمتع الزعتر بالخصائص الطبية التالية: \n" +
+                        "• مضاد للجراثيم \n" +
+                        "• مضاد تشنج \n" +
+                        "• مقشع ومضاد لتشنج القصبات الهوائية \n" +
+                        "• يستخدم لعالج السعال والتهاب الشعب التنفسية"
         };
         fourthmsg17 = new String[] {
-               " يعتبر من الاعشاب الامنة اذا استهلك بكميات معتدلة الا ان استخدامه لفترات طويلة وبكميات كبيرة قد يسبب ظهور بعض الاعراض الجانبية كالصداع .",
-               "ينصح بعدم استخدام الزعتر مع بعض المستحضرات الدوائية",
-               "حبوب منع الحمل التي تحوي الاستروجين ( الاستراديول اتينيل استراديول) قد يقلل الزعتر من فعالية هذه الادوية.",
-               "الادوية المستخدمة لعلاج مرض الزهايمر الاستخدام المتزامن يمكن ان يسبب في زيادة الاثار الجانبية لهذه الادوية.",
-               "الادوية المضادة للتخثر(الوارفارين) والادوية المضادة للصفيحات( كلوبيوغريل) يمكن ان يسبب الزعتر في زيادة فعاليتها مما يزيد من خطر التعرض للنزبف."
+                       "يعتبر الزعتر من االعشاب االمنة اذا استخدم بصورة معتدلة دون االفراط باستخدامه حيث \n" +
+                               "يمكن ان يسبب التهاب جلد تحسسي"
         };
         fifthmsg17 = new String[] {
-             " لا تتوافر ادلة كافية حول امان الزعتر خلال فترة الحمل والرضاعة الطبيعية الا انه يمكن استخدامه بصورة معتدلة كمنه للطعام."
+                     "وال ينبغي تناوله عن طريق الفم ويجب تخفيفه عند االستخد ام الموضعي \n" +
+                             "استخدمه بجرعات كبيرة يسبب اعراض سمية وذلك وفقا لدراسات اجريت على الحيوانات وتشمل اعراض التسمم الغثيان \n" +
+                             "تسرع التنفس ,نوبات صرع."
         };
+        sixthmsg17 = new String[] {
+                     "ينصح بعدم استخدام الزعتر مع بعض المستحضرات الدوائية اهمها: \n" +
+                             "• االدوية المستخدمة لعالج اضطرابات الغدة الدرقية \n" +
+                             "• فلورويوراسيل عند استخدامه موضعيا مع زيت الزعتر لوحظ ازدياد امتصاص الدواء. "
+        };
+        sevenmsg17 = new String[] {
+                     "ال تتوفر ادلة كافية حول امان استخدامه خالل الحمل لذلك ينصح بعدم استخدامه خالل هذه الفترة"
+        };
+        eightmsg17 = new String[] {
+                     "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbl medicines. Thomson, Reuters, 2007, 4th\n" +
+                             "edition ,p (761-762)\n" +
+                             "• E. Basch……. D. Sollars ‘’Thyme (Thymus vulgaris L.), thymol’’\n" +
+                             "J Herb Pharmacother. 2004, 4(1): 49-67. [PubMed]\n"
+        };
+
     }
 
     private void getDetail16() {
@@ -665,330 +1026,601 @@ public class ItemsActivity extends AppCompatActivity {
                 "الاسم العلمي",
                 "الجزء المستخدم من النبات",
                 "الخصائص والاستخدامات الطبية",
-                "الاستخدام اثناء الحمل"
+                "موانع االستخدام واالثار الجانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg16 = new String[] { "Calendula officinalis" };
-        seondmsg16 = new String[] { "الازهار المجففة." };
+        seondmsg16 = new String[] { "االزهار" };
         thirdmsg16 = new String[] {
-                "يتمتع بخصائص مضادة للالتهاب وفعالية كمضاد اكسدة ومضاد للبكتريا ومضاد للفيروسات.",
-                "يساعد على التئام الجروح والحروق وقرحة الساق الوريدية والقدم السكرية وكذلك يخفف من الالتهاب الفم الناتج عن العلاج الكيميائي.",
-                "الزيت العطري المستخرج منه يتمتع بفعالية تقي من اشعة الشمس.",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية: يمكن لهذا النبات ان يسبب اعراض تحسسية.",
-                "ينصح بعدم مشاركة الاقحوان مع بعض المستحضرات الدوائية ",
-                "الادوية المهدئة المشاركة بينهما قد تسبب فرط النعاس ومشاكل في التنفس."
+                "يتمتع االقحوان بالخصائص الطبية التالية: \n" +
+                        "• تاثيرات مضادة للميكروبات كالمكورات العنقودية الذهبية\n" +
+                        "• تاثيرات مضادة لفيروس نقص المناعة المكتسب \n" +
+                        "• تاثيرات مضادة لفيروس الفم الحويصلي \n" +
+                        "• تاثيرات مضادة لاللتهاب \n" +
+                        "• يستخدم لعالج الجروح والقروح وتقرحات الساق \n" +
+                        "• يستخدم لعالج التهاب الفم والبلعوم"
         };
 
         fourthmsg16 = new String[] {
-                "ينصح بعدم استخدامها اثناء الحمل وخلال الارضاع الطبيعي لعدم وجود ادلة كافية حول امان استخدامها خلال هذه الفترة."
+                "قد يسبب االقحوان التهاب للجلد"
         };
+        fifthmsg16 = new String[] {
+                "ينصح بتجنب استخدام االقحوان مع بعض المستحضرات الدوائية اهمها: \n" +
+                        "• االدوية المهدئة التي تؤثر على الجهاز العصبي المركزي )هيكسوباربيتال( "
+        };
+        sixthmsg16 = new String[] {
+                " ينصح بعدم استخدام االقحوان خالل الحمل لعدم توفر ادلة كافية حول امان استخدامه خالل هذه \n" +
+                        "الفترة."
+        };
+        sevenmsg16 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, \n" +
+                        "4\n" +
+                        "thedition, p (497-499)\n" +
+                        "• B. Ethan, S. Bent, S.Haskim…….S.Yong ’’Marigold(Calendula officinalis L.):an evidence-based \n" +
+                        "systematic review by the natural standard research collboration’’ Journal of Herbal \n" +
+                        "Pharmacotherapy, Vol. 6(3\\4)2006.{Google Scholar]\n"
+        };
+
     }
 
     private void getDetail15() {
         headings15 = new String[] {
                 "الاسم العلمي ",
-                "الجزء المستخدم من النبات",
-                "الخصائص والاستخدامات الطبية",
-                "الاستخدام اثناء الحمل"
+                "الجزء المستخدم",
+                "الخصائص واالستخدامات الطبية",
+                "موانع االستخدام واالثار الجانبية",
+                "التداخالت الدوائية",
+                "المراجع"
         };
         firstmsg15 = new String[] { "Hibiscus sabdariffa" };
-        seondmsg15 = new String[] { "سبلات وكوؤس الازهار." };
+        seondmsg15 = new String[] { "االزهار" };
         thirdmsg15 = new String[] {
-                " يتمتع هذا النبات بخصائص مضادة للالتهاب وفعالية خافضة لضغط الدم  وفعالية خافضة للسكر من النمط الثاني وكذلك خافضة للكولسترول  والشحوم الثلاثية كما اظهرت بعض الدراسات ان مستخلص الكركديه  له تاثير ايجابي على فقدان الوزن كما انه يتمتع بخصائص مضادة للاكسدة اضافة الى خصائصه الوقائية للكبد.",
-                "ملين وطارد للبلغم من الطرق التنفسية كما انه بساعد في التخفيف من اعراض الرشح والتهابات الجهاز التنفسي العلوي.",
-                "كما بينت بعض الابحاث فعالية زيت الكركديه في تحسين نمو الشعر.",
-                "يتمتع شراب الكركديه بخصائص منشطة للهضم وخصائص مرطبة للجسم.",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية: يعتير شراب الكركديه امن اذا استهلك بكميات معتدلة دون الافراط في استخدامه",
-                "نظرا لاحتوائه على نسبة عالية من اوكسالات الكالسيوم يمنع استخدامه من قبل مرضى الكلى والجهاز البولي.",
-                "يوصى بعدم استخدامه من قبل الاشخاص ذوي الضغط الدموي المنخفض بسبب فعاليته الخافضة للضغط الدموي.",
-                "يجب التوقف عن استهلاك الكركديه قبل العمليات الجراحية باسبوعين بسبب تاثيره الخافض للسكر.",
-                "التتداخلات الدوائية: يوصى بعدم مشاركة الكركديه مع بعض الادوية:",
-                "الاسيتامينوفين: المشاركة بينهما قد تسرع تخلص الجسم من الاسيتامينوفين",
-                "الادوية الخافضة للضغط(فيراباميل املودبين ديلتيازيم وغيرها )",
-                "المشاركة بينهما قد تسبب هبوط في الضغط الدموي.",
-                "الادوية الخافضة للسكر ( انسولين خافضات سكر فموية) المشاركة بينهما قد تسبب هبوط في سكر الدم.",
-                "الكلووكين يقلل الكركديه من فعالية هذا الدواء لذلك ينصح مرضى الملاريا المستخدمين لهذا الدواء بعدم استخدام الكركديه."
+                " يتمتع الكركديه بالخصائص الطبية التالية: \n" +
+                        "• خافض للضغط الدموي \n" +
+                        "• مرخي لعضالت الرحم \n" +
+                        "• ملين الحتوائه على احماض الفاكهة \n" +
+                        "• خافض لمستوى السكر والدهون في الدم \n" +
+                        "• يتمتع بخصائص منشطة للهضم و مرطبة للجسم "
         };
         fourthmsg15 = new String[] {
-                " يعتبر هذا النبات غير امن خلال فترة الحمل لانه قد يسبب تقلصات في الرحم وحدوث اجهاض او ولادة مبكرة.",
-                "ينصح بعدم استهلاكه خلال الرضاعة الطبيعية لعدم توفر ادلة كافية عن امان استخدامه خلال هذه الفترة."
+                " يعتير شراب الكركديه امن اذا استهلك بكميات معتدلة دون االفراط في استخدامه من \n" +
+                        "االثار الجانبية النادرة جدا اضطرابات بالمعدة وغازات."
         };
+fifthmsg15 = new String[] {
+                        "ينصح بعدم مشاركة الكركديه مع بعض المستحضرات الدوائية اهمها: \n" +
+                                "• الكلوروكين يقلل الكركديه من امتصاص هذا الدواء لذلك يجب على االشخاص الذين يستخدمون الكلوروكين لعالج المالريا \n" +
+                                "التوقف عن استخدام الكركديه\n" +
+                                "• االدوية الخافضة للضغط الدموي االملودبين وغيرها \n" +
+                                "• االدوية الخافضة للسكر في الدم االنسولين وخافضات السكر الفموية \n" +
+                                "• الديكلوفيناك"
+        };
+sixthmsg15 = new String[] {
+                        " ينصح بعدم االستخدام اثناء الحمل لعدم توفر معلومات وادلة كافية عن امان استخدامه اثناء الحمل. "
+        };
+sevenmsg15 = new String[] {
+                        "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                                "edition, p(394-396)\n" +
+                                "• M.A Alam ………., F.I Al-Jenoobi ‘’ Effect of hibiscus sabdariffa and Zingiber officinale on \n" +
+                                "pharmacokinetics and pharmacodynamics of amlodipine’’\n" +
+                                "J Pharm Pharmacol. 2021 Aug, 12(9): 1151-1160. [PubMed]\n" +
+                                "• T.O Fakeye ……., A.A Famakinde ‘’Effect of water extract of Hibiscus sabdariffa Linn \n" +
+                                "(Malvaceae) Roselle on excretion of a diclofenac formulation’’\n" +
+                                "Phytother Res, 2007 Jan,21(1): 96-8. [PubMed]\n" +
+                                "• B.M Mahmoud……, J.L Bennett ‘’ significant reduction in chloroquine bioavailability following\n" +
+                                "coadministration with Sudanese beverages Aradaib, Karkadi and lemon’’\n" +
+                                " J Antimicrob Chemother. 1994 May ,33(5):1005-9. [PubMed]\n"
+        };
+
     }
 
     private void getDetail14() {
         headings14 = new String[] {
-               "tالاسم العلمي",
-                "الجزء المستخدم من النبات ",
+               "الاسم العلمي",
+                "الجزء المستخدم",
                 "الخصائص والاستخدامات الطبية",
-                "الامان اثناء الحمل"
+                "الامان اثناء الحمل",
+                "موانع االستخدام واالثار الجانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg14 = new String[] { "Mellisa officinalis" };
-        seondmsg14 = new String[] { "الاوراق والساق تستخدم هذه الاجزاء قبل ان يزهر النبات وتتميز باحتوائها على زيت عطري." };
+        seondmsg14 = new String[] { "االوراق والزيت العطري المستخرج منها" };
         thirdmsg14 = new String[] {
-                " تتمتع اوراق المليسة بفعالية مهدئة للجهاز العصبي المركزي وتاثير مضاد للتشنج المرافق للقلق والارق لذلك تستخدم لعلاج اضطرابات النوم والقلق اضافة الى فعاليتها كمضاد اكسدة .",
-                "يستخدم الزيت الطيار المستخرج منها لعلاج التهاب الاغشية المخاطية في الجهاز الهضمي والجهاز التنفسي وذلك لخصائصه المضادة للبكتريا والفيروسات اضافة الى فعاليته كطارد للديدان المعوية.",
-                "تخفف  المليسة من اعراض عسر الهضم والتلبك المعوي.",
-                "تساعد المليسة في تهدئة التشنجات والام الحيض.",
-                "يستخدم زيت المليسة موضعيا بشكل كمادات لعلاج الام الروماتيزم.",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية: ان استهلاك المليسة بكميات كبيرة قد يسبب التهاب الجلد وظهور اعراض تحسسية.",
-                " يوصى بالتوقف عن استهلاك المليسة قبل الخضوع للعمليات الجراحية لان مشاركتها مع الادوية المستخدمة اثناء الجراحة وبعدها قد يسبب الخمول والنعاس الشديد.",
-                "ينصح بعدم تناول المليسة مع بعض المستحضرات الدوائية:",
-                "يوصى بعدم مشاركة المليسة مع ادوية الغدة الدرقية( الليفوتركسين) لان الاستهلاك المتزامن لهما قد يمنع امتصاص هذه الادوية",
-                "الادوية المهدئة(الورازيبام الفينوباربيتال وغيرها) المشاركة بينهما قد تزيد من التائير المهدئ لهذه الادوية."
+                "تتمتع المليسة بالخصائص الطبية التالية: \n" +
+                        "• مهدىء ومزيل للقلق \n" +
+                        "• مزيل للتشنج \n" +
+                        "• طارد للريح \n" +
+                        "• مضاد للجراثيم \n" +
+                        "• مضاد للفيروسات \n" +
+                        "• مضاد لالكسدة\n" +
+                        "• تستخدم لعالج االرق والعصبية واضطرابات النوم"
         };
         fourthmsg14 = new String[] {
-                "ينصح عدم استهلاك المليسة اثناء الحمل والارضاع الطبيعي لعدم وجود ادلة كافية حول امان هذا النبات اثناء الحمل والارضاع."
+                " يعتبر الملسية امنة اذا استهلكت بصورة معتدلة دون االفراط في استخدامها. "
         };
+fifthmsg14 = new String[] {
+                "ينصح بعدم استخدام المليسة مع بعض المستحضرات الدوائية اهمها: \n" +
+                        "• االدوية المهدئة) فينوباربيتال , لورازيبام وغيرها( "
+        };
+sixthmsg14 = new String[] {
+                " ينصح بعدم استخدام المليسة خالل الحمل لعدم وجود ادلة كافية حول سالمة استخدامها اثناء الحمل. "
+        };
+sevenmsg14 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition ,p (461-463)\n" +
+                        "• P. Posadzki, E. Ernest ‘’Herb-drug interactions: an overview of systematic review’’\n" +
+                        "Br J Clin Pharmacol.2013 Mar,75(3): 603-18. [PubMed]\n"
+        };
+
     }
 
     private void getDetail13() {
         headings13 = new String[] {
-                "الاسم العلمي للنوع الامريكي",
-                "الجزء المستخدم من النبات",
-                "الخصائص والاستخدامات الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "الامان اثناء الحمل"
+                "ي ا",
+                "الجزء المستخدم",
+                "الخصائص واالستخدامات الطبية",
+                "موانع االستخدام واالثار الجانبية",
+                "قد يسبب بعض االثار الجانبية",
+                "االستخدام اثناء الحمل واالرضاع",
+                "المراجع"
         };
         firstmsg13 = new String[] { "Panax quinquefol" };
         seondmsg13 = new String[] { "الجذور" };
-        thirdmsg13 = new String[] { " يتمتع الجنسنغ بخصائص مضادة للسرطان ولمرض السكري  وويستخدم ايضا لتحسين الاداء لدى الرياضيين وزيادة القدرة لديهم على التحمل كما ان له تاثيرات محفزة واخرى مثبطة للجهاز العصبي المركزي اضافة الى فعاليته في تحفيز جهاز المناعة  حيث انه  يسبب زيادة  في الخلايا التائية المساعدة واللمفاوية وكذلك يزيد من  الخلايا القاتلة الطبيعية ويحسن من الاستجابة المناعية ويحسن  الذاكرة لدى الاصحاء ولدى مرضى المصابين بالفصام ومرضى الزهايمر كما اشارت بعض الدراسات ان الجنسنغ قد يساعد في تخفيف من اعراض سن الياس وله فعالية مضادة لارتفاع الضغط الدموي كما انه يخفف من التعب المزمن مجهول السبب." };
+        thirdmsg13 = new String[] { "يتمتع الجنسنع بالخصائص الطبية التالية: \n" +
+                "• محفز للجهاز العصبي المركزي \n" +
+                "• تاثيرات ايجابية للوقاية من االضطرابات المعرفية المرتبطة بالعمرحيث اثبتت بعض الدراسات فعاليته في تحسين الذاكرة \n" +
+                "والتركيز \n" +
+                "• مثبط الفراز عدد من النواقل العصبية كاالستيل كولين وغاماامينوبوتريك اسيد لذلك يساهم الجنسنغ في مجموعة متنوعة من \n" +
+                "التاثيرات العالجية. \n" +
+                "• معزز للمناعة حيث يزيد من انتاج الخاليا اللمفاوية والخاليا القاتلة الطبيعية ويحسن االستجابة المناعية \n" +
+                "• مضاد للسرطان حيث اثبتت بعض الدراسات فعاليته في تحريض الموت المبرمج للخاليا السرطانية للمصابين بسرطان الكبد \n" +
+                "• مضاد الرتفاع مستوى السكر في الدم ويزيد حساسية مستقبالت االنسولين \n" +
+                "• مضاد لالكسدة لذلك يتمتع بتاثيرات واقية النسجة الكبد والقلب من تاثير الجذور الحرة\n" +
+                "• يعزز من تصفية الكحول من الجسم النه يتمتع بتاثيرات خافضة لمستوى الكحول في الدم \n" +
+                "• يخفض مستوى الدهون الثالثية والكولسترول في الدم \n" +
+                "• مضاد للتخ ثر \n" +
+                "• مضاد للفيروسات \n" +
+                "• يستخدم لتحسين وزيادة القدرة على التحمل ولعالج التعب والوهن وضعف التركيز" };
         fourthmsg13 = new String[] {
-                " ان استهلاك الجنسنغ بكميات كبيرة قد يسبب  الارق يجب استخدام هذا العقار بحذر لدى المصابين بسرطان الثدي لانه قد يحفز نمو خلايا سرطان الثدي.",
-                "يوصى بعدم مشاركة الجنسنغ مع بعض المستحضرات الدوائية:",
-                "الوارفارين حيث ان له فعالية مضادة لتاثير الوارفارين.",
-                "الخمائر الكبدية السيتوكروم (CYP3A4) حيث انه يزيد من فعالية هذه الخمائر مما يؤثر على تركيز الادوية التي يتم استقلابها بواسطة هذه الخمائر."
+                "يجب استخدامه بحذر من قبل مرضى القلب واالوعية الدموية والسكري وقد يسبب \n" +
+                        "استخدام الجنسنغ لفترة طويلة وبكميات كبيرة ارتفاع في الضغط الدموي, فرط توتر, االرق, وذمة"
         };
         fifthmsg13 = new String[] {
-                "يعتبر هذا العقار غير امن اثناء الحمل لانه قد يسبب تشوهات للجنين اضافة الى اضرار للحامل كانخفاض في مستوى السكر الدموي ونزيف مهبلي.",
-               "ينصح بعدم استخدامه اثناء الرضاعة الطبيعية لعدم وجود ادلة كافية عن امان استخدامه خلال هذه الفترة."
+               "االرق, الرعاف, الصداع, العصبية, القيء, االم في الثدي, نزيف مهبلي. "
         };
+        sixthmsg13 = new String[] {
+               "ينصح بعدم مشاركة الجنسنغ مع بعض المستحضرات الدوائية اهمها: \n" +
+                       "• االدوية الخافضة لمستوى السكر في الدم ) االنسولين وخافضات السكر الفموية( \n" +
+                       "• االدوية المضادة للتخث)الوارفارين ( ومضادات الصفيحات \n" +
+                       "• مضادات االلتهاب غير الستيروئيدية \n" +
+                       "• مضادات االكتئاب من فئة MAOIs (فينيليزين( \n" +
+                       "• المدرات البولية ) مدرات العروة("
+        };
+        sevenmsg13 = new String[] {
+               " ينصح بعدم استخدام الجنسنغ اثناء الحمل والرضاعة الطبيعية فهو يعتبر غير امن خالل \n" +
+                       "هذه الفترة."
+        };
+        eightmsg13 = new String[] {
+               "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbl medicines. Thomson, Reuters, 2007, 4th\n" +
+                       "edition ,p (346 -350)\n"
+        };
+
+
     }
 
     private void getDetail12() {
         headings12 = new String[] {
                 "الاسم العلمي ",
-                "الجزء المستخدم من النبات",
+                "الجزء المستخدم",
                 "الخصائص والاستخدامات الطبية",
-                "الامان اثناء الحمل"
+                "موانع االستخدام واالثار الجانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "االستخدام اثناء االرضاع الطبيعي",
+                "المراجع"
         };
         firstmsg12 = new String[] { "Camellia sinesis" };
         seondmsg12 = new String[] { "الاوراق" };
         thirdmsg12 = new String[] {
-            "بينت بعض الدراسات ان استهلاك الشاي الاخضر قد يقلل من خطر الاصابة بالخرف وارتفاع الضغط الدموي وامراض القلب والاوعية الدموية كما يتمتع بفعالية خافضة للكولسترول السيء كما انه يقلل من مستويات السكر في الدم .",
-            "الاستخدام الموضعي لمستخلصالشاي الاخضر يتمتع بفعالية مضادة للثاليل التناسلية الخارجية وكذلك الثاليل المتواجدة حول الشرج وتتمتع خلاصة الشاي الاخضر ايضا بتاثيرات مفيدة لعلاج حب الشباب.",
-            "يتمتع الشاي الاخضر بفعالية مضادة للخلايا السرطانية كما ان له فعالية في الوقاية من الاصابة بسرطان الفم وكذلك  بخصائص وقائية للمرضى المعرضين للاصابة بسرطان الكبد وسرطان القولون والمستقيم اضافة الى فعاليته المضادة لسرطان الدم الليمفاوي المزمن.",
-            "كما انه يساعد في تخفيف التهاب الجلد الناتج عن العلاج الاشعاعي لدى مرضى سرطان الثدي وكذلك في تخفيف التهاب المري الحاد الناتج عن العلاج الاشعاعي لمرضى سرطان الرئة.",
-            "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية: يعتبر الشاي الاخضر امنا  عند استهلاكه بكميات معتدلة الا ان استهلاكه بكميات كبيرة  وبصورة مفرطة قد يسبب اضطرابات بالنوم , صداع  وذلك يرجع لوجود الكافيئين , سمية كبدية عند الاستهلاك المفرط من خلاصة الشاي الاخضر وكذلك قد يسبب نقص في صفيحات الدم وقد بينت الدراسات ان هذه الاثار تختفي  عند معالجتها  والتوقف عن استهلاك الشاي الاخضر بصورة مفرطة.",
-            " بينت بعض الدراسات  ان استهلاك الشاي الاخضر بكميات كبيرة  من قبل المرضى المصابين بانواع معينة من السرطانات (ابياض الدم اللمفوي الحاد, سرطان الثدي ) يمكن ان يسبب الغثيان ,اضطرابات في وظائف الكبد ,عسر هضم, ارق.",
-            "التداخلات الدوائية: ينصح بعدم المشاركة الشاي الاخضر مع بعض المستحضرات الدوائية",
-            "المستحضرات الحاوية على الحديد  والادوية الحاوية على  حمض الفوليك  حيث وجد ان المشاركة بين هذه الادوية والشاي الاخضر قد يسبب نقص في التوافر الحيوي لها  وبالتالي نقص في فعاليتها لذلك ينصح بتناول الشاي الاخضرقبل تناول هذه المستحضرات بساعتين او بعد تناول هذه الادوية ب 4 ساعات.",
-            "فيراباميل: الاعطاء المتزامن له مع الشاي الاخضر قد يسبب زيادة في التوافر الحيوي لهذا الدواء ممايزيد من احتمالية ظهور الاثار الجانبية له .",
-            "الاسيتامينوفين ( الباراسيتامول) بينت بعض الدراسات التي اجريت على الحيوانات ان استهلاك الشاي الاخضر بعد استخدام الاسيتامينوفين قد سبب زيادة في السمية الكبدية لهذا الدواء.",
-            "الادوية الخافضة للضغط الدموي ( حاصرات بيتا) كالنادولول تبين ان الاستخدام المتزامن لها مع الشاي الاخضر قد يسبب نقص في امتصاصها وفي  توافرها الحيوي وبالتالي يخفض من فعاليتها.",
-            "مضادات التخثر( الوارفارين) والادية المضادة للصفيحات(كلوبيدوغريل ) استهلاك الشاي بالتزامن مع هذه الادوية يخفض من تاثيرالمضاد للتخثر الذي تتمتع به وذلك يعود لاحتواء الشاي الاخضر على فيتامين K.",
-            "التاموكسيفين: المشاركة بينهما يمكن ان تسبب زيادة في امتصاص التاموكسيفين ممايزيد من ظهور الاثار الجانبية لهذا الدواء.",
-            "الاتروبين:  قد يقلل الاعطاء المتزامن للمستحضرات الحاوية على الاتروبين والشاي الاخضر من امتصاص الاتروبين .",
-            "الكودائين: يمكن ان تسبب المشاركة بينهما انخفاض في امتصاص الكودائين.",
-            "خمائر السيتوكروم( P4503A4) يثبط الشاي الاخضر هذه الخمائر مما يؤثر على تركيز الادوية التي يتم استقلابها بواسطة هذه الخمائر.",
-            "الادوية المضادة للسرطان (بورتيزوميب): قد تسبب المشاركة بينهما تثبيط  لفعالية هذا الدواء.",
-            "الادينوزين: الاستخدام المتزامن بينهما يثبط تاثير الادينوزين المستخدم في اختبار جهد القلب لذلك يوصى بالتوقف عن استهلاك الشاي الاخضر قبل اجراء هذا الاختبار ب24 ساعة.",
-            "المضادات الحيوية من فئة الكينولون: المشاركة بينهما قد تسبب بظهور الاثار الجانبية للكافيئين المتواجد في الشاي الاخضركالصداع وزيادة معدل ضربات القلب لان هذه الادوية تقلل من سرعة تفكك الكافيئين."
+            "يتمتع الشاي االخضر بالخصائص الطبية التالية: \n" +
+                    "• منشط للجهاز العصبي المركزي \n" +
+                    "• مضاد اكتئاب \n" +
+                    "• مدر للبول \n" +
+                    "• يقلل من مستويات السكر والدهون في الدم \n" +
+                    "• مضاد التهاب \n" +
+                    "• مضاد للخاليا السرطانية \n" +
+                    "• خصائص وقائية من سرطانات البنكرياس,القولون,المستقيم,الثدي,الرئة \n" +
+                    "• مضاد للبكتريا \n" +
+                    "• تاثير مثبط لترسب البالك وتاثير وقائي من تسوس االسنان"
         };
         fourthmsg12 = new String[] {
-                " على الرغم من ان هيئة الغذاء والدواء الامريكيةFDAتعتبر الشاي الاخضر من المواد امنة الاستخدام الا انه يوصى بعدم استهلاكه بكميات كبيرة اثناء الحمل لاحتوائة على الكافيئين  اضافة الى احتوائه على مركبات تقلل من امتصاص حمض الفوليك الضروري لمنع حدوث تشوهات عصبية لدى الجنين.",
-                "وكذلك الامر بالنسبة للارضاع الطبيعي وذلك لان الشاي ينتقل الى حليب الثدي مما يسبب اضطرابات بالنوم لدى الرضع."
+                "يعتبر الشاي االخضر امن اذا استهلك بكميات معتدلة اال ان استهالكه بكميات مفرطة يمكن \n" +
+                        "ان يسبب فرط حموضة وتهيج المعدة,انخفاض الشهية, قلق,االرق,خفقان,فقدان شهية,دوار,اسهال,صداع,القيء"
         };
+
+        fifthmsg12 = new String[] {
+                "ينصح بعد م مشاركة الشاي االخضر مع بعض المستحضرات الدوائية:\n" +
+                        "• المستحضرات الحاوية على الحديد واالدوية الحاوية على حمض الفوليك النه قد يسبب نقص في توافرها الحيوي لذلك ينصح \n" +
+                        "الشاي االخضر قبل تناول هذه االدوية بساعتين او بعد تناول هذه االدوية ب 4 ساعات.\n" +
+                        "• االسيتامينوفين)الباراسيتامول( بينت بعض الدراسات التي اجريت على الحيوانات ان استهالك الشاي االخضر بعد استخدام \n" +
+                        "الباراسيتامول قد سبب زيادة في السمية الكبدية لهذا الدواء\n" +
+                        "• مضادات التخثر)الوافارين( واالدوية المضادة للصفيحات) كلوبيدوغريل( \n" +
+                        "• االدوية الخافضة للضغط الد موي )نادولول( \n" +
+                        "• التاموكسيفين \n" +
+                        "• االتروبين \n" +
+                        "• الكودائين \n" +
+                        "• الفيرباميل \n" +
+                        "• االدوية المضادة للسرطان)بورتيزوميت( المشاركة مع الشاي االخضرتثبيط لفعالية الدواء\n" +
+                        "• االدينوزين: االستخدام مع الشاي االخضر يثبط تاثير االدينوزين المستخدم في اختبار جهد القلب لذلك يوصى بالتوقف عن \n" +
+                        "استهالك الشاي االخضر قبل اجراء هذا االختبار ب 24 ساعة \n" +
+                        "• المضادات الحيوية من فئة الكينولون: المشاركة بينهما قد تسبب بظهور االثار الجانبية للكافيئين المتواجد في الشاي \n" +
+                        "االخضركالصداع وزيادة معدل ضربات القلب الن هذه االدوية تقلل من سرعة تفكك الكافيئين"
+        };
+
+        sixthmsg12 = new String[] {
+                " ينصح بان ال تزيد الكمية المستهلكة من الشاي االخضر عن 5 اكواب بحيث ال يزيدعن 300 ملغ من \n" +
+                        "الكافيئين يوميا اضافة الى احتواء الشاي االخضرعلى مركبات تقلل من امتصاص حمض الفوليك الضروري لمنع حدوث \n" +
+                        "تشوهات عصبية لدى الجنين."
+        };
+
+        sevenmsg12 = new String[] {
+                        "يمكن ان يسبب استهالك الشاي االخضر اضطرابات بالنوم لدى الرضع وذلك الن الشاي \n" +
+                                "ينتقل الى حليب الثدي. "
+        };
+        eightmsg12 = new String[] {
+                        "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, \n" +
+                                "4\n" +
+                                "thedition, p (369-372)\n" +
+                                "• F. Brinker, ‘’Herb contractions and drug interactions’’ \n" +
+                                "Eclectic Medical Puplications, 2001. [Google Scholar]\n" +
+                                "• J. Taylor, V. Wilt ‘’Probable antagonism of warfarin by green tea’’\n" +
+                                "Annalas of Pharmacotherapy 33 (4), 426-428, 1999. [Google Scholar]\n" +
+                                "• W. F Salmine……. A. A Ali ‘’Green tea extract can potentaite acetaminophen-induced \n" +
+                                "hepatotoxicity in mice’’\n" +
+                                "Food Chem Toxicol 2012 May, 50(5): 1439-46. [PubMed]\n" +
+                                "• E. B Goldeni……, A. H Schonthal ‘’Green tea polyphenols block the anticancer effects of \n" +
+                                "bottezomib and other boronic acid-based proteasome inhibitors’’\n" +
+                                "Boold (2009) 113(23): 5927-5937. [PubMed]\n" +
+                                "• S.C Shin……., J.S Choi ‘’ effects of epigallocatechin gallate on the oral bioavailability and \n" +
+                                "pharmacokinetics of tamoxifen and its main metabolite, 4-hydroxytamoxifen, in rats’’\n" +
+                                "• J.H Chang…..., J.S Choi ‘’Effect of oral epigallocatechin gallate on the oral pharmacokinetics of \n" +
+                                "verapamil in rats’’\n" +
+                                "Biopharm Drug Dispos. 2009 May,30(2): 90-3. [PubMed] \n" +
+                                "• S. Misaka, ……., J. Kimura ‘’ Green tea ingestion greatly reduces plasma concentrations of \n" +
+                                "nadolol in healthy subjects’’\n" +
+                                "Clin Pharmacol Ther. 2014 Apr. [PubMed]\n" +
+                                "• M.Carbo, ……, J. Cami ‘’ Effect of quinolones on caffeine disposition’’\n" +
+                                "Clin Pharmacol Ther. 1989 Mar,45(3): 234-40. [PubMed]\n"
+        };
+
     }
 
     private void getDetail11() {
         headings11 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
+                "الجزء المستخدم",
                 "الخصائص والاستخدامات الطبية",
-                "الامان اثناء الحمل"
+                "موانع االستخدام واالثار الجانبية",
+                "ابرز االثار الجانبية",
+                "ينصح بعدم استخدام ",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "ال يستخدم",
+                "المراجع"
         };
         firstmsg11 = new String[] { "Senna alexandrina" };
-        seondmsg11 = new String[] { "الثمار والاوراق المجففة." };
+        seondmsg11 = new String[] { "االوراق والثمار واالزهار" };
         thirdmsg11 = new String[] {
-                " تعتبر السنا من افضل الملينات حيث اثبتت الدراسات ان اوراق وثمار هذا العقارتعتبر ملين لطيف اذا استخدم بجرعات معتدلة وترجع هذه الفعالية لاحتوائه على مركبات انتراكينونية ويتميز هذا العقار بعدم تاثيره على المعدة والامعاء الدقيقة انما تاثيره ينحصر فقط على الامعاء الغليظة ولذلك فهو لا يؤثر على امتصاص المواد الغذائية بعد الاسهال ولا يسبب خمول بحركة الامعاء وبالتالي لا يصاب مستخدمي هذا العقار بالامساك بعد الاسهال كما هو الحال في باقي الملينات.",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية: ",
-                "ينصح بعدم استخدام اوارق السنا الجافة بشكل مسحوق لان ذلك قد يسبب مغص قوي.",
-                "استخدام السنا بصورة غيرمتكررة وبحرعات معتدلة لا يسبب ظهور اثار جانبية الا ان استمرار استخدامه لفترات طويلة  او استهلاكه بكميات كبيرة يمكن ان يسبب مشاكل في القولون  واسهال شديد الذي يؤدي للجفاف .",
-                "لا ينصح باستخدامه في حال وجود التهاب امعاء او التهاب زائدة دودية او انسداد في الامعاء او في حال وجود مشاكل في الكبد.",
-                "ينصح بعدم مشاركة عقار السنا مع بعض المستحضرات الدوائية :",
-                "الديجوكسين  قد يسبب استخدامهما بشكل متزامن بظهور الاثار الجانبية للديجوكسين وذلك برجع لتاثير السنا المخفض لمستوى البوتاسيوم في الدم.",
-                "المدرات البولية قد يسبب مشاركتهما معا انخفاض كبير في مستوى البوتاسيوم في الدم لان كل منهما يملك تاثير خافض للبوتاسيوم.",
-                "الادوية المميعة للدم (الوارفارين) يمكن ان يسبب المشاركة بينهما من خطر التعرض للنزيف.",
-                "مانعات الحمل الفموية التي تحوي الاستروجين المشاركة بينهما قد يخفض من فعالية هذه الادوية."
+                "يتمتع السنا بالخصائص الطبية التالية: \n" +
+                        "• ملين منبه \n" +
+                        "• يستخدم لعالج االمساك ولتفريغ االمعاء قبل االختبارات التشخيصية للجهاز الهضمي ومنطقة القولون والمستقيم. "
         };
         fourthmsg11 = new String[] {
-                "يجب عدم استخدام  عقارالسنا اثناء الحمل لعدم توفر ادلة كافية حول امان استخدامه خلال هذه الفترة."
+                "يمنع استخدام السنا في حال وجود انسداد معوي, التهاب زائدة دودية, التهاب امعاء حاد."
         };
+        fifthmsg11 = new String[] {
+                "اضطرابات معدية معوية تعود لتاثير السنا الملين االستخدام لفترات طويلة يمكن ان يسبب بصورة نادرة \n" +
+                        "عدم انتظام ضربات القلب, اعتالل كلية, وذمة, نقص مستوى البوتاسيوم في الدم, بيلة دموية, ضعف بالعضالت"
+        };
+        sixthmsg11 = new String[] {
+                "السنا على اعتباره من الملينات المنبهة الكثر من اسبوعين دون استشارة طبية."
+        };
+        sevenmsg11 = new String[] {
+                "ينصح بعدم استخدام السنا مع بعض المستحضرات الدوائية اهمها: \n" +
+                        "• الديجوكسين \n" +
+                        "• مضادات االلتهاب الغيرستيرويدية \n" +
+                        "• ادوية اضطرابات نظم القلب \n" +
+                        "• االدوية التي يدخل في تركيبها االستروجين \n" +
+                        "• حاصرات قنوات الكالسيوم) النيفيديبين("
+        };
+        eightmsg11 = new String[] {
+                "يجب عدم استخدام السنا اثناء الحمل واالرضاع الطبيعي النه يعتبر غير امن خالل هذه الفترة."
+        };
+        ninthmsg11 = new String[] {
+                "من قبل االطفال اقل من عامين."
+        };
+        tenthmsg11 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbl medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition ,p (684-686)\n"
+        };
+
+
     }
 
     private void getDetail9() {
         headings9 = new String[] {
                 "الاسم العلمي ",
-                "الجزء المستخدم من النبات",
-                "الخصائص والاستخدامات الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "الامان اثناء الحمل"
+                "الجزء المستخدم",
+                "الخصائص واالستخدامات الطبية",
+                "موانع االستخدام واالثار الجانبية",
+                "من االثار الجانبية",
+                "الجرعات الزائدة",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg9 = new String[] { "Zingiber officinalle" };
-        seondmsg9 = new String[] { "الجذامير والزيت المستخرج منها." };
+        seondmsg9 = new String[] { "الجذور" };
         thirdmsg9 = new String[] {
-                "يتمتع الزنجبيل بخصائص مضادة للقيء والغثيان لذلك يستخدم في تخفيف القيء لدى المرضى الخاضعين للجراحة وكذلك يساعد في تخفيف القيء المرتبط بالعلاج الكيميائي وكذلك  يتمتع بخصائص مضادة للالتهاب وله فعالية كمضاد اكسدة  كما انه يتمتع بخصائص مضادة للصفيحات  ومضادة للتخثرفهويمنع تجمع الصفيحات الدموية ويمنع تشكل الخثراتوله فعالية في تخفيض مستوى الدهون والكولسترول السيء في الجسم وكذلك يتمتع بفعالية خافضة لسكر الدم لدى الاشخاص المصابين بالنمط الثاني من السكري وكذلك ييمتع بفعالية مضادة لالتهاب المفاصل والام اسفل الظهر. ",
-                "اثبتت بعض الدراسات ان الزنجبيل يساعد على تخفيض الوزن  وذلك يرجع لتاثيره في تخفيض تراكم الدهون  في الجسم وكذلك يقلل من مؤشر كتلة الجسم ومن مستويات الانسولين في الدم.",
-                "يستخدم كمسكن فعال  لالام الطمث وكذلك مسكن لالام الصداع النصفي.",
-                "تتمتع المستحضرات الحاوية على الزنجبيل بتاثيرات وقائية للاشخاص المعرضين للاصابة بسرطان القولون"
+                "يتمتع الزنجبيل بالخصائص الطبية التالية: \n" +
+                        "• مضاد للتجلطات الدموية بسبب فعاليته المضادة للتخثر والمضادة لتجمع الصفيحات الدموية. \n" +
+                        "• مضاد لالكسدة\n" +
+                        "• مضاد للغثيان والقيء \n" +
+                        "• مضاد لاللتهاب \n" +
+                        "• خافض لمستوى الدهون والكولسترول في الدم \n" +
+                        "• مضاد الالم الصداع النصفي \n" +
+                        "• يزيد من افراز اللعاب وعصائر المعدة والعصارة الصفراوية \n" +
+                        "• يتمتع بتاثير محفزلجهاز المناعة \n" +
+                        "• يستخدم لعالج فقدان الشهية \n" +
+                        "• يستخدم لعالج دوار السفر\n" +
+                        "• يستخدم لعالج اضطرابات عسر الهضم"
         };
         fourthmsg9 = new String[] {
-                "من الاثار الجانبية الشائعة للزنجبيل هي الحرقة المعدية والتهاب الجلد.",
-                "يوصى بعدم استخدام الزنجبيل والمستحضرات الحاوية عليه قبل اجراء العمليات الجراحية وذلك لخصائصه المضادة للتخثر",
-                "كذلك يجب تجنب استخدام هذا العقار من قبل المرضى المصابين باضطرابات نزفية.",
-                "ويوصى بتجنب استخدامه من قبل المصابين بحصوات في المرارة.",
-                "يوصى بتجنب استهلاك الزنجبيل والمستحضرات التي يدخل في تركيبها مع مجموعة من الادوية:",
-                "مضادات الالتهاب غير الاستروئيدية: (الايبوبروفين ديكلوفيناك وغيرها) الجمع بينهما قد يزيد من خطر النزيف.",
-                "مضادات التخثر مضادات الصفيحات: ان الاستخدام المتزامن مع هذه الادوية قد يزيد من خطر النزيف.",
-                "الادوية الخافضة لسكر الدم (الانسولين) : الجمع بينهما يمكن ان يسبب انخفاض في مستوى السكر في الدم",
-                "السيكلوسبورين: استهلاك الزنجبيل بالتزامن مع السيكلوسبورين يسبب انخفاض في تركيز هذا الدواء وبالتالي يخفض من فعاليته.",
-                "تاكروليموس: استخدام الزنجبيل مع هذا الدواء قد تسبب زيادة في تركيزالدواء في الدم."
+                " يمنع استخدام الزنجبيل لعالج الغثيان الصباحي لدى الحوامل, يمنع استخدامه في حال \n" +
+                        "وجود حصيات في المرارة, يمنع استخدامه من قبل االشخاص الذين يعانون من اضطرابات نزفية"
         };
         fifthmsg9 = new String[] {
-                " يوصى بتجنب استخدام المستحضرات التي تحوي الزنجبيل اثناء الحمل والارضاع الطبيعي  بسبب نقص في المعلومات حول تاثيراته على تطور الجنين في الدراسات التي اجريت على الحيوانات ."
+                "للزنجبيل الحرقة المعدية والتهاب الجلد."
         };
+        sixthmsg9 = new String[] {
+                "منه قد تسبب تثبيط للجهاز العصبي المركزي وعدم انتظام ضربات القلب"
+        };
+        sevenmsg9 = new String[] {
+                "ينصح بعدم استخدام الزنجبيل مع بعض المستحضرات الدوائية اهمها: \n" +
+                        "• االدوية المضادة للتخثر والمضادة للصفيحات \n" +
+                        "• االدوية الخافضة لمستوى السكر في الدم \n" +
+                        "• مضادات االلتهاب غير الستيروئيدية \n" +
+                        "• سيكلوسبورين \n" +
+                        "• تاكروليموس"
+        };
+        eightmsg9 = new String[] {
+                "ينصح بعدم استخدام الزنجبيل اثناء الحمل لعدم توفر معلومات وادلة مثبتة عن تاثيراته خالل الحمل."
+        };
+        ninthmsg9 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbl medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition ,p (339-341)\n" +
+                        "• S. Shalansky, ………C. Kerr ‘’ Risk of warfarin- related bleeding events and supratherapeutic \n" +
+                        "international normalized ratios associated with complementary and alternative medicine: a \n" +
+                        "longitudinal analysis’’\n" +
+                        "Pharmacotherapy. 2007 Sep, 27(9): 1237-47. [PubMed]\n" +
+                        "• P.J Hodges, P C A Kam ‘’ The peri- operative implications of herbal medicines’’ Anaesthesia. \n" +
+                        "2002 Sep,57(9): 889-99. [ PubMed]\n" +
+                        "• K. Egashira……, I.Ieiri ‘’ Food-drug interactions of tacrolimus with pomelo, ginger, and turmeric \n" +
+                        "juice in rats’’ Drug Metab Pharmacokinte. 2012,27(2): 242-7. [PubMed]\n" +
+                        "• D. Colombo, L. Lunaradon, G. Bellia ‘’ Cyclosporin and herbal supplement interactions’’ J \n" +
+                        "Toxicol. 2014, 2014:145325. [PubMed] \n"
+        };
+
+
     }
 
     private void getDetail8() {
         headings8 = new String[] {
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
-                "الخصائص والاستخدامات الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "الامان اثناء الحمل"
+                "الجزء المستخدم",
+                "الخصائص واالستخدامات الطبية",
+                "موانع االستخدام واالثار الجانبية",
+                "االثار الجانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg8 = new String[] { "Glycyrrhiza glabra" };
         seondmsg8 = new String[] { "الجذور المجففة غير المقشورة." };
         thirdmsg8 = new String[] {
-                " يتمتع هذا العقار بفعالية مضادة لتقرحات المعدة المسببة (Helicobacter pylori) وكذلك فعالية مضادة للاورام ويمتلك كذلك خصائص مضادة للوذمات وله تاثير مضاد للمركبات الحالة للدم وكذلك له فعالية خافضة لشحوم الدم كما اثبتت الدراسات فعاليته المضادة لبعض انواع الفيروسات منها فيروس التهاب الكبد B لذلك يستخدم في علاج التهاب الكبد الفيروسي المزمن وكذلك فيروس Herpes) simplex ) المسبب لتقرحات المناطق التناسلية كما انه يتمتع بتاثير مضاد لفطور(Candida alibicans) المسببة للالتهابات النسائية التناسلية ويتمتع ايضا تاثيرات استروجينية.",
-                "يستخدم السوس لعلاج التهابات الجهاز التنفسي  كما انه يزيد من المادة المخاطية التي تقي جدار المعدة ويقلل من افراز الحمض المعدي ويساهم في التئام القرحة.",
-                "يتمتع بفعالية مميعة للدم ومانعة لتجلطه لوجود مركبات كومارينية اي انه يقلل من الجلطات الدموية وجلطات الدماغ.",
-                "لهذا العقار فعالية في ايقاف تطور سرطان الثدي وسرطان البروستات وذلك لوجود مركب فينولي يعرف ب(BHP) الذي يثبط نشاط البروتين المسوؤل عن تكاثر الخلايا السرطانية."
+                "يتمتع عرق السوس بالخصائص الطبية التالية: \n" +
+                        "• مضاد لاللتهاب \n" +
+                        "• مميع ومضاد لتخثر الدم\n" +
+                        "• تاثيرات وقائية ضد القرحات المعدية كما يسرع من التئام القرح \n" +
+                        "• مضاد للفيروسات كفيروس التهاب الكبد الوبائي B وفيروس الهربسsimplex Herpes\n" +
+                        "• مضاد للفطريات كفطور المبيضات alibicans Candida\n" +
+                        "• تاثيرات مشابهة لتاثير االلدوستيرون حيث يسبب احتباس الماء وارتفاع الضغط الدموي \n" +
+                        "• تاثيرات مضادة لالورام \n" +
+                        "• يستخدم لعالج السعال والتهاب الشعب الهوائية \n" +
+                        "• يستخدم لعالج التهاب المعدة"
         };
         fourthmsg8 = new String[] {
-                " قد يسبب هذا العقار الام في الراس, و احتباس الصوديوم والماء مما يسبب وذمة كما ان استهلاكه بكميات كبيرة قد يسبب فشل قلبي ,ورجفان بطيني عدم انتظام في ضربات القلب ,قلة الصفيحات ,اعتلال كلوي واعتلال لشبكية العين .",
-                "كما اثبتت بعض الدراسات ان استهلاكه بكميات معتدلة بصورة متكررة قد يسبب ارتفاع في الضغط الدموي و ونقص مستوى البوتاسيوم في الدم.",
-                "الاستهلاك المفرط من السوس يمكن ان يسبب نزيف دموي في المخ وكذلك السكتات القلبية ويزيد من معدل حدوث الولادة المبكرة .",
-                "يوصى بدم تناول السوس مع بعض المستحضرات الدوائية:",
-                " مضادات التخثر( الوارفارين) : السوس يقلل من فعالية الوارفارين لانه يسرع من تحطمهداخل الجسم  ممايزيد من خطر تشكل الجلطات.",
-                "الغليكوزيدات القلبية (الديجوكسين) الجمع بينهما قد يسبب ظهور اثار سامة للديجوكسين وذلك لان السوس يسبب انخفاض في مستوى البوتاسيوم.",
-                "المدرات الطارحة للبوتاسيوم : الجمع بينهما قد يسبب نقص كبير في مستوى البوتاسيوم الدموي ممايزيد من فعالية هذه المدرات.",
-                "المدرات الحافظة للبوتاسيوم (سبيرونولاكتون) : الجمع بينهما يسبب نقص في فعالية هذه المدرات.",
-                "الادوية الخافضة لضغط الدم وذلك بسبب تاثيرها المعاكس لتاثير السوس.",
-                "اسيتات الكورتيزون المستخدم لدى المرضى المصابين بداء اديسون قد يسبب الجمع بينهما من زيادة التوافر الحيوي لاسيتات الكورتيزول.",
-                "مثبطات الاوكسيداز احادي الامين(MAOIs ) الجمع بينهما قد يزيد من فعالية هذه الادوية وبالتالي يزيد من ظهور الاثار الجانبية لها كالصداع والرعاش.",
-                " له تاثير على خمائر الكبد السيتوكروم p450 (CYP3A, CYP2D6) ممايزيد من فعالية بعض الادوية التي تستقلب عن طريق هذه الخمائر ويزيد من احتمال ظهور اثارها الجانبية من هذه الادوية الفينوباربيتال ديكساميتازون الايبوبروفين لوزارتان لوفاستاتين وغيرها .",
-                "السيكلوسبورين : قد يقلل  الجمع بينهمامن التوافر الحيوي للسيكلوسبورين وذلك بسبب تاثير السوس المنشط للخمائر الكبديةCYP3A) ) المسوؤلة عن استقلاب السيكوسبورين."
+                "يمنع استخدام عرق السوس من قبل المرضى المصابين بالتهاب الكبد المزمن, امراض \n" +
+                        "الكبد الصفراوية, تليف الكبد, التهاب الكلى الحاد,مرضى السكر وارتفاع ضغط الدم, والمصابين بنقص البوتاسيوم في الدم , \n" +
+                        "الحمل"
         };
         fifthmsg8 = new String[] {
-                "يوصى بتجنب استخدام عقار السوس اثناء الحمل وذلك لاحتواءه على كميات كبيرة من مركب الجليسرزين الذي قد يسبب اثار ضارة للجنين وكذلك يوصى بتجنب استهلاكه اثناء الرضاعة الطبيعية لعدم وجود دراسات كافية حول امان استخدامه اثناء هذه الفترة."
+                "قد يسبب استخدام عرق السوس لفترة طويلة نقص مستوى البوتاسيوم في الدم, ارتفاع مستوى الصوديوم في \n" +
+                        "الدم وذمة وارتفاع الضغط الدموي اضطرابات قلبية ,و اعتالل كلوي حاد وترسب للكالسيوم في الكلى وفشل قلبي. "
+        };
+        sixthmsg8 = new String[] {
+                "ينصح بعدم مشاركة عرق السوس مع بعض المستحضرات الدوائية اهمها: \n" +
+                        "• المدرات البولية الحافظة للبوتاسيوم والطارحة للبوتاسيوم) فوروسيميد, هيدروكلوروتيازيد( \n" +
+                        "• مضادات التخثر)الوارفارين(\n" +
+                        "• الغليكوزيدات القلبية) الديجوكسين( \n" +
+                        "• االدوية المضادة الضطرابات نظم القلب \n" +
+                        "• الكورتيكوستيرويدات"
+        };
+        sevenmsg8 = new String[] {
+                "يوصى بتجنب استخدام عرق السوس اثناء الحمل لعدم توفر معلومات وادلة كافية حول سالمة \n" +
+                        "استخدامه اثناء هذه الفترة."
+        };
+        eightmsg8 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition, p (469-473)\n"
         };
     }
 
     private void getDetail7() {
         headings7 = new String[] {
                 "الاسم العلمي ",
-                "الجزء المستخدم من النبات",
-                "الخصائص والاستخدامات الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات مع المستحضرات الدوائية",
-                "الامان اثناء الحمل"
+                "الجزء المستخدم",
+                "الخصائص واالستخدامات الطبية",
+                "موانع االستخدام واالثار الجانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg7 = new String[] { "Rosmarinus officinalis" };
         seondmsg7 = new String[] { "القمم المزهرة واوراق النبات المجففة وكذلك الزيت المستخرج منها." };
         thirdmsg7 = new String[] {
-                "يتمتع هذا العقار بخصائص حالة لتشنجات المرارة وخصائص واقية للكبد وخصائص مثبطة لنمو الاورام اضافة الى فعاليته كمضاد اكسدة .",
-                "يستخدم لعلاج ارتفاع ضغط الدم واضطرابات الجهاز الهضمي  وذلك يرجع لفعاليته الحالة لتشنجات العضلات الملساء في الجهاز الهضمي وكذلك يستخدم لعلاج مرض الزهايمر لاحتوائه على مركبات تمنع تخرب الاستيل كولين في الدماغ.",
-                "يمكن استخدام الزيت بشكل موضعي لعلاج الام المفاصل والروماتيزم وعرق النسا  وكذلك لتطهير الجروج على شكل كمادات كما انه يساعد في ترميم الانسجة الجلدية وتسكين الالام العضلية.",
-                "يتمتع بقعالية مضادة لتساقط الشعر ويزيد من نموه لانه يزيد من تدفق الدم الى فروة الراس."
+                "يتمتع اكليل الجبل بالخصائص الطبية التالية: \n" +
+                        "• يتمتع بتاثير قابض \n" +
+                        "• مضاد للميكروبات وللفطريات \n" +
+                        "• مضاد تشنج \n" +
+                        "• مزيل للقلق ومقوي للذاكرة وقد اثبتت بعض الدراسات فعاليته في عالج مرض الزهايمر. \n" +
+                        "• مضاد لالكسدة\n" +
+                        "• مضاد للتشنج \n" +
+                        "• يستخدم لعالج التهاب الفم والبلعوم \n" +
+                        "• يتمتع بفعالية مضادة لتساقط الشعر ويزيد من نموه النه يزيد من تدفق الدم الى فروة الراس"
         };
         fourthmsg7 = new String[] {
-                "يتمتع اكليل الجبل بهامش امان جيد وذلك عند استخدامه بصورة معتدلة اذ ان الافراط في تناول هذا العقار قد يسبب القيء, تهيج الجلد, نزيف الرحم, الارق ,التهاب الامعاء.",
-                "يوصى بعدم الجمع بين اكليل الجبل وبعض المستحضرات الدوائية",
-                "الادوية المضادة للتخثر والمضادة للصفيحات ( الوارفارين الاسبرين)",
-                "الادوية الخافضة للضغط الدموي من فئة مثبطات الانزيم المحول للانجبوتنسين.",
-                "مدرات البول.",
-                "الادوية المضادة للاكتئاب التي يدخل في تركيبها الليثيوم."
+                "يتمتع اكليل الجبل بهامش امان جيد اال ان استخدامه بكميات كبيرة ولفترات طويلة قد \n" +
+                        "يسبب اقياء, التهاب جلد ,ارق",
         };
-        fifthmsg7 = new String[] { "ان استهلاك اكليل الجبل بكميات كبيرة خلال الحمل غير امن وقد يسبب نزيف بالرحم والاجهاض." };
+        fifthmsg7 = new String[] { "ال توجد ادلة ومعلومات عن تداخالت دوائية الكليل الجبل" };
+        sixthmsg7 = new String[] { "ينصح بعدم استهالك اكليل الجبل بكميات كبيراثناء الحمل لعدم توفر ادلة مثبتة عن امان استخدامه \n" +
+                "خالل هذه الفترة" };
+        sevenmsg7 = new String[] { "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbl medicines. Thomson, Reuters, 2007, 4th\n" +
+                "edition ,p (645-647)\n" +
+                "• S.Habtemmariam ‘’The therapeutic of rosemary (Rosmarinus officinalis) diterpenes for \n" +
+                "Alzheimer’s disease’’\n" +
+                "Evid Based Complement Alternt Med.2016. [PubMed] \n" +
+                "• M.Ghasemzadeh, …., H.Hosseinzadeh ‘’Therapeutic effects of rosemary (Rosmarinus officinalis \n" +
+                "L.) and its active constituents on nervous system disorders’’\n" +
+                "Iran J Basic Med Sci. 2020, Sep, 23(9): 1100-1112. [PubMed]\n"};
+
     }
 
     private void getDetail6() {
         headings6 = new String[]{
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
+                "الجزء المستخدم",
                 "الخصائص والاستخدامات الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات مع المستحضرات الدوائية",
-                "الامان اثناء الحمل ",
-                "يجب عدم استخدامها اثناء الارضاع الطبيعي  لانها تقلل من افراز الحليب"
+                "موانع االستخدام واالثار الجانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع: "
         };
         firstmsg6 = new String[]{ "Salvia officinalis" };
         seondmsg6 = new String[]{ "الاوراق والازهار والزيت  الطيارالمستخرج منهما." };
         thirdmsg6 = new String[]{
-                " يتمتع زيت المريمية  بفعالية مضادة للجراثيم والفطور والفيروسات وخصائص مضادة لارتفاع ضغط الدم وكذلك فعالية مضادة للتعرق  الزائد و فعالية مضادة لارتفاع سكر الدم وكذلك فعالية مزيلة لتشنجات العضلات الملساء اضافة الى فعاليته كمضاد للوذمة.",
-                "يمكن استخدام  الزيت بشكل غرغرة لعلاج التهاب الاغشية المخاطية للثة والفم والبلعوم ."
+                "يتمتع عقارالميريمية بالخصائص الطبية التالية: \n" +
+                        "• مضاد للجراثيم والفطريات والفيروسات \n" +
+                        "• منشط الفراز الصفراء \n" +
+                        "• مثبط الفراز العرق \n" +
+                        "• له تاثيرات على الجهاز العصبي المركزي ويسبب للتشنج \n" +
+                        "• يستخدم لعالج التهاب الفم والبلعوم \n" +
+                        "• يستخدم كفاتح للشهية \n" +
+                        "• يستخدم لعالج فرط التعرق \n" +
+                        "• يستخدم لعالج اضطرابات عسر الهضم \n" +
+                        "• يمكن ان يستخدم خارجيا لعالج التهاب االغشية المخاطية لالنف والحنجرة",
         };
         fourthmsg6 = new String[]{
-                "يمكن ان يسبب هذا العقار نوبات صرع وتهيج للجلد.",
-                "يمنع استخدام المريمية من قبل الاشخاص المصابين بالصرع لان الكميات الكبيرة من مركب الثوجون تسبب حدوث نوبات صرع.",
-                "يوصى بعدم تناول المريمية مع بعض الادوية",
-                "الادوية الخافضة لسكر الدم (الانسولين وخافضات السكر الفموية)",
-                "الادوية المستخدمة لعلاج الصرع ( الفينوباربيتال , كاربامازبين , فالبريك اسيد , جابابنتين ) وذلك لان المريمية تؤثر على النواقل الكيميائية في المخ  بشكل معاكس لهذه الادوية.",
-                "الادوية المهدئة والحالة للقلق (لورازيبام, الفينوباربيتال, زولبيديم) وذلك لان الجمع بينهما يسبب الافراط في النعاس كما انها تزيد من تائيرالمهدئ لهذه الادوية. "
+                "تعتبر المريمية امنة اذا استخدمت بصورة معتدلة دون االفراط في استخدامها وقد تظهر \n" +
+                        "بعض االثار الناتجة عن استخدام كميات كبيرة منها عدم انتظام ضربات القلب, الشعور بالدوار, تشنجات صرعية.",
         };
-        fifthmsg6 = new String[]{ "يمنع استخدام المريمية اثناء الحمل لانها قد تسبب الاجهاض لوجود مركب الثوجون." };
-        sixthmsg6 = new String[] {""};
+        fifthmsg6 = new String[]{ "ال تتوفر معلومات وادلة موثوقة حول التداخالت الدوائية لعقار المريمية." };
+        sixthmsg6 = new String[] {" ينصح بعدم استخدام المريمية خالل الحمل النها تعتبر غير امنة خالل هذه الفترة."};
+        sevenmsg6 = new String[] {"• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbl medicines. Thomson, Reuters, 2007, 4th\n" +
+                "edition ,p (367-369)\n"};
     }
 
     private void getDetail5() {
         headings5 = new String[]{
                 "الاسم العلمي",
-                "الجزء المستخدم من النبات",
+                "الجزء المستخدم",
                 "الخصائص والاستخدامات الطبية ",
-                "موانع الاستخدام والتداخلات الدوائية",
-                "الاثار الجانبية",
-                "التداخلات الدوائية",
-                "الاستخدام اثناء الحمل والارضاع"
+                "موانع االستخدام واالثار الجانبية",
+                "ابرز االثار الجانبية",
+                "التداخالت الدوائية:",
+                "االستخدام اثناء الحمل واالرضاع",
+                "المراجع"
         };
         firstmsg5 = new String[]{"Coeffia arabica"};
         seondmsg5 = new String[]{"البذور"};
         thirdmsg5 = new String[]{
-                " تتمتع بذور القهوة بتاثير منشط للجهاز العصبي المركزي وذلك لاحتوائها على الكافيئين وكذلك بخصائص مدرة للبول وذلك يرجع لاحتوائها على مركب الثيوبرومين اضافة الى فعاليتها المنشطة للهضم وذلك لاحتوائها على حمض الكلوروجينيك.",
-                "اثبتت الدراسات ان الكافيئين يساعد مرضى الزكام على الشعور بنشاط اكبر وكذلك يساعد الاشخاص المسنين على التقليل من  اصابتهم بانخفاض الضغط الدمويبعد تناول الطعام."
+                " تتمتع بذور القهوة الخضراء بالخصائص الطبية التالية والتي ترجع الى احتواءها على \n" +
+                        "الكافيين: \n" +
+                        "• تاثيرات منشطة للجهاز العصبي المركزي \n" +
+                        "• تاثير ايجابي على القلب \n" +
+                        "• تاثير مرخي للعضالت الملساء في االوعية الدموية \n" +
+                        "• تاثيرات مدرة للبول \n" +
+                        "• تاثيرات منشطة الفرازات المعدة\n" +
+                        "• اثبتت الدراسات فعالية الكافيين في المساعدة لعالج الزكام كما يساعد في عالج الصداع",
         };
         fourthmsg5 = new String[]{
-                " قد يكون تناول القهوة غير مناسب لبعض الاشخاص كالحوامل والمرضعات ومرضى ارتفاع ضغط الدم ومرضى ارتفاع الكوليسترول والمصابين بالقرحة المعديةو الاشخاص الذين يعانون من عدم انتظام ضربات القلب والمصابين بفرط نشاط الغدة الدرقية لذلك هؤلاء الاشخاص يجب ان يكون استهلاكهم للقهوة بصورة خفيفة.",
-                "من ابرز الاثار الجانبية للقهوة زيادة التبول ,صداع بسبب ارتفاع الضغط الدموي وتسرع بضربات القلب وكذلك قد يسبب استهلاك القهوة رجفان عضلي وكذلك يمكن ان تسبب قلص مريئي معدي وقلق.",
-                "يجب عدم مشاركة الكافيئين مع بعض المستحضرات الدوائية حيث انها تؤثر على امتصاص بعض الادوية حيث تسبب زيادة امتصاص بعضها وتقلل من امتصاص ادوية اخرى ممايؤثر على فعالية الادوية اويزيد من احتمال ظهور الاثار الجانبية لهذه الادوية اهمها: الاسبرين , البنزوديازبينات, الباراسيتامول الادوية الخافضة لسكر الدم, الافدرين, مركبات بيتا ادرينيرجيك كالتالينول, الثيوفيللين, الليثيوم , المستحضرات الحاوية على الحديد وكذلك مانعات الحمل الفموية حيث ان الجمع بينهما قد يسبب في تعزيز الاثار السلبية لهذه الادوية او تقلل من فعاليتها .",
+                "ينصح بعدم االفراط بتناول القهوة لدى بعض االشخاص كالحوامل والمرضعات ومرضى \n" +
+                        "ارتفاع ضغط الدم ومرضى القلب واالوعية الدموية وفرط نشاط الغدة الدرقية والمصابين بالقرحة المعدية وتشمل االثار \n" +
+                        "الجانبية فرط الحموضة تهيج المعدة ,اسهال ,قلة الشهية ,االرق, الخفقان و الدوخة.",
 
         };
         fifthmsg5 = new String[]{
-                " ان الكميات المعتدلة من الكافيئين ( 200- 300 ملليجرام) ما يعادل من فنجان الى فنجانين قهوة يوميا  لا تضر بالجنين اما الجرعات العالية  منه ما يعادل سبعة فناجين من القهوة  يوميا  له تاثيرات سلبية على الجنين حيثيسبب انخفاض وزن الجنين ويمكن ان يسبب موت الجنين داخل الرحم ."
+                "لالفراط في استهالك القهوة اكثر من 5.1 غرام من الكافيئين يوميا تصلب وتشنجات وعدم انتظام \n" +
+                        "ضربات القلب. "
         };
 
         sixthmsg5 = new String[] {
-                "الافدرين",
-                "الادينوزين ",
-                "مانعات الحمل الفموية",
-                "الليثيوم",
-                "الادوية المضادة للاكتئاب من فئة (MAOIs )",
-                "المضادات الحيوية من فئة الكينولون",
-                "الادوية المستخدمة لعلاج الربو من فئة ( B-adrenergic agonist)",
-                "الادوية المضادة للتخثر والمضادة للصفيحات",
-                "المستحضرات الدوائية التي تحوي على الحديد"
+                "ينصح بعدم مشاركة القهوة مع بعض المستحضرات الدوائية اهمها: \n" +
+                        "• االفدرين \n" +
+                        "• االدينوزين \n" +
+                        "• مانعات الحمل الفموية \n" +
+                        "• الليثيوم \n" +
+                        "• االدوية المضادة لالكتئاب من فئة ) MAOIs )\n" +
+                        "• المضادات الحيوية من فئة الكينولون \n" +
+                        "• االدوية المستخدمة لعالج الربو من فئة ) agonist adrenergic-B ( \n" +
+                        "• االدوية المضادة للتخثر والمضادة للصفيحات \n" +
+                        "• المستحضرات الدوائية التي تحوي على الحديد ",
         };
 
         sevenmsg5 = new String[] {
-                "يجب على الحامل تجنب الكميات الكبيرة من الكافيئين والتي تتجاوز 300 ملغ يوميا اي ما يعادل 3 اكواب من القهوة على مدار اليوم وينصح بعدم الاكثار من القهوة اثناء الارضاع الطبيعي لان الكافيئين ينتقل عن طريق الحليب ويسبب اضطرابات في النوم لدى الرضع."
+                " يجب على الحامل تجنب الكميات الكبيرة من الكافيئين والتي تتجاوز 300 ملغ يوميا اي \n" +
+                        "ما يعادل 3 اكواب من القهوة على مدار اليوم وينصح بعد م االكثار من القهوة اثناء االرضاع الطبيعي الن الكافيئين ينتقل عن \n" +
+                        "طريق الحليب ويسبب اضطرابات في النوم لدى الرضع. "
         };
+        eightmsg5 = new String[] {
+                "• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition, p-(453-455)\n" +
+                        "• M.Carbo, ……, J. Cami ‘’ Effect of quinolones on caffeine disposition’’\n" +
+                        "Clin Pharmacol Ther. 1989 Mar,45(3): 234-40. [PubMed]\n" +
+                        "• R. Mester, ……, P.Toren ‘’Caffeine withdrawal increase lithium blood levels’’\n" +
+                        "Biol Psychiatry 1995, 37: 348-350. [PubMed]\n" +
+                        "• S. Hagg, …., R. Dahlqvist ‘’Effect of caffeine on clozapine pharmacokinetics in healthy \n" +
+                        "volunteers’’\n" +
+                        "Br J Clin Phamacol.2000 Jan, 49(1): 59-63. [PubMed]\n" +
+                        "• S. J Stohs, V. Badmaev ‘’A review of natural stimulants and non-stimulant thermogenic agents’’\n" +
+                        "Phytother Res. 2016 May, 30(5): 732-740. [PubMed]\n" +
+                        "• A. H Staib, ……., C. Beer ‘’Interactions between quinolones and caffeine’’\n" +
+                        "Drugs. 1987, 34Suppl 1:170-174. [PubMed]\n" +
+                        "• J.A Carrillo, J. Benitez ‘’Clinically significant pharmacokinetics interactions between dietary \n" +
+                        "caffeine and medication’’\n" +
+                        "Clin Pharmacokinet. 2000 Aug, 39(2):127-53. [ PubMed]\n" +
+                        "• D.R. Abernethy, E.L.Todd ‘’Impairment of caffeine clearance by chronic use of low-dose \n" +
+                        "oestrogen-containing oral contraceptive’’\n" +
+                        "European journal of clinical pharmacology. 28,425-428. [PubMed]\n" +
+                        "• R. F Hurrell, M. Reddy, J.D Cook ‘’Inhibition of non-haem iron absorption in man by \n" +
+                        "polyphenolic-containing beverages’’\n" +
+                        "Br J Nutr. 1999 Apr, 81(4): 289-95. [PubMed]\n"
+        };
+
     }
 
     private void getDetail4() {
@@ -996,29 +1628,49 @@ public class ItemsActivity extends AppCompatActivity {
                 "الاسم العلمي",
                 "الجزء المستخدم من النبات",
                 "الخصائص والاستخدامات الطبية ",
-                "موانع الاستخدام والتداخلات الدوائية",
+                "موانع االستخدام واالثار الجانبية",
                 "التداخلات الدوائية",
-                "الاستخدام اثناء الحمل "
+                "الاستخدام اثناء الحمل ",
+                "المراجع"
         };
         firstmsg4 = new String[] {"Origanum syriacum"};
-        seondmsg4 = new String[] {"جميع الاجزاء الهوائية للنبات المزهر النامية فوق سطح التربة وكذلك الزيت العطري المستخرج منها."};
+        seondmsg4 = new String[] {"جميع اجزاء النبات المزهر والزيت العطري المستخرج منها"};
         thirdmsg4 = new String[] {
-                "ان زيت البردقوش الطيار له فعالية كمضاد للجراثيم والفطور والفيروسات , ويستخدم هذا الزيت موضعيا لعلاج التهابات الجلد والجروح والحروق والتهابات المفاصل .",
-                "اما مستخلص النبات فيتمتع بخواص كمضاد اكسدة وخواص محفزة لجهاز المناعة ومزيل للارق ومسكن لالام الطمث ومنظما للدورة الشهرية, كما ان مغلي النبات  يتمتع بخواص مقشعة ومهدئة للربو ومسكنة للسعال ومضادة لتشنج المعدة وطاردة للغازات وكذلك يستخدم لعلاج التهاب الاغشية المخاطية للجهازين الهضمي والتنفسي والتهاب الجهاز البولي.",
+                " يتمتع بالخصائص الطبية التالية: \n" +
+                        "• تاثير قابض \n" +
+                        "• مضاد اكسدة\n" +
+                        "• خصائص مهدئة للمعدة وطارد للريح ومضاد تشنج \n" +
+                        "• مضاد للبكتريا والفطريات \n" +
+                        "• مضاد التهاب \n" +
+                        "• تاثير واقي للكبد والقلب \n" +
+                        "• مضاد تخثر \n" +
+                        "• مضاد للقرحة و ويتمتع بتاثيرات واقية في لالغشية المخاطية في الجهازين الهضمي والتنفسي \n" +
+                        "• يستخدم لعالج االضطرابات الهضمية والتهابات الجهاز التنفسي بسبب فعاليته المضادة للميكروبات \n" +
+                        "• يساعد على تنظيم الدورة الشهرية واستعادة توازن الهرمونات لدى النساء غير الحوامل. \n" +
+                        "• يساعد في عالج متالزمة المبيض متعدد الكيسات",
         };
         fourthmsg4 = new String[] {
-                "الاستخدام لفترات طويلة يمكن ان يسبب التهاب في الجلد والعين",
-                "ينصح الالشخاص الذين يعانون من حساسية تجاه بعض الاعشاب كالمريمية والنعناع والخزامي بعدم استخدام البردقوش."
+                "اثبتت الدراسات هامش امان كبير للبردقوش اال ان استخدامه بصورة مفرطة قد يسبب \n" +
+                        "التهاب للجلد, يجب عدم استخدامه للرضع واالطفال الصغار.",
         };
         fifthmsg4 = new String[] {
-                "الادوية الخافضة لسكر الدم المشاركة مع البردقوش قد تسبب انخفاض في مستوى سكر الدم.",
-                "الادوية المضادة للتخثر تناول البردقوش مع هذه الادوية يمكن ان يسبب زيادة احتمال حدوث خطر النزيف",
-                "الادوية المضادة للكولين(الاتروبين سكوبولامين) التي تستخدم لعلاج مرض الغلوكوما والزهايمر استخدام البردقوش مع هذه الادوية قد يسبب ظهور الاثار الجانبية لهذه الادوية."
+                "ينصح بعدم استخدام البردقوش مع بعض المستحضرات الدوائية اهمها: \n" +
+                        "• مميعات الدم ومضادات التخثر \n" +
+                        "• االدوية الخافضة لمستوى السكر في الدم ",
         };
         sixthmsg4 = new String[] {
-                " يعتبر هذا العقار غير امن اثناء الحمل  لعدم توفر دراسات وابحاث كافية تثبت امان استخدامه خلال هذه الفترة."
+                " يجب عدم استخدامه اثناء الحمل خاصة زيت البردقوش النه يعتبر غير امن."
         };
-
+        sevenmsg4 = new String[]{"• Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+        "edition ,p (746 -748)\n" +
+        "• I.Haj-Husein, S. Tukan, F. Alkazaleh ‘’The effect of Origanum majorana tea on the hormonal \n" +
+        "profile of women with polycystic ovary syndrome: a randomized controlled pilot study’’\n" +
+        "• PMID:25662759. 2015. [PubMed]\n" +
+        "• F. Bina, …., R. Rahimi ‘’Sweet Marjoram: a review of ethnopharmacology, phytochemistry, and \n" +
+        "biological activities’’ PMID: 27231340 2016 May. [PubMed]\n" +
+        "• H.F Yen, ……. C. K Wang,’’ In vitro anti diabetic effect and chemical component analysis of 29 \n" +
+        "essential oils products’’\n" +
+        "Food Drug Anal. 2015 Mar 23(1): 124-129. [PubMed]\n"};
     }
 
     private void getDetail3() {
@@ -1030,45 +1682,51 @@ public class ItemsActivity extends AppCompatActivity {
                 "الاثار الجانبية",
                 "التداخلات الدوائية",
                 "الاستخدام اثناء الحمل",
-                "الاستخدام لدى الاطفال"
+                "الاستخدام لدى الاطفال",
+                "المراجع"
         };
         firstmsg3 = new String[] {"Alo vera, Aloe barabadensis, Aloe capennsis))"};
-        seondmsg3 = new String[] {"الاوراق والهلام المستخرج من الاوراق."};
+        seondmsg3 = new String[] {"االوراق والهالم المستخرج منها."};
         thirdmsg3 = new String[] {
-            "تتمتع عصارة الصبر بفعالية ملينة لذلك تعتبر من اهم العقاقير التي تستخدم لعلاج الامساك بجرعات خفيفة وكذلك لها فعالية مطهرة للجهاز الهضمي ومحسنة لعملية الهضم.",
-            "الانزيمات والفيتامينات المتواجدة في هذا العقار تسرع عمليات الاستقلاب وحرق الدهون وتخفض معدل الكوليسترول وتنشط وظائف الكبد وانتاج الكريات البيضاء وبذلك  فهي تحفزجهاز المناعة.",
-                "اشارت بعض الدراسات ان خلاصة الصبر الهلامية لها خصائص مضادة للالتهاب الناتجة عن بعض انواع البكتريا والفيروسات والفطور وقد ثبتت فعاليتها في علاج التهابات الجيوب والحنجرة والملتحمة وذلك يرجع لمركب الو-ايمودين(aloe-emodin) المتواجد فيها.",
-                "كما يتمتع هذا العقار بخصائص مضادة للاكسدة ترجع لوجود الفيتامينات والاحماض الامينية.",
-                "اضافة الى فعاليته في تخفيض الوزن ومقاومة الانسولين لدى المصابين بالسمنة المفرطة والذين يعانون من مرض السكر.",
-                "مستخلص نبات الصبارفعال لعلاج التهاب اللثة وتشكل الجير السني .",
-                "كما يتمتع هذا العقار في فعالية مضادة لنمو  بعض انواع من الخلايا السرطانية.",
-                "يمكن استخدام هلام الصبار موضعيا لخصائصه المحفزة والمسرعة لالتئام الجروح والحروق السطحية ولذلك تستخدم مستحضرات هذا العقار لتسريع شفاء الجروح بعد عمليات التجميل الجراحية اضافة الى فعاليتها المرطبة للبشرة الجافة وتستخدم ايضا لعلاج الكثير من الامراض الجلدية كحب الشباب والاكزيما وتستخدم المستحضرات التي تحتوي هذا العقار لعلاج تساقط الشعر."
+            "يتمتع الصباربالعديد من الخصائص الطبية اهمها :",
+            "• تاثيرات ملينة لذلك يستخدم لعالج االمساك. \n" +
+                    "• تاثيرات مضادة للبكتريا \n" +
+                    "• تاثيرات مضادة للفيروسات ) فيروس الهربس البسيط وفيروس الحماق النطاقي, فيروس االنفلونزا( \n" +
+                    "• تاثرات مضادة لالورام. \n" +
+                    "• تاثيرات محفزة لجهاز المناعة \n" +
+                    "• تاثيرات مضادة لاللتهاب \n" +
+                    "• يستخدم لعالج االمراض الناتجة عن نقص التروية الدموية كقضمة الصقيع. \n" +
+                    "• يستخدم هالم الصبار موضعيا لتاثيره المسرع اللتئام الجروح والحروق السطحية",
         };
         fourthmsg3 = new String[] {
-          "يسبب تشنج للجهاز الهضمي لذلك ينبغي تخفيض الجرعة في هذه الحالة.",
-          "يجب عدم استخدام هذا العقار من قبل المرضى المصابين بداء كراون او التهاب الزائدة الدودية.",
-                "الاستخدام لفترات طويلة قد يسبب التهاب الجلد , اكزيما , نقص البوتاسيوم, بيلة الالبومين وكذلك قد يسبب تصبغ الاغشية المخاطية المعويةوهذا ما يعرف بالورم الميلاني الكاذب الذي يمكن التخلص منه بالتوقف عن تناول العقار وكذلك قد يسبب سمية لانسجة الكبد و ضعف في الغدة الدرقية.",
-                "ادرجت هيئة الغذاء والدواء الامريكية (FDA) بان عقار الصبار غير امن كملين منبه للامعاء."
-        };
+          "يمنع استخدام الصبار في حاالت اال نسداد المعوي والتهاب القولون التقرحي داء كراون والتهاب الزائدة \n" +
+                  "الدودية .",
+         };
         fifthmsg3 = new String[]{
-          "يوصى بعدم الجمع بين عقار الصبار وبعض المستحضرات الدوائية",
-          "الملينات المنبهة للامعاء قد يسبب الجمع بينهما فرط في تحفيز الامعاء ممايؤدي الى الاصابة بالاسهال الحاد والجفاف.",
-          "المدرات البولية قد يسبب  الجمع بينهما انخفاض في مستوى البوتاسيوم في الدم .",
-          "سيفوفلوران قد يسبب استخدامهما معا من خطر حدوث نزف لان كل منهما له تاثير مبطئ لتخثر الدم.",
-          "الادوية الخافضة لسكر الدم يمكن ان يسبب الجمع بينهما انخفاض في مستوى السكر في الدم بشكل غير طبيعي",
-          "له تاثير على خمائر السيتوكروم P450(CYP3A4, CYP2D6) مما يؤثر على امتصاص الجسم لبعض الادوية الفموية  التي يتم استقلابها بواسطة هذه الخمائر وكذلك على تركيز هذه الادوية في الجسم مما يؤثرعلى فعاليتها.",
-          "الديجوكسين الجمع بينهما يمكن ان يسبب بظهور الاثار الجانبية للديجوكسين بسبب تاثير الخافض للبوتاسيوم الذي يسببه هذا العقار. "
+          "استخدام الصبار لفترات طويلة وبكميات كبيرة قد يسبب االسهال, تثبيط حركة االمعاء, عدم انتظام ضربات \n" +
+                  "القلب, اعتالل الكلية, وذمة , تصبغ الغشاء المخاطي المعوي)الورم الميالني الكاذب( الذي يزول عند التوقف عن االستخدام, \n" +
+                  "بول دموي,بيلة االلبومين , نقص البوتاسيوم , فرط الحساسية الذي يظهر بشكل التهاب جلد واكزيما, ضرر باالنسجة \n" +
+                  "المعوية .",
         };
         sixthmsg3 = new String[] {
-          " يعتبر هذا العقار غير امن اثناء الحمل."
+          " يوصى بعدم استخدام الصبار مع بعض المستحضرات الدوائية: \n" +
+                  "• الغليكوزيدات القلبية)الديجوكسين( . \n" +
+                  "• االدوية المضادة الضطرابات النظم. \n" +
+                  "• المدرات البولية. \n" +
+                  "• الكورتيكوستيرويدات."
         };
         sevenmsg3 = new String[] {
-                "يمنع استخدام الصبار اثناء الحمل فهو يعتبر غير امن خلال هذه الفترة."
+                " يمنع استخدام الصبار اثناء الحمل فهو يعتبر غير امن خالل هذه الفترة "
         };
 
         eightmsg3 = new String[] {
-                "يمنع الاستخدام لدى الاطفال دون 12 عام."
+                "يمنع االستخدام لدى االطفال دون 12 عام."
         };
+        ninthmsg3 = new String[] {
+                "Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition p (16-19)\n"
+        };
+
     }
 
     private void getDetail2() {
@@ -1077,73 +1735,102 @@ public class ItemsActivity extends AppCompatActivity {
                 "الجزء المستخدم",
                 "الاستخدامات والخصائص الطبية",
                 "موانع الاستخدام والاثار الجانبية",
-                "يوصى بعدم تناول الحبة السوداء مع الادوية التالية",
-                "التداخلات الدوائية",
-                "الاستخدام اثناء الحمل "
+                "يوصى بعدم تناول الحبة السوداء مع الادوية التالية",//todo:change 2(e)
+                "التداخالت الدوائية",
+                "الاستخدام اثناء الحمل ",
+                "المراجع: "
         };
         firstmsg2 = new String[] {
                 "Nigella sativia"
         };
         seondmsg2 = new String[]{
-          "البذور الناضجة والزيت العطري المستخرج منها."
+          "البذور"
         };
         thirdmsg2 = new String[]{
-          "ان لحبة البركة خواص محفزة لجهاز المناعة فهي تزيد من عدد الخلايا  اللمفاوية التائية والخلايا القاتلة الطبيعية وتتمتع بخواص مضادة للفيروسات والبكترياوخاصة بكتريا الجهاز التنفسي والهضمي والبولي.",
-                "كما يتمتع الزيت الطيار بخواص مضادة للاكسدة وله فعالية مثبطة لنمو خلايا سرطان الثدي.",
-                "اثبتت الدراسات فعالية مركب النيجلون المتواجد في الحبة السوداءفي حماية الجسم من سموم المركبات التي قد يتعرض لها.",
-                "الثيموكينون الذي يعتبر المركب الفعال في الحبة السوداء  له تاثيرفي حماية القلب والشرايين من التاثيرات الضارة لارتفاع مركب الهموسيستسن (homosystein) الذي يسبب ارتفاعه ازدياد نسبة حدوث امراض القلب والشرايينكما يرفع الثيموكينون من مستوى الكولسترول المفيد في الجسم.",
-                "ويتمتع الثيموكينون بتاثير واقي من الاعتلال الكلوي لانه يثبط طرح الالبومين والبروتين في البول وله ايضا خصائص وقائية في حماية غشاء المعدة من التاثيرات المخرشة.",
-                " كما اثبتت العديد من الدراسات التي اجريت على الحيوانات فعالية حبة البركة في العلاج والوقاية من  الربو والسعال وذلك بسبب تاثيرها المرخي لعضلات الرغامى.",
-                "بينت دراسات اجريت على الحيوانات فعاليتها في خفض مستوى السكر في الدم وزيادة افراز الانسولين.",
-                "الاحماض الدهنية في حبة البركة تتمتع بتاثيرات ايجابية على صحة الجلد والشعر والاغشية المخاطية."
-        };
+          "تتمتع الحبة السوداء بالخصائص الطبية التالية: ",
+          " مضادة لالكسدة",
+          "محفزة للمناعة",
+          "مضادة للطفيليات",
+          "تاثيرات مضادة للصرع",
+          "تاثيرات خافضة لمستوى السكر والدهون في الدم",
+          "خصائص مضادة للسرطان ",
+          "تستخدم مستخلصات حبة البركة لعالج الربو والسعال وامراض الحساسية",
+          "تستخدم لعالج امراض المفاصل",
+          "اثبتت بعض الد راسات التي اجريت على الحيوانات فعاليتها في وقاية االنسجة من التلف الناتج من التعرض لالشعاع",
+            };
         fourthmsg2 = new String[] {
-                "تم تاكيد السمية المنخفضة وهامش امان واسع للحبة السوداء في العديد من الدراسات التي اجريت على الحيوانات ووفقا لهذه الدراسات يجب مراعاة التغيرات في استقلاب الهيموغلوبين وانخفاض تعداد الكريات البيضاء والصفائح الدموية",
-                "الجرعات الكبيرة منها لها تاثيرات سامة على التركيب النسيجي للكلى وبدرجة اقل على الكبد ويجب استخدامها بجرعات مناسبة.",
-                "يجب عدم استخدامها عند الاشخاص الذين يعانون من الحساسية لاحد المركبات المتواجدة في الحبة السوداء."
+                "قد يسبب زيت حبة البركة التهاب جلد تحسسي",
         };
         fifthmsg2 = new String[] {
-            "تستخدم بحذز خلال فترة الحمل والارضاع  فهي تعتبر غير امنة خلال الحمل والارضاع "
+            "تستخدم بحذز خلال فترة الحمل والارضاع  فهي تعتبر غير امنة خلال الحمل والارضاع "//todo:change 2(e)
         };
         sixthmsg2 = new String[] {
-            "لها تاثير على الخمائرالكبديةالسيتوكروم(CYP450 )  حيث انها تثبط (CYP3A4, CYP2D6)مما يؤثر على تركيز وفعالية الادوية التي تستقلب بواسطة هذه الخمائر.",
-            "الادوية الخافضة للسكر( انسولين ميتفورمين وغيرها) المشاركة مع الحبة السوداء قد يسبب اخفاض في مستوى السكر في الدم.",
-            "الادوية المضادة لتخثر الدم والمضادة للصفيحات(الوارفرين, الهيبارين كلوبيدوغريل وغيرها) الاستخدام مع الحبة السوداء قد يزيد من احتمالية حدوث النزيف.",
-            "الادوية الخافضة للضغط الدموي( فيراباميل ,نيفيدبين وغيرها)"
+            "ينصح بعدم مشاركة الحبة السوداء مع عدد من المستحضرات الدوائية اهمها:",
+            "لها تاثير على الخمائر الكبدية )CYP2D6, CYP3A4 )م ما يؤثر على تركيز وفعالية االدوية التي تستقلب بواسطة هذه \n" +
+                    "الخمائر."
         };
         sevenmsg2 = new String[] {
-                "ينصح بعدم استخدامها اثناء الحمل والارضاع لعدم وجود ادلة كافية حول امان استخدامها خلال هذه الفترة."
+                " ينصح بعدم استخدامها اثناء الحمل واالرضاع لعدم وجود ادلة كافية حول امان استخدامها خالل هذه \n" +
+                        "الفترة."
         };
+        eightmsg2 = new String[] {
+                "F. I Al-Jenoobi……., S. Jamil ‘’Effect of black seed on dextromethorphan O-and N-demethylation \n" +
+                        "in human liver microsomes and healthy human subject’’\n" +
+                        "Drug Metab Lett. 2010 Jan, (4): 51-5. [PubMed]\n" +
+                        "M.Ebrahim, ……, F. Anwar ‘’Nigella sativa L. (Black Cumin): a promising natural remedy for wide \n" +
+                        "range of illness’’ PMCID. 2019 May 12; 2019:1528635.\n"
+        };
+
     }
 
     private void getDetail1() {
         headings1 = new String[]{
                 "الاسم العلمي",
                 "الجزء المستخدم",
-                "الاستخدامات  والخصائص الطبية",
-                "الاثار الجانبية وموانع الاستخدام والتداخلات الدوائية",
-                "ينصحبعدم مشاركته مع بعض الاصناف الدوائية",
-                "الاستخدام اثناء الحمل"
+                "الخصائص واالستخدامات الطبية",
+                "موانع االستخدام واالثار الجانبية",
+                "التداخالت الدوائية",
+                "االستخدام اثناء الحمل",
+                "المراجع"
         };
         firstmsg1 = new String[]{"(MatricariaChamomilla)"};
-        seondmsg1 = new String[]{"الرؤوس المزهرة والزيت العطري المستخرج منها"};
+        seondmsg1 = new String[]{"االزهار"};
         thirdmsg1 = new String[]{
-                "الازهار والزيت العطري يتمتعان بخواص مضادة للالتهاب,مزيلة لتشنجات العضلات الملساء,يساعد على ترميم الجروح والتقرحات,مضاد للبكتريا ومثبط لنموها.",
-                "يمكن ان يستخدم داخليا لعلاج تشنجات الجهاز الهضمي ولعلاج تخرش الاغشية المخاطية للفم والبلعوم والطرق التنفسية العلوية ويتمتع بفعالية لعلاج التهاب القصبات الهوائية المزمن والسعال الديكي ويستخدم لعلاج الحمى بسبب فعاليته كخافض للحرارة.",
-                "كذلك يمكن ان يستخدم موضعيا بشكل غرغرة لعلاج التهاب اللثة او بشكل نشوق لعلاج التهابات الجهاز التنفسي او بشكل غسول لعلاج التهابات المسالك التناسلية والتهاب الجلد والاغشية المخاطية وكذلك يمكن ان يستخدم بشكل حمامات للتخفيف من الام البواسيرولعلاج الامراض النسائية الالتهابية.",
-                "كما يستخدم كمهدئ ومزيل للقلق ."
+                " يتمتع البابونج بالخصائص الطبية التالية",
+                "تاثيرات واقية للمعدة",
+                "مضاد لاللتهاب",
+                "مضاد لالكسدة",
+                "مضاد لالورام ",
+                "مضاد للميكروبات",
+                "مهدىء ومزيل للقلق",
+                " يساعد ويسرع في التئام الجروح والقروح",
+                "يستخدم لعالج السعال والتهاب الشعب التنفسية والحمى والزكام",
+                "يستخدم لعالج التهاب الفم والبلعوم",
+                "يستخدم لعالج التهاب الجلد ولعالج الجروح والقروح",
+                " يستخدم البابونج داخليا لعالج التهابات االغشية المخاطية في الجهازين الهضمي والتنفسي",
+                " يستخدم البابونج خارجيا لعالج التهاب اللثة ولب االسنان ولعالج التهاب الجلد واالغشية المخاطية والتهاب الشرج.",
         };
         fourthmsg1 = new String[]{
-                "التهاب الملتحمة الارجي, تهيج الجلد, اعراض تحسسية حادة (ضيق نفس حكة, طفح جلدي, ازيز).",
-                "لذلك يجب استخدام البابونج بحذر لدى الاشخاص الذين يعانون من حساسية لمكونات الزيت العطري وكذلك لدى الاشخاص الذين يعانون من حساسية شديدة من بعض الاعشاب كعشبة الرجيد(Ragweed)."
+                " يمنع استخدام البابونج من قبل االشخاص الذين لديهم ردود فعل تحسسية تجاه البابونج او \n" +
+                        "احد مكوناته او احد االعشاب التي تنتمي لنفس الفصيلة النباتية كعشبة زهرة العطاس وحشيشة الدود وغيرها وتشمل االثار \n" +
+                        "التهاب ملتحمة تحسسي تهيج الجلد و اعراض تحسسية حادة ) ضيق نفس حكة, طفح جلدي, ازيز( "
         };
         fifthmsg1 = new String[]{
-                "البنزوديزبينات حيث يطيل البابونج من التاثير المهدئ لهذه المركبات.",
-                "مضادات التخثر: قد يزيد تناول البابونج مع هذه الادوية من خطر  الاصابة بالنزيف.",
-                "الادوية التي تحوي الحديد في تركيبها:  حيث يقلل البابونج من امتصاص الحديد."
+                "ينصح بعد استخدام ال بابونج مع بعض المستحضرات الدوائية اهمها",
+                "مضادات التخثر)الوارفارين(",
+                "االدوية المهدئة)البينزوديازبينات(",
+                "سيكلوسبورين"
         };
-        sixthmsg1 = new String[]{"يجب تجنب استخدام  عقار البابونج اثناء الحمل لانه قد يحرض الاجهاض كما ان بعض مكوناته قد سببت الضرر عند اجنة الحيوانات."};
-
+        sixthmsg1 = new String[]{" ينصح بعدم استخدام البابونج اثناء الحمل لعدم توفر ادلة تثبت سالمة وامان استخدامه خالل هذه \n" +
+                "الفترة."};
+        sevenmsg1 = new String[]{
+                "Gruenwald, Joerg, Thomas Brendler, and Christof Jaenicke. PDR for herbal medicines. Thomson, Reuters, 2007, 4th\n" +
+                        "edition ,p (331-333)\n",
+                "R Segal, L Pilote ‘’Warfarin interaction with Matricaria chamomilla’’\n" +
+                        "CMAJ. 2006 Apr, 174(9): 1281-2. [PubMed]",
+                "D Colombo, L Lunardon, G Bellia ‘’Cyclosporine and herbal supplement interactions’’\n" +
+                        "J Toxiol. 2014, 2014:145325. [PubMed]\n",
+        };
     }
 
 

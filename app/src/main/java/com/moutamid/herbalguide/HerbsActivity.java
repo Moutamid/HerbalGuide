@@ -25,10 +25,12 @@ public class HerbsActivity extends AppCompatActivity {
     AppCompatButton EvaluationBtn;
     ItemDetailModel model;
     ImageView herb_img;
-    TextView herb_name, heading1, heading2, heading3, heading4, heading5, heading6, heading7,heading8;
+    TextView herb_name, heading1, heading2, heading3, heading4, heading5, heading6,
+            heading7,heading8, heading9, heading10;
     ImageView backbtn;
-    RecyclerView heading1RC, heading2RC, heading3RC, heading4RC, heading5RC, heading6RC, heading7RC,heading8RC;
-    String[] headings, msg1, msg2, msg3, msg4, msg5, msg6, msg7,msg8;
+    RecyclerView heading1RC, heading2RC, heading3RC, heading4RC, heading5RC,
+            heading6RC, heading7RC,heading8RC,heading9RC,heading10RC;
+    String[] headings, msg1, msg2, msg3, msg4, msg5, msg6, msg7,msg8,msg9,msg10;
     int len;
 
     @SuppressLint("MissingInflatedId")
@@ -49,6 +51,8 @@ public class HerbsActivity extends AppCompatActivity {
         heading6 = findViewById(R.id.heading6);
         heading7 = findViewById(R.id.heading7);
         heading8 = findViewById(R.id.heading8);
+        heading9 = findViewById(R.id.heading9);
+        heading10 = findViewById(R.id.heading10);
 
         heading1RC = findViewById(R.id.heading1RC);
         heading2RC = findViewById(R.id.heading2RC);
@@ -58,6 +62,8 @@ public class HerbsActivity extends AppCompatActivity {
         heading6RC = findViewById(R.id.heading6RC);
         heading7RC = findViewById(R.id.heading7RC);
         heading8RC = findViewById(R.id.heading8RC);
+        heading9RC = findViewById(R.id.heading9RC);
+        heading10RC = findViewById(R.id.heading10RC);
 
         heading1RC.setLayoutManager(new LinearLayoutManager(this));
         heading2RC.setLayoutManager(new LinearLayoutManager(this));
@@ -67,6 +73,8 @@ public class HerbsActivity extends AppCompatActivity {
         heading6RC.setLayoutManager(new LinearLayoutManager(this));
         heading7RC.setLayoutManager(new LinearLayoutManager(this));
         heading8RC.setLayoutManager(new LinearLayoutManager(this));
+        heading9RC.setLayoutManager(new LinearLayoutManager(this));
+        heading10RC.setLayoutManager(new LinearLayoutManager(this));
 
         heading1RC.setHasFixedSize(false);
         heading2RC.setHasFixedSize(false);
@@ -76,6 +84,8 @@ public class HerbsActivity extends AppCompatActivity {
         heading6RC.setHasFixedSize(false);
         heading7RC.setHasFixedSize(false);
         heading8RC.setHasFixedSize(false);
+        heading9RC.setHasFixedSize(false);
+        heading10RC.setHasFixedSize(false);
 
         model = (ItemDetailModel) getIntent().getSerializableExtra("model");
 
@@ -262,6 +272,72 @@ public class HerbsActivity extends AppCompatActivity {
             getDetails7();
             getDetails8();
         }
+        else if (len == 9){
+            heading1.setText(headings[0]);
+            heading2.setText(headings[1]);
+            heading3.setText(headings[2]);
+            heading4.setText(headings[3]);
+            heading5.setText(headings[4]);
+            heading6.setText(headings[5]);
+            heading7.setText(headings[6]);
+            heading8.setText(headings[7]);
+            heading9.setText(headings[8]);
+
+            msg1 = model.getFirstlist();
+            msg2 = model.getSecondList();
+            msg3 = model.getThirdlist();
+            msg4 = model.getFourthlist();
+            msg5 = model.getFifthlist();
+            msg6 = model.getSixthlist();
+            msg7 = model.getSeventhlst();
+            msg8 = model.getEightlist();
+            msg9 = model.getNinethlist();
+
+            getDetails1();
+            getDetails2();
+            getDetails3();
+            getDetails4();
+            getDetails5();
+            getDetails6();
+            getDetails7();
+            getDetails8();
+            getDetails9();
+        }
+  else if (len == 10){
+            heading1.setText(headings[0]);
+            heading2.setText(headings[1]);
+            heading3.setText(headings[2]);
+            heading4.setText(headings[3]);
+            heading5.setText(headings[4]);
+            heading6.setText(headings[5]);
+            heading7.setText(headings[6]);
+            heading8.setText(headings[7]);
+            heading9.setText(headings[8]);
+            heading10.setText(headings[9]);
+
+            msg1 = model.getFirstlist();
+            msg2 = model.getSecondList();
+            msg3 = model.getThirdlist();
+            msg4 = model.getFourthlist();
+            msg5 = model.getFifthlist();
+            msg6 = model.getSixthlist();
+            msg7 = model.getSeventhlst();
+            msg8 = model.getEightlist();
+            msg9 = model.getNinethlist();
+            msg10 = model.getTenthlst();
+
+            getDetails1();
+            getDetails2();
+            getDetails3();
+            getDetails4();
+            getDetails5();
+            getDetails6();
+            getDetails7();
+            getDetails8();
+            getDetails9();
+            getDetails10();
+        }
+
 
         EvaluationBtn.setOnClickListener(v -> {
             startActivity(new Intent(this, SurveyScreen.class));
@@ -346,4 +422,26 @@ public class HerbsActivity extends AppCompatActivity {
         adapter = new DetailAdapter(this, list);
         heading8RC.setAdapter(adapter);
     }
+
+    private void getDetails9() {
+        DetailAdapter adapter;
+        ArrayList<String> list = new ArrayList<>();
+        for (int i =0; i < msg9.length; i++){
+            list.add(msg9[i]);
+        }
+        adapter = new DetailAdapter(this, list);
+        heading9RC.setAdapter(adapter);
+    }
+
+    private void getDetails10() {
+        DetailAdapter adapter;
+        ArrayList<String> list = new ArrayList<>();
+        for (int i =0; i < msg10.length; i++){
+            list.add(msg10[i]);
+        }
+        adapter = new DetailAdapter(this, list);
+        heading10RC.setAdapter(adapter);
+    }
+
+
 }
