@@ -6,107 +6,108 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<!--    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/recyclerView"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="vertical"/>
+    <!--    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerView"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"/>
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/entryBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@drawable/button_background2"
-        android:text="@string/submit"
-        android:layout_alignParentBottom="true"
-        android:textColor="@color/white"
-        android:textSize="20sp" />-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/entryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_background2"
+            android:text="@string/submit"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:textSize="20sp" />-->
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="20dp">
+            android:layout_margin="20dp"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="end|right"
                 android:text="@string/ques_head"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_gravity="end|right"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="end|right"
+                android:layout_marginTop="5dp"
                 android:text="@string/ques_head1"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:layout_marginTop="5dp"
-                android:textStyle="bold"
-                android:layout_gravity="end|right"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques1"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/grou1">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q11"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques1_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques1_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q12"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques1_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques1_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q13"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques1_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques1_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q14"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques1_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques1_point4" />
 
                 </RadioGroup>
 
@@ -116,57 +117,57 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques2"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group2">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq21"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q21"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques2_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques2_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq22"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q22"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques2_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques2_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq23"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q23"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques2_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques2_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq24"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q24"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques2_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques2_point4" />
 
                 </RadioGroup>
 
@@ -175,519 +176,528 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques3"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group3">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq31"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q31"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques3_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques3_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq32"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q32"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques3_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques3_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq33"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q33"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques3_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques3_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q34"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques3_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques3_point4" />
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques4"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup4"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group4">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq41"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q41"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques4_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques4_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq42"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q42"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques4_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques4_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq43"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q43"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques4_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques4_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq44"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q44"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques4_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques4_point4" />
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques5"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group5">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq51"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q51"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques5_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques5_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq52"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q52"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques5_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques5_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq53"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q53"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques5_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques5_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq54"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q54"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques5_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques5_point4" />
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques6"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup6"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group6">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq61"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q61"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques6_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques6_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq62"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q62"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques6_point2"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/q63"
-                        android:layout_gravity="right|center"
                         android:layoutDirection="rtl"
-                        android:layout_marginRight="5dp"
-                        android:text="@string/ques6_point3"/>
+                        android:text="@string/ques6_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq63"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q64"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques6_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques6_point3" />
+
+                    <RadioButton
+                        android:id="@+id/aq64"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="5dp"
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques6_point4" />
 
                 </RadioGroup>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques7"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup7"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group7">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq71"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q71"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques7_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques7_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq72"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q72"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques7_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques7_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq73"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q73"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques7_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques7_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq74"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q74"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques7_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques7_point4" />
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques8"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup8"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group8">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq81"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q81"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques8_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques8_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq82"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q82"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques8_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques8_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq83"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q83"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques8_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques8_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq84"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q84"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques8_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques8_point4" />
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques9"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup9"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group9">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq91"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q91"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques9_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques9_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq92"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q92"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques9_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques9_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq93"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q93"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques9_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques9_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq94"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q94"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques9_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques9_point4" />
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques10"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup10"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group10">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq101"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q101"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques10_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques10_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq102"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q102"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques10_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques10_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq103"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q103"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques10_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques10_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq104"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q104"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques10_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques10_point4" />
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques11"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup11"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group11">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq111"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q111"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques11_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques11_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq112"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q112"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques11_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques11_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq113"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q113"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques11_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques11_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq114"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q114"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques11_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques11_point4" />
 
                 </RadioGroup>
 
@@ -696,57 +706,57 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques12"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup12"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group12">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq121"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q121"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques12_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques12_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq122"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q122"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques12_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques12_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq123"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q123"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques12_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques12_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq124"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q124"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques12_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques12_point4" />
 
                 </RadioGroup>
 
@@ -755,57 +765,57 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques13"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup13"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group13">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq131"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q131"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques13_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques13_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq132"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q132"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques13_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques13_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq133"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q133"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques13_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques13_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq134"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q134"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques13_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques13_point4" />
 
                 </RadioGroup>
 
@@ -814,57 +824,57 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques14"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup14"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group14">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq141"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q141"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques14_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques14_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq142"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q142"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques14_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques14_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq143"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q143"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques14_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques14_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq144"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q144"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques14_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques14_point4" />
 
                 </RadioGroup>
 
@@ -873,150 +883,150 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques15"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup15"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group15">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq151"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q151"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques15_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques15_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq152"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q152"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques15_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques15_point2" />
 
                     <RadioButton
+                        android:id="@+id/aq153"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q153"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques15_point3"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques15_point3" />
 
                     <RadioButton
+                        android:id="@+id/aq154"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q154"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques15_point4"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques15_point4" />
 
                 </RadioGroup>
 
             </LinearLayout>
-
-
+            
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="end|right"
+                android:layout_marginTop="10dp"
                 android:text="@string/ques_head2"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="end|right"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques16"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup16"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group16">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq161"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q161"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq162"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q162"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point2" />
 
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques17"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup17"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group17">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq171"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q171"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq172"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q172"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point2" />
 
 
                 </RadioGroup>
@@ -1025,326 +1035,335 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques18"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup18"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group18">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq181"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q181"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq182"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q182"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point2" />
 
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques19"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup19"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group19">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq191"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q191"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq192"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q192"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point2" />
 
 
                 </RadioGroup>
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques20"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup20"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group20">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq201"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q201"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq202"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q202"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point2" />
 
 
                 </RadioGroup>
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques21"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
+
                 <RadioGroup
+                    android:id="@+id/agroup21"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group21">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq211"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q211"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq212"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q212"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point2" />
 
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques22"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup22"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group22">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq221"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q221"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq222"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q222"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point2" />
 
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques23"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup23"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group23">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq231"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q231"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq232"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q232"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point2" />
 
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques24"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
+
                 <RadioGroup
+                    android:id="@+id/agroup24"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group24">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq241"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q241"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq242"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q242"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point2" />
 
 
                 </RadioGroup>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
                     android:text="@string/ques25"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_gravity="end|right"/>
+                    android:textSize="18sp" />
 
                 <RadioGroup
+                    android:id="@+id/agroup25"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/group25">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/aq251"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q251"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point1"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point1" />
 
                     <RadioButton
+                        android:id="@+id/aq252"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q252"
                         android:layout_gravity="right|center"
-                        android:layoutDirection="rtl"
                         android:layout_marginRight="5dp"
-                        android:text="@string/ques16_point2"/>
+                        android:layoutDirection="rtl"
+                        android:text="@string/ques16_point2" />
 
 
                 </RadioGroup>
